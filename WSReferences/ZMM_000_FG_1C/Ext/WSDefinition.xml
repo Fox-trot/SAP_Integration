@@ -1,0 +1,648 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap12bind="http://schemas.xmlsoap.org/wsdl/soap12/"
+		xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:tns="urn:sap-com:document:sap:rfc:functions"
+		xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+		xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsd1="urn:sap-com:document:sap:rfc:functions"
+		targetNamespace="urn:sap-com:document:sap:rfc:functions">
+	<documentation> </documentation>
+	<types>
+		<xsd:schema xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+				xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+				xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+				xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+				xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+				attributeFormDefault="qualified"
+				targetNamespace="urn:sap-com:document:sap:rfc:functions">
+			<xsd:simpleType name="char1">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="1"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char10">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="10"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char11">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="11"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char16">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="16"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char2">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="2"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char35">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="35"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char4">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="4"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char40">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="40"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char50">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="50"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="cuky5">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="5"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="curr13.2">
+				<xsd:restriction base="xsd:decimal">
+					<xsd:totalDigits value="13"/>
+					<xsd:fractionDigits value="2"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="curr23.2">
+				<xsd:restriction base="xsd:decimal">
+					<xsd:totalDigits value="23"/>
+					<xsd:fractionDigits value="2"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="date10">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="10"/>
+					<xsd:pattern value="\d\d\d\d-\d\d-\d\d"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="numeric4">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="4"/>
+					<xsd:pattern value="\d*"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="numeric5">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="5"/>
+					<xsd:pattern value="\d*"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="numeric6">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="6"/>
+					<xsd:pattern value="\d*"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="quantum13.3">
+				<xsd:restriction base="xsd:decimal">
+					<xsd:totalDigits value="13"/>
+					<xsd:fractionDigits value="3"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="unit3">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="3"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:complexType name="ZMM_000_S_1C_MAL_HAREKETI_LOG">
+				<xsd:sequence>
+					<xsd:element name="MBLNR"
+							type="xsd1:char10"/>
+					<xsd:element name="MJAHR"
+							type="xsd1:numeric4"/>
+					<xsd:element name="ZEILE"
+							type="xsd1:numeric4"/>
+					<xsd:element name="XBLNR"
+							type="xsd1:char16"/>
+					<xsd:element name="VBELN_IM"
+							type="xsd1:char10"/>
+					<xsd:element name="VBELP_IM"
+							type="xsd1:numeric6"/>
+					<xsd:element name="MENGE"
+							type="xsd1:quantum13.3"/>
+					<xsd:element name="MEINS"
+							type="xsd1:unit3"/>
+					<xsd:element name="DMBTR"
+							type="xsd1:curr13.2"/>
+					<xsd:element name="WAERS"
+							type="xsd1:cuky5"/>
+					<xsd:element name="MATBF"
+							type="xsd1:char40"/>
+					<xsd:element name="MAKTX"
+							type="xsd1:char40"/>
+					<xsd:element name="CHARG"
+							type="xsd1:char10"/>
+					<xsd:element name="VFDAT"
+							type="xsd1:date10"/>
+					<xsd:element name="BUDAT"
+							type="xsd1:date10"/>
+					<xsd:element name="BLDAT"
+							type="xsd1:date10"/>
+					<xsd:element name="SMBLN"
+							type="xsd1:char10"/>
+					<xsd:element name="SMBLP"
+							type="xsd1:numeric4"/>
+					<xsd:element name="SJAHR"
+							type="xsd1:numeric4"/>
+					<xsd:element name="SUCCES"
+							type="xsd1:char1"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ZMM_000_S_MESSAGES">
+				<xsd:sequence>
+					<xsd:element name="MSGTY"
+							type="xsd1:char1"/>
+					<xsd:element name="MSGV1"
+							type="xsd1:char50"/>
+					<xsd:element name="MSGV2"
+							type="xsd1:char50"/>
+					<xsd:element name="MSGV3"
+							type="xsd1:char50"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ZMM_000_S_1C_FATURA_LIST_LOG">
+				<xsd:sequence>
+					<xsd:element name="SIRKET_KODU"
+							type="xsd1:char4"/>
+					<xsd:element name="YIL"
+							type="xsd1:numeric4"/>
+					<xsd:element name="MUHASEBE_BELGE_NO"
+							type="xsd1:char10"/>
+					<xsd:element name="MUHASEBE_BELGE_KALEM"
+							type="xsd1:numeric6"/>
+					<xsd:element name="FATURA_NO"
+							type="xsd1:char16"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="TRGS_POSTING_DATE">
+				<xsd:sequence>
+					<xsd:element name="SIGN"
+							type="xsd1:char1"/>
+					<xsd:element name="OPTION"
+							type="xsd1:char2"/>
+					<xsd:element name="LOW"
+							type="xsd1:date10"/>
+					<xsd:element name="HIGH"
+							type="xsd1:date10"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="MRMRBBW_RANGE_BELNR">
+				<xsd:sequence>
+					<xsd:element name="SIGN"
+							type="xsd1:char1"/>
+					<xsd:element name="OPTION"
+							type="xsd1:char2"/>
+					<xsd:element name="LOW"
+							type="xsd1:char10"/>
+					<xsd:element name="HIGH"
+							type="xsd1:char10"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ZMM_000_S_1C_ENTEGRASYON_LIST">
+				<xsd:sequence>
+					<xsd:element name="SIRKET_KODU"
+							type="xsd1:char4"/>
+					<xsd:element name="MUHASEBE_BELGE_NO"
+							type="xsd1:char10"/>
+					<xsd:element name="YIL"
+							type="xsd1:numeric4"/>
+					<xsd:element name="MUHASEBE_BELGE_KALEM"
+							type="xsd1:numeric6"/>
+					<xsd:element name="FATURA_NO"
+							type="xsd1:char16"/>
+					<xsd:element name="MASRAF_TIPI"
+							type="xsd1:char2"/>
+					<xsd:element name="MASRAF_TIPI_TX"
+							type="xsd1:char40"/>
+					<xsd:element name="TESLIMAT"
+							type="xsd1:char10"/>
+					<xsd:element name="TESLIMAT_KALEM"
+							type="xsd1:numeric6"/>
+					<xsd:element name="MIKTAR"
+							type="xsd1:quantum13.3"/>
+					<xsd:element name="OLCU_BIRIMI"
+							type="xsd1:unit3"/>
+					<xsd:element name="TUTAR"
+							type="xsd1:curr23.2"/>
+					<xsd:element name="PARA_BIRIMI"
+							type="xsd1:cuky5"/>
+					<xsd:element name="FATURA_BELGE_NO"
+							type="xsd1:char10"/>
+					<xsd:element name="VERGI_GOSTERGE"
+							type="xsd1:char2"/>
+					<xsd:element name="VERGI_TUTAR"
+							type="xsd1:curr23.2"/>
+					<xsd:element name="TOPLAM_TUTAR"
+							type="xsd1:curr23.2"/>
+					<xsd:element name="BIRIM_FIYAT"
+							type="xsd1:curr23.2"/>
+					<xsd:element name="SATICI"
+							type="xsd1:char10"/>
+					<xsd:element name="SATICI_VKN"
+							type="xsd1:char11"/>
+					<xsd:element name="SATICI_TX"
+							type="xsd1:char35"/>
+					<xsd:element name="SATINALMA_SIPARIS"
+							type="xsd1:char10"/>
+					<xsd:element name="SATINALMA_SIPARIS_KALEM"
+							type="xsd1:numeric5"/>
+					<xsd:element name="MALZEME"
+							type="xsd1:char40"/>
+					<xsd:element name="MALZEME_TX"
+							type="xsd1:char40"/>
+					<xsd:element name="PARTI"
+							type="xsd1:char10"/>
+					<xsd:element name="SKT"
+							type="xsd1:date10"/>
+					<xsd:element name="KAYIT_TARIH"
+							type="xsd1:date10"/>
+					<xsd:element name="TERS_KAYIT_BELGE_NO"
+							type="xsd1:char10"/>
+					<xsd:element name="TERS_KAYIT_BELGE_YIL"
+							type="xsd1:numeric4"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="IBKK_R_BUDAT">
+				<xsd:sequence>
+					<xsd:element name="SIGN"
+							type="xsd1:char1"/>
+					<xsd:element name="OPTION"
+							type="xsd1:char2"/>
+					<xsd:element name="LOW"
+							type="xsd1:date10"/>
+					<xsd:element name="HIGH"
+							type="xsd1:date10"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="CFB_S_MBLNR_RANGE">
+				<xsd:sequence>
+					<xsd:element name="SIGN"
+							type="xsd1:char1"/>
+					<xsd:element name="OPTION"
+							type="xsd1:char2"/>
+					<xsd:element name="LOW"
+							type="xsd1:char10"/>
+					<xsd:element name="HIGH"
+							type="xsd1:char10"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ZMM_000_S_1C_ILAC_ALIM">
+				<xsd:sequence>
+					<xsd:element name="WERKS"
+							type="xsd1:char4"/>
+					<xsd:element name="MBLNR"
+							type="xsd1:char10"/>
+					<xsd:element name="ZEILE"
+							type="xsd1:numeric4"/>
+					<xsd:element name="MJAHR"
+							type="xsd1:numeric4"/>
+					<xsd:element name="XBLNR"
+							type="xsd1:char16"/>
+					<xsd:element name="VBELN_IM"
+							type="xsd1:char10"/>
+					<xsd:element name="VBELP_IM"
+							type="xsd1:numeric6"/>
+					<xsd:element name="MENGE"
+							type="xsd1:quantum13.3"/>
+					<xsd:element name="MEINS"
+							type="xsd1:unit3"/>
+					<xsd:element name="DMBTR"
+							type="xsd1:curr13.2"/>
+					<xsd:element name="WAERS"
+							type="xsd1:cuky5"/>
+					<xsd:element name="MATBF"
+							type="xsd1:char40"/>
+					<xsd:element name="MAKTX"
+							type="xsd1:char40"/>
+					<xsd:element name="CHARG"
+							type="xsd1:char10"/>
+					<xsd:element name="VFDAT"
+							type="xsd1:date10"/>
+					<xsd:element name="BUDAT"
+							type="xsd1:date10"/>
+					<xsd:element name="BLDAT"
+							type="xsd1:date10"/>
+					<xsd:element name="SMBLN"
+							type="xsd1:char10"/>
+					<xsd:element name="SMBLP"
+							type="xsd1:numeric4"/>
+					<xsd:element name="SJAHR"
+							type="xsd1:numeric4"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ZMM_000_TT_1C_MAL_HAREKET_LOG">
+				<xsd:sequence>
+					<xsd:element name="item"
+							type="xsd1:ZMM_000_S_1C_MAL_HAREKETI_LOG"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ZMM_000_TT_1C_FATURA_LIST_LOG">
+				<xsd:sequence>
+					<xsd:element name="item"
+							type="xsd1:ZMM_000_S_1C_FATURA_LIST_LOG"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="TRGR_POSTING_DATE">
+				<xsd:sequence>
+					<xsd:element name="item"
+							type="xsd1:TRGS_POSTING_DATE"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="MRMRBBW_RANGE_BELNR_T">
+				<xsd:sequence>
+					<xsd:element name="item"
+							type="xsd1:MRMRBBW_RANGE_BELNR"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ZMM_000_TT_1C_ENTEGRASYON_LIST">
+				<xsd:sequence>
+					<xsd:element name="item"
+							type="xsd1:ZMM_000_S_1C_ENTEGRASYON_LIST"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="BKK_R_BUDAT">
+				<xsd:sequence>
+					<xsd:element name="item"
+							type="xsd1:IBKK_R_BUDAT"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="CFB_T_MBLNR_RANGE">
+				<xsd:sequence>
+					<xsd:element name="item"
+							type="xsd1:CFB_S_MBLNR_RANGE"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ZMM_000_TT_1C_ILAC_ALIM">
+				<xsd:sequence>
+					<xsd:element name="item"
+							type="xsd1:ZMM_000_S_1C_ILAC_ALIM"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="ZMM_000_FM_1C_MAL_HAREKETI_RTN">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="IT_MAL_HAREKETI_RTRN"
+								type="xsd1:ZMM_000_TT_1C_MAL_HAREKET_LOG"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="ZMM_000_FM_1C_MAL_HAREKETI_RTNResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="MESSAGE"
+								type="xsd1:ZMM_000_S_MESSAGES"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="ZMM_000_FM_1C_FATURA_LIST_RTRN">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="IT_FATURALIST"
+								type="xsd1:ZMM_000_TT_1C_FATURA_LIST_LOG"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="ZMM_000_FM_1C_FATURA_LIST_RTRNResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="MESSAGE"
+								type="xsd1:ZMM_000_S_MESSAGES"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="ZMM_000_FM_1C_FATURA_LISTESI">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="IT_INVOICE"
+								type="xsd1:MRMRBBW_RANGE_BELNR_T"
+								minOccurs="0"/>
+						<xsd:element name="IT_POSTING_DATE"
+								type="xsd1:TRGR_POSTING_DATE"
+								minOccurs="0"/>
+						<xsd:element name="IV_COMPANY_CODE"
+								type="xsd1:char4"/>
+						<xsd:element name="IV_YEAR"
+								type="xsd1:numeric4"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="ZMM_000_FM_1C_FATURA_LISTESIResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="ET_FATLIST"
+								type="xsd1:ZMM_000_TT_1C_ENTEGRASYON_LIST"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="ZMM_000_FM_1C_MAL_HAREKETI">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="IR_BUDAT"
+								type="xsd1:BKK_R_BUDAT"
+								minOccurs="0"/>
+						<xsd:element name="IR_MBLNR"
+								type="xsd1:CFB_T_MBLNR_RANGE"
+								minOccurs="0"/>
+						<xsd:element name="I_MJAHR"
+								type="xsd1:numeric4"/>
+						<xsd:element name="I_WERKS"
+								type="xsd1:char4"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="ZMM_000_FM_1C_MAL_HAREKETIResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="ET_LIST"
+								type="xsd1:ZMM_000_TT_1C_ILAC_ALIM"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</types>
+	<message name="ZMM_000_FM_1C_MAL_HAREKETI_RTN">
+		<part name="parameters"
+				element="tns:ZMM_000_FM_1C_MAL_HAREKETI_RTN"/>
+	</message>
+	<message name="ZMM_000_FM_1C_MAL_HAREKETI_RTNResponse">
+		<part name="parameter"
+				element="tns:ZMM_000_FM_1C_MAL_HAREKETI_RTNResponse"/>
+	</message>
+	<message name="ZMM_000_FM_1C_FATURA_LIST_RTRN">
+		<part name="parameters"
+				element="tns:ZMM_000_FM_1C_FATURA_LIST_RTRN"/>
+	</message>
+	<message name="ZMM_000_FM_1C_FATURA_LIST_RTRNResponse">
+		<part name="parameter"
+				element="tns:ZMM_000_FM_1C_FATURA_LIST_RTRNResponse"/>
+	</message>
+	<message name="ZMM_000_FM_1C_FATURA_LISTESI">
+		<part name="parameters"
+				element="tns:ZMM_000_FM_1C_FATURA_LISTESI"/>
+	</message>
+	<message name="ZMM_000_FM_1C_FATURA_LISTESIResponse">
+		<part name="parameter"
+				element="tns:ZMM_000_FM_1C_FATURA_LISTESIResponse"/>
+	</message>
+	<message name="ZMM_000_FM_1C_MAL_HAREKETI">
+		<part name="parameters"
+				element="tns:ZMM_000_FM_1C_MAL_HAREKETI"/>
+	</message>
+	<message name="ZMM_000_FM_1C_MAL_HAREKETIResponse">
+		<part name="parameter"
+				element="tns:ZMM_000_FM_1C_MAL_HAREKETIResponse"/>
+	</message>
+	<portType name="ZMM_000_FG_1C">
+		<documentation> </documentation>
+		<operation name="ZMM_000_FM_1C_MAL_HAREKETI_RTN">
+			<input name="ZMM_000_FM_1C_MAL_HAREKETI_RTNRequest"
+					message="tns:ZMM_000_FM_1C_MAL_HAREKETI_RTN"/>
+			<output name="ZMM_000_FM_1C_MAL_HAREKETI_RTNResponse"
+					message="tns:ZMM_000_FM_1C_MAL_HAREKETI_RTNResponse"/>
+		</operation>
+		<operation name="ZMM_000_FM_1C_FATURA_LIST_RTRN">
+			<input name="ZMM_000_FM_1C_FATURA_LIST_RTRNRequest"
+					message="tns:ZMM_000_FM_1C_FATURA_LIST_RTRN"/>
+			<output name="ZMM_000_FM_1C_FATURA_LIST_RTRNResponse"
+					message="tns:ZMM_000_FM_1C_FATURA_LIST_RTRNResponse"/>
+		</operation>
+		<operation name="ZMM_000_FM_1C_FATURA_LISTESI">
+			<input name="ZMM_000_FM_1C_FATURA_LISTESIRequest"
+					message="tns:ZMM_000_FM_1C_FATURA_LISTESI"/>
+			<output name="ZMM_000_FM_1C_FATURA_LISTESIResponse"
+					message="tns:ZMM_000_FM_1C_FATURA_LISTESIResponse"/>
+		</operation>
+		<operation name="ZMM_000_FM_1C_MAL_HAREKETI">
+			<input name="ZMM_000_FM_1C_MAL_HAREKETIRequest"
+					message="tns:ZMM_000_FM_1C_MAL_HAREKETI"/>
+			<output name="ZMM_000_FM_1C_MAL_HAREKETIResponse"
+					message="tns:ZMM_000_FM_1C_MAL_HAREKETIResponse"/>
+		</operation>
+	</portType>
+	<binding name="ZMM_000_FG_1C"
+			type="tns:ZMM_000_FG_1C">
+		<soapbind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="ZMM_000_FM_1C_MAL_HAREKETI_RTN">
+			<soapbind:operation style="document"
+					soapAction="urn:sap-com:document:sap:rfc:functions:ZMM_000_FG_1C:ZMM_000_FM_1C_MAL_HAREKETI_RTNRequest"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="ZMM_000_FM_1C_FATURA_LIST_RTRN">
+			<soapbind:operation style="document"
+					soapAction="urn:sap-com:document:sap:rfc:functions:ZMM_000_FG_1C:ZMM_000_FM_1C_FATURA_LIST_RTRNRequest"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="ZMM_000_FM_1C_FATURA_LISTESI">
+			<soapbind:operation style="document"
+					soapAction="urn:sap-com:document:sap:rfc:functions:ZMM_000_FG_1C:ZMM_000_FM_1C_FATURA_LISTESIRequest"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="ZMM_000_FM_1C_MAL_HAREKETI">
+			<soapbind:operation style="document"
+					soapAction="urn:sap-com:document:sap:rfc:functions:ZMM_000_FG_1C:ZMM_000_FM_1C_MAL_HAREKETIRequest"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<binding name="ZMM_000_FG_1C_soap12"
+			type="tns:ZMM_000_FG_1C">
+		<soap12bind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="ZMM_000_FM_1C_MAL_HAREKETI_RTN">
+			<soap12bind:operation style="document"
+					soapAction="urn:sap-com:document:sap:rfc:functions:ZMM_000_FG_1C:ZMM_000_FM_1C_MAL_HAREKETI_RTNRequest"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="ZMM_000_FM_1C_FATURA_LIST_RTRN">
+			<soap12bind:operation style="document"
+					soapAction="urn:sap-com:document:sap:rfc:functions:ZMM_000_FG_1C:ZMM_000_FM_1C_FATURA_LIST_RTRNRequest"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="ZMM_000_FM_1C_FATURA_LISTESI">
+			<soap12bind:operation style="document"
+					soapAction="urn:sap-com:document:sap:rfc:functions:ZMM_000_FG_1C:ZMM_000_FM_1C_FATURA_LISTESIRequest"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="ZMM_000_FM_1C_MAL_HAREKETI">
+			<soap12bind:operation style="document"
+					soapAction="urn:sap-com:document:sap:rfc:functions:ZMM_000_FG_1C:ZMM_000_FM_1C_MAL_HAREKETIRequest"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="ZMM_000_FG_1C">
+		<port name="ZMM_000_FG_1C"
+				binding="tns:ZMM_000_FG_1C">
+			<soapbind:address location="http://AFERPAEQA1.asfarma.local:8000/sap/bc/srt/rfc/sap/zmm_000_fg_1c/100/zmm_000_fg_1c/zmm_000_fg_1c"/>
+		</port>
+		<port name="ZMM_000_FG_1C_soap12"
+				binding="tns:ZMM_000_FG_1C_soap12">
+			<soap12bind:address location="http://AFERPAEQA1.asfarma.local:8000/sap/bc/srt/rfc/sap/zmm_000_fg_1c/100/zmm_000_fg_1c/zmm_000_fg_1c"/>
+		</port>
+	</service>
+</definitions>

@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap12bind="http://schemas.xmlsoap.org/wsdl/soap12/"
+		xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:tns="urn:sap-com:document:sap:rfc:functions"
+		xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+		xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsd1="urn:sap-com:document:sap:rfc:functions"
+		targetNamespace="urn:sap-com:document:sap:rfc:functions">
+	<documentation> </documentation>
+	<types>
+		<xsd:schema xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+				xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+				xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+				xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+				xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+				attributeFormDefault="qualified"
+				targetNamespace="urn:sap-com:document:sap:rfc:functions">
+			<xsd:simpleType name="char1">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="1"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char10">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="10"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char20">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="20"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char50">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="50"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char6">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="6"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char80">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="80"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="cuky5">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="5"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="curr23.2">
+				<xsd:restriction base="xsd:decimal">
+					<xsd:totalDigits value="23"/>
+					<xsd:fractionDigits value="2"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="date10">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="10"/>
+					<xsd:pattern value="\d\d\d\d-\d\d-\d\d"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="decimal9.5">
+				<xsd:restriction base="xsd:decimal">
+					<xsd:totalDigits value="9"/>
+					<xsd:fractionDigits value="5"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="numeric7">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="7"/>
+					<xsd:pattern value="\d*"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:complexType name="ZFI_011_S_1C_LOG">
+				<xsd:sequence>
+					<xsd:element name="DOCNO"
+							type="xsd1:char10"/>
+					<xsd:element name="PERIOD_YEAR"
+							type="xsd1:numeric7"/>
+					<xsd:element name="POSTDATE"
+							type="xsd1:date10"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ZFI_011_S_MESSAGES">
+				<xsd:sequence>
+					<xsd:element name="MSGTY"
+							type="xsd1:char1"/>
+					<xsd:element name="MSGV1"
+							type="xsd1:char50"/>
+					<xsd:element name="MSGV2"
+							type="xsd1:char50"/>
+					<xsd:element name="MSGV3"
+							type="xsd1:char50"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ZFI_011_S_OUTPUT">
+				<xsd:sequence>
+					<xsd:element name="DATA"
+							type="xsd1:ZFI_011_TT_DATA"/>
+					<xsd:element name="RETURN"
+							type="xsd1:ZFI_011_S_MESSAGES"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ZFI_011_S_DATA">
+				<xsd:sequence>
+					<xsd:element name="DOCNO"
+							type="xsd1:char10"/>
+					<xsd:element name="DOCTYP_DESC"
+							type="xsd1:char20"/>
+					<xsd:element name="PERIOD_YEAR"
+							type="xsd1:numeric7"/>
+					<xsd:element name="POSTDATE"
+							type="xsd1:date10"/>
+					<xsd:element name="DOCDATE"
+							type="xsd1:date10"/>
+					<xsd:element name="CURRENCY"
+							type="xsd1:cuky5"/>
+					<xsd:element name="REFBELNO"
+							type="xsd1:char10"/>
+					<xsd:element name="EXCRATE"
+							type="xsd1:decimal9.5"/>
+					<xsd:element name="XREVERSED"
+							type="xsd1:char1"/>
+					<xsd:element name="XREVERSING"
+							type="xsd1:char1"/>
+					<xsd:element name="REFDOCNO_TOREVERSE"
+							type="xsd1:char10"/>
+					<xsd:element name="POSTITEMFORLEDGER"
+							type="xsd1:char6"/>
+					<xsd:element name="ALT_ACCNO"
+							type="xsd1:char10"/>
+					<xsd:element name="GLACC_TEXT"
+							type="xsd1:char50"/>
+					<xsd:element name="VENDOR"
+							type="xsd1:char80"/>
+					<xsd:element name="CUSTOMER"
+							type="xsd1:char80"/>
+					<xsd:element name="ASSET_DESC"
+							type="xsd1:char50"/>
+					<xsd:element name="AMOUNT_TRANSACTIONCURR"
+							type="xsd1:curr23.2"/>
+					<xsd:element name="AMOUNT_COMPANYCODECURR"
+							type="xsd1:curr23.2"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ZFI_011_TT_1C_LOG">
+				<xsd:sequence>
+					<xsd:element name="item"
+							type="xsd1:ZFI_011_S_1C_LOG"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ZFI_011_TT_DATA">
+				<xsd:sequence>
+					<xsd:element name="item"
+							type="xsd1:ZFI_011_S_DATA"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="ZFI_011_RFC_OZBEKISTAN_RTRN">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="IT_OZB"
+								type="xsd1:ZFI_011_TT_1C_LOG"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="ZFI_011_RFC_OZBEKISTAN_RTRNResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="MESSAGE"
+								type="xsd1:ZFI_011_S_MESSAGES"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="ZFI_011_RFC_OZBEKISTAN">
+				<xsd:complexType>
+					<xsd:sequence/>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="ZFI_011_RFC_OZBEKISTANResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="OUTPUT"
+								type="xsd1:ZFI_011_S_OUTPUT"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</types>
+	<message name="ZFI_011_RFC_OZBEKISTAN_RTRN">
+		<part name="parameters"
+				element="tns:ZFI_011_RFC_OZBEKISTAN_RTRN"/>
+	</message>
+	<message name="ZFI_011_RFC_OZBEKISTAN_RTRNResponse">
+		<part name="parameter"
+				element="tns:ZFI_011_RFC_OZBEKISTAN_RTRNResponse"/>
+	</message>
+	<message name="ZFI_011_RFC_OZBEKISTAN">
+		<part name="parameters"
+				element="tns:ZFI_011_RFC_OZBEKISTAN"/>
+	</message>
+	<message name="ZFI_011_RFC_OZBEKISTANResponse">
+		<part name="parameter"
+				element="tns:ZFI_011_RFC_OZBEKISTANResponse"/>
+	</message>
+	<portType name="ZFI_011_FG_1C">
+		<documentation> </documentation>
+		<operation name="ZFI_011_RFC_OZBEKISTAN_RTRN">
+			<input name="ZFI_011_RFC_OZBEKISTAN_RTRNRequest"
+					message="tns:ZFI_011_RFC_OZBEKISTAN_RTRN"/>
+			<output name="ZFI_011_RFC_OZBEKISTAN_RTRNResponse"
+					message="tns:ZFI_011_RFC_OZBEKISTAN_RTRNResponse"/>
+		</operation>
+		<operation name="ZFI_011_RFC_OZBEKISTAN">
+			<input name="ZFI_011_RFC_OZBEKISTANRequest"
+					message="tns:ZFI_011_RFC_OZBEKISTAN"/>
+			<output name="ZFI_011_RFC_OZBEKISTANResponse"
+					message="tns:ZFI_011_RFC_OZBEKISTANResponse"/>
+		</operation>
+	</portType>
+	<binding name="ZFI_011_FG_1C"
+			type="tns:ZFI_011_FG_1C">
+		<soapbind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="ZFI_011_RFC_OZBEKISTAN_RTRN">
+			<soapbind:operation style="document"
+					soapAction="urn:sap-com:document:sap:rfc:functions:ZFI_011_FG_1C:ZFI_011_RFC_OZBEKISTAN_RTRNRequest"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="ZFI_011_RFC_OZBEKISTAN">
+			<soapbind:operation style="document"
+					soapAction="urn:sap-com:document:sap:rfc:functions:ZFI_011_FG_1C:ZFI_011_RFC_OZBEKISTANRequest"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<binding name="ZFI_011_FG_1C_soap12"
+			type="tns:ZFI_011_FG_1C">
+		<soap12bind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="ZFI_011_RFC_OZBEKISTAN_RTRN">
+			<soap12bind:operation style="document"
+					soapAction="urn:sap-com:document:sap:rfc:functions:ZFI_011_FG_1C:ZFI_011_RFC_OZBEKISTAN_RTRNRequest"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="ZFI_011_RFC_OZBEKISTAN">
+			<soap12bind:operation style="document"
+					soapAction="urn:sap-com:document:sap:rfc:functions:ZFI_011_FG_1C:ZFI_011_RFC_OZBEKISTANRequest"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="ZFI_011_FG_1C">
+		<port name="ZFI_011_FG_1C"
+				binding="tns:ZFI_011_FG_1C">
+			<soapbind:address location="http://AFERPAEQA1.asfarma.local:8000/sap/bc/srt/rfc/sap/zfi_011_fg_1c/100/zfi_011_fg_1c/zfi_011_fg_1c"/>
+		</port>
+		<port name="ZFI_011_FG_1C_soap12"
+				binding="tns:ZFI_011_FG_1C_soap12">
+			<soap12bind:address location="http://AFERPAEQA1.asfarma.local:8000/sap/bc/srt/rfc/sap/zfi_011_fg_1c/100/zfi_011_fg_1c/zfi_011_fg_1c"/>
+		</port>
+	</service>
+</definitions>

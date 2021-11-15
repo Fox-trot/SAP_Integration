@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap12bind="http://schemas.xmlsoap.org/wsdl/soap12/"
+		xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:tns="urn:sap-com:document:sap:rfc:functions"
+		xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+		xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsd1="urn:sap-com:document:sap:rfc:functions"
+		targetNamespace="urn:sap-com:document:sap:rfc:functions">
+	<documentation> </documentation>
+	<types>
+		<xsd:schema xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+				xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+				xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+				xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+				xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+				attributeFormDefault="qualified"
+				targetNamespace="urn:sap-com:document:sap:rfc:functions">
+			<xsd:simpleType name="char1">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="1"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char10">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="10"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char4">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="4"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char40">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="40"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char50">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="50"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="cuky5">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="5"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="curr13.2">
+				<xsd:restriction base="xsd:decimal">
+					<xsd:totalDigits value="13"/>
+					<xsd:fractionDigits value="2"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="curr15.2">
+				<xsd:restriction base="xsd:decimal">
+					<xsd:totalDigits value="15"/>
+					<xsd:fractionDigits value="2"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="date10">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="10"/>
+					<xsd:pattern value="\d\d\d\d-\d\d-\d\d"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="numeric6">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="6"/>
+					<xsd:pattern value="\d*"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="quantum13.3">
+				<xsd:restriction base="xsd:decimal">
+					<xsd:totalDigits value="13"/>
+					<xsd:fractionDigits value="3"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="unit3">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="3"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:complexType name="ZSD_011_S_OUTPUT">
+				<xsd:sequence>
+					<xsd:element name="DATA"
+							type="xsd1:ZSD_011_TT_DATA"/>
+					<xsd:element name="MESSAGE"
+							type="xsd1:ZSD_010_S_MESSAGE"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ZSD_010_S_MESSAGE">
+				<xsd:sequence>
+					<xsd:element name="MSGTY"
+							type="xsd1:char1"/>
+					<xsd:element name="MSGV1"
+							type="xsd1:char50"/>
+					<xsd:element name="MSGV2"
+							type="xsd1:char50"/>
+					<xsd:element name="MSGV3"
+							type="xsd1:char50"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ZSD_011_S_DATA">
+				<xsd:sequence>
+					<xsd:element name="BILLDOC"
+							type="xsd1:char10"/>
+					<xsd:element name="ITEMNO"
+							type="xsd1:numeric6"/>
+					<xsd:element name="BILLTYP"
+							type="xsd1:char4"/>
+					<xsd:element name="BILLDATE"
+							type="xsd1:date10"/>
+					<xsd:element name="MATERIAL"
+							type="xsd1:char40"/>
+					<xsd:element name="PAYER"
+							type="xsd1:char10"/>
+					<xsd:element name="QUANTITY"
+							type="xsd1:quantum13.3"/>
+					<xsd:element name="UNIT"
+							type="xsd1:unit3"/>
+					<xsd:element name="BATCH"
+							type="xsd1:char10"/>
+					<xsd:element name="COST"
+							type="xsd1:curr13.2"/>
+					<xsd:element name="PROFITMARJIN"
+							type="xsd1:curr13.2"/>
+					<xsd:element name="SELPRICE"
+							type="xsd1:curr15.2"/>
+					<xsd:element name="TOTALPRICE"
+							type="xsd1:curr15.2"/>
+					<xsd:element name="CURRUNIT"
+							type="xsd1:cuky5"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ZSD_011_S_OZB_FAT_IA_DEKON_LOG">
+				<xsd:sequence>
+					<xsd:element name="BILLDOC"
+							type="xsd1:char10"/>
+					<xsd:element name="ITEMNO"
+							type="xsd1:numeric6"/>
+					<xsd:element name="BILLTYP"
+							type="xsd1:char4"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ZSD_011_TT_DATA">
+				<xsd:sequence>
+					<xsd:element name="item"
+							type="xsd1:ZSD_011_S_DATA"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ZSD_011_TT_OZB_FAT_IA_DEKN_LOG">
+				<xsd:sequence>
+					<xsd:element name="item"
+							type="xsd1:ZSD_011_S_OZB_FAT_IA_DEKON_LOG"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="ZSD_010_RFC_OZB_FAT_IA_DEKONT">
+				<xsd:complexType>
+					<xsd:sequence/>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="ZSD_010_RFC_OZB_FAT_IA_DEKONTResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="OUTPUT"
+								type="xsd1:ZSD_011_S_OUTPUT"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="ZSD_011_RFC_OZBFAT_IA_DKNT_RTR">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="IT_OZB_IA_DEKONT"
+								type="xsd1:ZSD_011_TT_OZB_FAT_IA_DEKN_LOG"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="ZSD_011_RFC_OZBFAT_IA_DKNT_RTRResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="MESSAGE"
+								type="xsd1:ZSD_010_S_MESSAGE"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</types>
+	<message name="ZSD_010_RFC_OZB_FAT_IA_DEKONT">
+		<part name="parameters"
+				element="tns:ZSD_010_RFC_OZB_FAT_IA_DEKONT"/>
+	</message>
+	<message name="ZSD_010_RFC_OZB_FAT_IA_DEKONTResponse">
+		<part name="parameter"
+				element="tns:ZSD_010_RFC_OZB_FAT_IA_DEKONTResponse"/>
+	</message>
+	<message name="ZSD_011_RFC_OZBFAT_IA_DKNT_RTR">
+		<part name="parameters"
+				element="tns:ZSD_011_RFC_OZBFAT_IA_DKNT_RTR"/>
+	</message>
+	<message name="ZSD_011_RFC_OZBFAT_IA_DKNT_RTRResponse">
+		<part name="parameter"
+				element="tns:ZSD_011_RFC_OZBFAT_IA_DKNT_RTRResponse"/>
+	</message>
+	<portType name="ZSD_011_FG_1C">
+		<documentation> </documentation>
+		<operation name="ZSD_010_RFC_OZB_FAT_IA_DEKONT">
+			<input name="ZSD_010_RFC_OZB_FAT_IA_DEKONTRequest"
+					message="tns:ZSD_010_RFC_OZB_FAT_IA_DEKONT"/>
+			<output name="ZSD_010_RFC_OZB_FAT_IA_DEKONTResponse"
+					message="tns:ZSD_010_RFC_OZB_FAT_IA_DEKONTResponse"/>
+		</operation>
+		<operation name="ZSD_011_RFC_OZBFAT_IA_DKNT_RTR">
+			<input name="ZSD_011_RFC_OZBFAT_IA_DKNT_RTRRequest"
+					message="tns:ZSD_011_RFC_OZBFAT_IA_DKNT_RTR"/>
+			<output name="ZSD_011_RFC_OZBFAT_IA_DKNT_RTRResponse"
+					message="tns:ZSD_011_RFC_OZBFAT_IA_DKNT_RTRResponse"/>
+		</operation>
+	</portType>
+	<binding name="ZSD_011_FG_1C"
+			type="tns:ZSD_011_FG_1C">
+		<soapbind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="ZSD_010_RFC_OZB_FAT_IA_DEKONT">
+			<soapbind:operation style="document"
+					soapAction="urn:sap-com:document:sap:rfc:functions:ZSD_011_FG_1C:ZSD_010_RFC_OZB_FAT_IA_DEKONTRequest"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="ZSD_011_RFC_OZBFAT_IA_DKNT_RTR">
+			<soapbind:operation style="document"
+					soapAction="urn:sap-com:document:sap:rfc:functions:ZSD_011_FG_1C:ZSD_011_RFC_OZBFAT_IA_DKNT_RTRRequest"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<binding name="ZSD_011_FG_1C_soap12"
+			type="tns:ZSD_011_FG_1C">
+		<soap12bind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="ZSD_010_RFC_OZB_FAT_IA_DEKONT">
+			<soap12bind:operation style="document"
+					soapAction="urn:sap-com:document:sap:rfc:functions:ZSD_011_FG_1C:ZSD_010_RFC_OZB_FAT_IA_DEKONTRequest"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="ZSD_011_RFC_OZBFAT_IA_DKNT_RTR">
+			<soap12bind:operation style="document"
+					soapAction="urn:sap-com:document:sap:rfc:functions:ZSD_011_FG_1C:ZSD_011_RFC_OZBFAT_IA_DKNT_RTRRequest"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="ZSD_011_FG_1C">
+		<port name="ZSD_011_FG_1C"
+				binding="tns:ZSD_011_FG_1C">
+			<soapbind:address location="http://AFERPAEQA1.asfarma.local:8000/sap/bc/srt/rfc/sap/zsd_011_fg_1c/100/zsd_011_fg_1c/zsd_011_fg_1c"/>
+		</port>
+		<port name="ZSD_011_FG_1C_soap12"
+				binding="tns:ZSD_011_FG_1C_soap12">
+			<soap12bind:address location="http://AFERPAEQA1.asfarma.local:8000/sap/bc/srt/rfc/sap/zsd_011_fg_1c/100/zsd_011_fg_1c/zsd_011_fg_1c"/>
+		</port>
+	</service>
+</definitions>
