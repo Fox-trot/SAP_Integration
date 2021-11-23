@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Enum uuid="42ccee94-6697-40b1-9c0a-58fca7b8d4a9">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ЗачетНДС" category="Ref">
+				<xr:TypeId>c199c35c-cc25-4268-a5a8-14eaa6c572ef</xr:TypeId>
+				<xr:ValueId>2436b07c-ef9e-4c5b-b775-6f760a5d1f5a</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ЗачетНДС" category="Manager">
+				<xr:TypeId>ac4ee277-4020-4a95-93f4-7065bb5adb17</xr:TypeId>
+				<xr:ValueId>ac06f45d-ee9d-475d-8a46-c714b3592290</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ЗачетНДС" category="List">
+				<xr:TypeId>aed54bc5-b1fd-42e1-a3f5-a457f27145a6</xr:TypeId>
+				<xr:ValueId>e90780f5-ad72-47ae-b142-a356db472fce</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ЗачетНДС</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зачет НДС</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="dc21cfe0-3736-42ba-b5e7-8e3a81ca0316">
+				<Properties>
+					<Name>НДСВСтоимость</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>в стоимость</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>НДС включаемая в стоимость ТМЦ</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b08fed6b-3f91-4e01-8586-f6709945fb2c">
+				<Properties>
+					<Name>НДСВЗачет</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>в зачет (вся сумма)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>НДС принимаемый в зачет всей суммой</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="adae8d09-8471-4c69-88ea-b759b258c089">
+				<Properties>
+					<Name>НДСПо_ОС_НМА_НС</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>в зачет (в течении 12 мес)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>НДС принимаемый в зачет долями в течении 12 мес (ОС или НМА)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="20e8b923-f463-4404-8dfe-5861c1d967b0">
+				<Properties>
+					<Name>НДСВЗачетИмущество</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>в зачет (в течении 36 мес)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>НДС принимаемый в зачет долями в течении 36 мес (недвижимое имущество)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="8e9cd6d3-e9c1-48af-8415-a5e85ef83d81">
+				<Properties>
+					<Name>НДСВСтоимостьИмущество</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>в стоимость имущества</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>НДС включаемая в стоимость недвижимого имущества</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="838c35d4-7248-4fdb-822f-48b56438f074">
+				<Properties>
+					<Name>НДСУслугамВСтоимость_ОС_НМА_НС</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>капитальное строительство</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>НДС по услугам включаемых в стоимость объекта строительства</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="dcf10d07-6564-4ee3-92f0-37edd616edc3">
+				<Properties>
+					<Name>НДСПоБезвозмездноПолученным</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Безвозмездно</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>НДС по безвозмездно полученным ТМЦ, услугам</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="9cee8780-c8d1-4256-90a4-c8444349ffe9">
+				<Properties>
+					<Name>НДСНеоблагаемый</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Льгота по ст.147</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>НДС не подлежащий вычету по ст.147 НК</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="e1150cba-052f-465b-a5e6-f6fb3d2fd9f4">
+				<Properties>
+					<Name>НДСПоРазвлечениям</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Развлечения (не используется)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>НДС по развлечениям (не используется)</Comment>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<DocumentJournal uuid="ceff28e6-460a-41e8-a590-46deceabe284">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentJournalSelection.КадровыеИзменения" category="Selection">
+				<xr:TypeId>447b4ca5-30dd-49b8-a179-8816e7229f64</xr:TypeId>
+				<xr:ValueId>46243edf-895a-4899-b4d3-d6075ac031db</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentJournalList.КадровыеИзменения" category="List">
+				<xr:TypeId>48de818b-a62a-49b3-a957-21b54b653dd2</xr:TypeId>
+				<xr:ValueId>5a4d18d0-49ea-4299-a679-652e865e2bdf</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentJournalManager.КадровыеИзменения" category="Manager">
+				<xr:TypeId>9446ca79-5e81-405a-b77d-5410f52d211b</xr:TypeId>
+				<xr:ValueId>6fc10d4b-3843-40bb-abb9-b5a4d0bad41d</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>КадровыеИзменения</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кадровые изменения</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<DefaultForm>DocumentJournal.КадровыеИзменения.Form.ФормаСписка</DefaultForm>
+			<AuxiliaryForm/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<RegisteredDocuments>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриказОбУвольнении</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриказОПриеме</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КадровыеИзменения</xr:Item>
+			</RegisteredDocuments>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Column uuid="779693a4-ede0-4517-8e79-2a824748ef9a">
+				<Properties>
+					<Name>Сотрудник</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сотрудник</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПриказОПриеме.Attribute.ФизическоеЛицо</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПриказОбУвольнении.Attribute.Сотрудник</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.КадровыеИзменения.Attribute.Сотрудник</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="203a4991-00fc-4573-ad18-b3281433d60b">
+				<Properties>
+					<Name>ТабельныйНомер</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Табельный номер</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПриказОПриеме.Attribute.ТабельныйНомер</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПриказОбУвольнении.Attribute.ТабельныйНомер</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.КадровыеИзменения.Attribute.ТабельныйНомер</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="6c806ef9-b93d-4053-ae6f-249c2422a022">
+				<Properties>
+					<Name>Подразделение</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подразделение</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПриказОПриеме.Attribute.Подразделение</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.КадровыеИзменения.Attribute.Подразделение</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="c4b9adaf-711a-4f14-9f2a-079328531048">
+				<Properties>
+					<Name>Должность</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Должность</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПриказОПриеме.Attribute.Должность</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.КадровыеИзменения.Attribute.Должность</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="a02beb0c-39b0-41c8-a5f5-68565e0de680">
+				<Properties>
+					<Name>Оклад</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оклад</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПриказОПриеме.Attribute.Оклад</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.КадровыеИзменения.Attribute.Оклад</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="7a7bc805-f307-4504-b02f-f8d0e81fc9a6">
+				<Properties>
+					<Name>Организация</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПриказОПриеме.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПриказОбУвольнении.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.КадровыеИзменения.Attribute.Организация</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Form>ФормаСписка</Form>
+		</ChildObjects>
+	</DocumentJournal>
+</MetaDataObject>

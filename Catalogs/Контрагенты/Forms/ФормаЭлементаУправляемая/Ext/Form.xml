@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Родитель" id="5">
+			<DataPath>Объект.Parent</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РодительКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="36"/>
+		</InputField>
+		<UsualGroup name="Группа2" id="34">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="37"/>
+			<ChildItems>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="38"/>
+				</InputField>
+				<InputField name="Наименование" id="3">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="39"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="НаименованиеПолное" id="19">
+			<DataPath>Объект.НаименованиеПолное</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<Width>35</Width>
+			<ContextMenu name="НаименованиеПолноеКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="НаименованиеПолноеРасширеннаяПодсказка" id="40"/>
+		</InputField>
+		<UsualGroup name="Группа1" id="33">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<InputField name="ЮрФизЛицо" id="13">
+					<DataPath>Объект.ЮрФизЛицо</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЮрФизЛицоКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ЮрФизЛицоРасширеннаяПодсказка" id="42"/>
+				</InputField>
+				<InputField name="ИНН" id="15">
+					<DataPath>Объект.ИНН</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИННКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="ИННРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="КодОКОНХ" id="23">
+					<DataPath>Объект.КодОКОНХ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодОКОНХКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="КодОКОНХРасширеннаяПодсказка" id="44"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа3" id="35">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="45"/>
+			<ChildItems>
+				<InputField name="Регион" id="25">
+					<DataPath>Объект.Регион</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РегионКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="РегионРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="МинистерствоВедомство" id="27">
+					<DataPath>Объект.МинистерствоВедомство</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МинистерствоВедомствоКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="МинистерствоВедомствоРасширеннаяПодсказка" id="47"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ГоловнойКонтрагент" id="11">
+			<DataPath>Объект.ГоловнойКонтрагент</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ГоловнойКонтрагентКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ГоловнойКонтрагентРасширеннаяПодсказка" id="48"/>
+		</InputField>
+		<InputField name="ОсновнойДоговорКонтрагента" id="7">
+			<DataPath>Объект.ОсновнойДоговорКонтрагента</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Осн. договор контрагента</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОсновнойДоговорКонтрагентаКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ОсновнойДоговорКонтрагентаРасширеннаяПодсказка" id="49"/>
+		</InputField>
+		<InputField name="ОсновнойБанковскийСчет" id="21">
+			<DataPath>Объект.ОсновнойБанковскийСчет</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОсновнойБанковскийСчетКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="ОсновнойБанковскийСчетРасширеннаяПодсказка" id="50"/>
+		</InputField>
+		<InputField name="Страна" id="31">
+			<DataPath>Объект.Страна</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СтранаКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="СтранаРасширеннаяПодсказка" id="51"/>
+		</InputField>
+		<InputField name="Комментарий" id="9">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="52"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Контрагенты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,577 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Enum uuid="26d58aa6-ff06-4afe-b337-2a2f63f19218">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.СтатусыЭД" category="Ref">
+				<xr:TypeId>66f28fc1-c745-4833-a995-4a86de17e61f</xr:TypeId>
+				<xr:ValueId>9649792f-e9e5-4d21-989e-b4c606fc6bb7</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.СтатусыЭД" category="Manager">
+				<xr:TypeId>80991ec4-f709-4e40-83bd-b327aba5e7ee</xr:TypeId>
+				<xr:ValueId>bf5c4c8e-f963-498b-bc8e-c573474ef207</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.СтатусыЭД" category="List">
+				<xr:TypeId>c55e2819-9d1f-4742-9200-4fd59428452a</xr:TypeId>
+				<xr:ValueId>881727da-9dda-46f1-aa5d-9c86a3b01840</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>СтатусыЭД</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статусы ЭД</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<StandardAttributes>
+				<xr:StandardAttribute name="Order">
+					<xr:LinkByType/>
+					<xr:FillChecking>DontCheck</xr:FillChecking>
+					<xr:MultiLine>false</xr:MultiLine>
+					<xr:FillFromFillingValue>false</xr:FillFromFillingValue>
+					<xr:CreateOnInput>Auto</xr:CreateOnInput>
+					<xr:MaxValue xsi:nil="true"/>
+					<xr:ToolTip/>
+					<xr:ExtendedEdit>false</xr:ExtendedEdit>
+					<xr:Format/>
+					<xr:ChoiceForm/>
+					<xr:QuickChoice>Auto</xr:QuickChoice>
+					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
+					<xr:EditFormat/>
+					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
+					<xr:MarkNegatives>false</xr:MarkNegatives>
+					<xr:MinValue xsi:nil="true"/>
+					<xr:Synonym/>
+					<xr:Comment/>
+					<xr:FullTextSearch>Use</xr:FullTextSearch>
+					<xr:ChoiceParameterLinks/>
+					<xr:FillValue xsi:nil="true"/>
+					<xr:Mask/>
+					<xr:ChoiceParameters/>
+				</xr:StandardAttribute>
+				<xr:StandardAttribute name="Ref">
+					<xr:LinkByType/>
+					<xr:FillChecking>DontCheck</xr:FillChecking>
+					<xr:MultiLine>false</xr:MultiLine>
+					<xr:FillFromFillingValue>false</xr:FillFromFillingValue>
+					<xr:CreateOnInput>Auto</xr:CreateOnInput>
+					<xr:MaxValue xsi:nil="true"/>
+					<xr:ToolTip/>
+					<xr:ExtendedEdit>false</xr:ExtendedEdit>
+					<xr:Format/>
+					<xr:ChoiceForm/>
+					<xr:QuickChoice>Auto</xr:QuickChoice>
+					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
+					<xr:EditFormat/>
+					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
+					<xr:MarkNegatives>false</xr:MarkNegatives>
+					<xr:MinValue xsi:nil="true"/>
+					<xr:Synonym/>
+					<xr:Comment/>
+					<xr:FullTextSearch>Use</xr:FullTextSearch>
+					<xr:ChoiceParameterLinks/>
+					<xr:FillValue xsi:nil="true"/>
+					<xr:Mask/>
+					<xr:ChoiceParameters/>
+				</xr:StandardAttribute>
+			</StandardAttributes>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="9ecc0440-a98b-48e2-9825-349dc4322adf">
+				<Properties>
+					<Name>Сформирован</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сформирован</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="7feacc81-43af-4c50-b4e6-28fed88a3b3b">
+				<Properties>
+					<Name>Отправлен</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отправлен получателю</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="9d0235ae-b47b-49c0-9d21-49872f315d8e">
+				<Properties>
+					<Name>Подписан</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подписан</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="98fd1901-195a-4c3d-8bc4-d5922d957aa9">
+				<Properties>
+					<Name>ОтклоненПолучателем</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отклонен получателем</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c0825056-738b-42c7-9522-bef6a24c6e13">
+				<Properties>
+					<Name>ПолностьюПодписан</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Полностью подписан</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="515c8bd3-85ac-4855-9733-148746cbf172">
+				<Properties>
+					<Name>Удален</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Удален</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="1c9b61f9-ee16-4d2d-a4d5-89c06409cff8">
+				<Properties>
+					<Name>Отклонен</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отклонен</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="3e84760d-e268-41e7-a7cb-4048a9838dac">
+				<Properties>
+					<Name>Получен</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получен</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="6b7c2876-01d2-49ea-ac7e-7f9cffdcdb3e">
+				<Properties>
+					<Name>НеПолучен</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) НеПолучен</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="5a810d02-a9b8-4666-9e79-a01baa71ee1b">
+				<Properties>
+					<Name>Доставлен</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Доставлен получателю</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="6db858e8-ee72-4c15-ae9b-bc87e814c472">
+				<Properties>
+					<Name>ДоставленоПодтверждение</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Доставлено подтверждение</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c93d72ad-1da4-4e80-8f2c-b50688c26aa9">
+				<Properties>
+					<Name>Исполнен</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Исполнен</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="aed86629-3f67-4c9b-90ce-45375738b985">
+				<Properties>
+					<Name>НеСформирован</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) &lt;Не сформирован&gt;</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a18267e9-ac6e-48a1-b637-0a373b6bb4de">
+				<Properties>
+					<Name>Обработан</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Обработан</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a9542641-7677-43d7-a283-0c39a45ba74d">
+				<Properties>
+					<Name>ОтклоненБанком</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Отклонен банком</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="08c631f1-4098-49ed-a09f-bd6518761dd4">
+				<Properties>
+					<Name>ОтправленоИзвещение</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Отправлено извещение</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="cd2b00b8-3869-4b7a-a118-492f16b45e52">
+				<Properties>
+					<Name>ОтправленоПодтверждение</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Отправлено подтверждение</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="850cc6a3-18a0-414f-9796-daf690df2b22">
+				<Properties>
+					<Name>ОтправленоУведомление</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Отправлено уведомление об уточнении</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="4f93e30d-1092-40ba-9164-fd4407cc334e">
+				<Properties>
+					<Name>ОшибкаПередачи</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Ошибка передачи</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="066f78cf-a349-47a2-b214-701ac2cdf620">
+				<Properties>
+					<Name>ОтправленоПредложениеОбАннулировании</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Отправлено предложение об аннулировании</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="4d265778-3210-480a-b50b-0038080fc668">
+				<Properties>
+					<Name>ПереданОператору</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Отправлен оператору ЭДО</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="941b0d3c-9d15-4463-929b-940288564913">
+				<Properties>
+					<Name>ПодготовленКОтправке</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Подготовлен к отправке</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="cfd350be-5ffe-46d7-aea9-4f2ad483fc40">
+				<Properties>
+					<Name>ПодготовленоИзвещение</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Подготовлено извещение</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="6dd657b6-a903-4ad4-9bf5-aaa5685d86ee">
+				<Properties>
+					<Name>ПодготовленоПодтверждение</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Подготовлено подтверждение</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="efbd40c9-97b2-4f5e-8f2e-28d72864105c">
+				<Properties>
+					<Name>ПолученоИзвещение</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Получено извещение</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="091b1134-4ebe-4951-a37e-692e7fe957b1">
+				<Properties>
+					<Name>ПолученоПодтверждение</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Получено подтверждение</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="9b23490e-4d20-4f6f-8ec9-947fa7d9183e">
+				<Properties>
+					<Name>ПолученоПодтверждениеОператора</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Получено подтверждение оператора</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="845c81ad-2476-49d4-8dd2-066ba0aa777c">
+				<Properties>
+					<Name>ПолученоУведомление</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Получено уведомление об уточнении</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="86773d7f-32e3-49ae-a27a-fbdd6496f1be">
+				<Properties>
+					<Name>Утвержден</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Утвержден</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="389da17a-b05d-498b-96d6-ce2e96e4f3d2">
+				<Properties>
+					<Name>ПолученоПредложениеОбАннулировании</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Получено предложение об аннулировании</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="00e54743-c44e-4028-801c-0d978f928f6b">
+				<Properties>
+					<Name>ЧастичноПодписан</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Частично подписан</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="142b5072-0a6c-4f9d-a5cf-14092b60288f">
+				<Properties>
+					<Name>Картотека2</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Картотека 2</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="cd7bf62f-683e-4153-a156-6eb11508331f">
+				<Properties>
+					<Name>Принят</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Принят</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="376a04ba-b73a-45c4-bb52-46b6fa1dc0ec">
+				<Properties>
+					<Name>ЭЦПНеВерна</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) ЭП не верна</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="05908d0d-f3a9-4f58-b8b8-be772150780a">
+				<Properties>
+					<Name>СформированоПредложениеОбАннулировании</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Сформировано предложение об аннулировании</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b490c738-b70a-4be2-8a74-3c0392b6aad1">
+				<Properties>
+					<Name>ОшибкаРеквизитов</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Ошибка реквизитов</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="469f27fa-7722-4f1d-83a1-485e0a9d5fe6">
+				<Properties>
+					<Name>ОтказанАБС</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Отказан АБС</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="595ac574-aeef-4c10-ba2f-b78e2b5b9a0c">
+				<Properties>
+					<Name>Приостановлен</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Приостановлен</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="e6bb1bd8-3fb6-4f9b-883e-f95dedd13a7e">
+				<Properties>
+					<Name>УдалитьНеОтправлен</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется) Не отправлен</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="6fb9401c-a32a-43c1-8811-058932588f11">
+				<Properties>
+					<Name>Аннулирован</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется)Аннулирован</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Удалить</Comment>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

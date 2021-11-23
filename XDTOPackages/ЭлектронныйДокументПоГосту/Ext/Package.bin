@@ -1,0 +1,554 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="Didox">
+	<property xmlns:d2p1="Didox" name="ROOT" type="d2p1:ROOT"/>
+	<valueType name="CCРФТип" base="xs:string" variety="Atomic" length="2">
+		<pattern>[0-9]{2}</pattern>
+	</valueType>
+	<valueType name="ВремяТип" base="xs:string" variety="Atomic" length="8">
+		<pattern>([0-1]{1}[0-9]{1}|2[0-3]{1})\.([0-5]{1}[0-9]{1})\.([0-5]{1}[0-9]{1})</pattern>
+	</valueType>
+	<valueType name="ДатаТип" base="xs:string" variety="Atomic" length="10">
+		<pattern>(((0[1-9]{1}|[1-2]{1}[0-9]{1})\.(0[1-9]{1}|1[0-2]{1}))|((30)\.(01|0[3-9]{1}|1[0-2]{1}))|((31)\.(01|03|05|07|08|10|12)))\.(18[0-9]{2}|19[0-9]{2}|20[0-9]{2})</pattern>
+	</valueType>
+	<valueType name="ИННФЛТип" base="xs:string" variety="Atomic" length="12">
+		<pattern>([0-9]{1}[1-9]{1}|[1-9]{1}[0-9]{1})[0-9]{10}</pattern>
+	</valueType>
+	<valueType name="КНДТип" base="xs:string" variety="Atomic" length="7">
+		<pattern>[0-9]{7}</pattern>
+	</valueType>
+	<valueType name="КППТип" base="xs:string" variety="Atomic" length="9">
+		<pattern>([0-9]{1}[1-9]{1}|[1-9]{1}[0-9]{1})([0-9]{2})([0-9A-F]{2})([0-9]{3})</pattern>
+	</valueType>
+	<valueType name="ОКВТип" base="xs:string" variety="Atomic" length="3">
+		<pattern>[0-9]{3}</pattern>
+	</valueType>
+	<valueType name="ОКЕИТип" base="xs:string" variety="Atomic" minLength="3" maxLength="4">
+		<pattern>[0-9]{3}</pattern>
+		<pattern>[0-9]{4}</pattern>
+	</valueType>
+	<valueType name="ОКОПФТип" base="xs:string" variety="Atomic" minLength="2" maxLength="5">
+		<pattern>[0-9]{2}</pattern>
+		<pattern>[0-9]{5}</pattern>
+	</valueType>
+	<valueType name="ОКСМТип" base="xs:string" variety="Atomic" length="3">
+		<pattern>[0-9]{3}</pattern>
+	</valueType>
+	<valueType name="Строка256" base="xs:string" variety="Atomic" minLength="1" maxLength="256">
+		<pattern>[0-9]{2}</pattern>
+	</valueType>
+	<valueType name="Строка32" base="xs:string" variety="Atomic" minLength="1" maxLength="32">
+		<pattern>[0-9]{2}</pattern>
+	</valueType>
+	<objectType name="ТоварыТип">
+		<property name="productId" lowerBound="1">
+			<typeDef xsi:type="ValueType" base="xs:integer" variety="Atomic" totalDigits="64"/>
+		</property>
+		<property name="productName" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="255"/>
+		</property>
+		<property name="measurment" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="64"/>
+		</property>
+		<property name="quantity" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:decimal" variety="Atomic" totalDigits="15" fractionDigits="2"/>
+		</property>
+		<property name="price" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:decimal" variety="Atomic" totalDigits="15" fractionDigits="2"/>
+		</property>
+		<property name="currencyId" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:integer" variety="Atomic" totalDigits="3"/>
+		</property>
+		<property name="totalPrice" lowerBound="1">
+			<typeDef xsi:type="ValueType" base="xs:decimal" variety="Atomic" totalDigits="15" fractionDigits="2"/>
+		</property>
+		<property name="exciseTax" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:integer" variety="Atomic" totalDigits="2"/>
+		</property>
+		<property name="exciseTaxSum" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:decimal" variety="Atomic" totalDigits="15" fractionDigits="2"/>
+		</property>
+		<property name="VAT" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:integer" variety="Atomic" totalDigits="2"/>
+		</property>
+		<property name="VATSum" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:decimal" variety="Atomic" totalDigits="15" fractionDigits="2"/>
+		</property>
+		<property name="priceWithVAT" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:decimal" variety="Atomic" totalDigits="15" fractionDigits="2"/>
+		</property>
+		<property name="measurmentId" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="3"/>
+		</property>
+		<property name="manufacturer" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="255"/>
+		</property>
+		<property name="series" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="255"/>
+		</property>
+		<property name="basePrice" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:decimal" variety="Atomic" totalDigits="15" fractionDigits="2"/>
+		</property>
+		<property name="baseCost" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:decimal" variety="Atomic" totalDigits="15" fractionDigits="4"/>
+		</property>
+		<property name="supplierMargin" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:integer" variety="Atomic" totalDigits="3"/>
+		</property>
+		<property name="supplierPrice" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:decimal" variety="Atomic" totalDigits="15" fractionDigits="2"/>
+		</property>
+		<property name="margin" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:decimal" variety="Atomic" totalDigits="10" fractionDigits="2"/>
+		</property>
+	</objectType>
+	<objectType name="ТоварыExpansionТип">
+		<property name="GoodID" lowerBound="1" form="Element">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="200"/>
+		</property>
+		<property name="ThisIsService">
+			<typeDef xsi:type="ValueType" base="xs:integer" variety="Atomic"/>
+		</property>
+	</objectType>
+	<objectType name="ТекстИнфТип">
+		<property name="Идентиф" lowerBound="1" form="Attribute">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="50"/>
+		</property>
+		<property name="Значен" lowerBound="1" form="Attribute">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="1" maxLength="2000"/>
+		</property>
+	</objectType>
+	<objectType name="СторонаТип">
+		<property name="legalEntity">
+			<typeDef xsi:type="ValueType" base="xs:boolean" variety="Atomic"/>
+		</property>
+		<property name="organization" lowerBound="1">
+			<typeDef xsi:type="ObjectType">
+				<property name="ownership">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="256"/>
+				</property>
+				<property name="fullname">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="250"/>
+				</property>
+				<property name="shortname">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="100"/>
+				</property>
+				<property name="bankAccount">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="50"/>
+				</property>
+				<property name="bankName">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="255"/>
+				</property>
+				<property name="bankCode">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="20"/>
+				</property>
+				<property name="bankCodeType">
+					<typeDef xsi:type="ValueType" base="xs:integer" variety="Atomic" totalDigits="20"/>
+				</property>
+				<property name="treasury">
+					<typeDef xsi:type="ValueType" base="xs:integer" variety="Atomic"/>
+				</property>
+				<property name="treasuryAccount">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="50"/>
+				</property>
+				<property name="inn">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="9"/>
+				</property>
+				<property name="okpo">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="8"/>
+				</property>
+				<property name="okonh">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="8"/>
+				</property>
+				<property name="oked">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+				</property>
+				<property name="vatCode">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="20"/>
+				</property>
+			</typeDef>
+		</property>
+		<property name="privatePerson" lowerBound="1">
+			<typeDef xsi:type="ObjectType">
+				<property name="surName">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="250"/>
+				</property>
+				<property name="firstName">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="250"/>
+				</property>
+				<property name="middleName">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="250"/>
+				</property>
+				<property name="inn">
+					<typeDef xsi:type="ValueType" base="xs:integer" variety="Atomic" totalDigits="9"/>
+				</property>
+				<property name="pinfl">
+					<typeDef xsi:type="ValueType" base="xs:integer" variety="Atomic" totalDigits="9"/>
+				</property>
+				<property name="pas_ser">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="2"/>
+				</property>
+				<property name="pas_num">
+					<typeDef xsi:type="ValueType" base="xs:integer" variety="Atomic" totalDigits="7"/>
+				</property>
+				<property name="pas_org">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="250"/>
+				</property>
+				<property name="pas_date">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="10"/>
+				</property>
+			</typeDef>
+		</property>
+		<property name="address" lowerBound="1">
+			<typeDef xsi:type="ObjectType">
+				<property name="street">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="250"/>
+				</property>
+				<property name="house">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="6"/>
+				</property>
+				<property name="building">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="6"/>
+				</property>
+				<property name="flat">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="6"/>
+				</property>
+				<property name="settlement">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="250"/>
+				</property>
+				<property name="district">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="250"/>
+				</property>
+				<property name="region">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="250"/>
+				</property>
+				<property name="country">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="250"/>
+				</property>
+				<property name="postcode">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="6"/>
+				</property>
+				<property name="postbox">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="6"/>
+				</property>
+				<property name="nontypical">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="250"/>
+				</property>
+				<property name="districtId">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="4"/>
+				</property>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="ROOT">
+		<property name="Header">
+			<typeDef xsi:type="ObjectType">
+				<property name="msgType">
+					<typeDef xsi:type="ValueType" base="xs:integer" variety="Atomic"/>
+				</property>
+				<property name="docId">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="64"/>
+				</property>
+				<property name="msgAcknow">
+					<typeDef xsi:type="ValueType" base="xs:integer" variety="Atomic" totalDigits="1"/>
+				</property>
+				<property name="senderInn">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="9"/>
+				</property>
+				<property name="senderSystem">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="64"/>
+				</property>
+				<property name="reciverInn">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="9"/>
+				</property>
+				<property name="reciverSystem">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="64"/>
+				</property>
+			</typeDef>
+		</property>
+		<property name="Document">
+			<typeDef xsi:type="ObjectType">
+				<property name="docType">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="256"/>
+				</property>
+				<property name="regNum">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="32"/>
+				</property>
+				<property name="regDate" lowerBound="1">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="10"/>
+				</property>
+				<property name="contract">
+					<typeDef xsi:type="ObjectType">
+						<property name="contractNum">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="64"/>
+						</property>
+						<property name="contractDate" lowerBound="1">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="10"/>
+						</property>
+						<property name="contractDetailsURL">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="256"/>
+						</property>
+					</typeDef>
+				</property>
+				<property name="amendment">
+					<typeDef xsi:type="ObjectType">
+						<property name="amendmentNum">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="64"/>
+						</property>
+						<property name="amendmentDate" lowerBound="1">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="10"/>
+						</property>
+						<property name="amendmentDetailsURL">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="256"/>
+						</property>
+					</typeDef>
+				</property>
+				<property xmlns:d5p1="Didox" name="supplier" type="d5p1:СторонаТип"/>
+				<property xmlns:d5p1="Didox" name="comissioner" type="d5p1:СторонаТип"/>
+				<property xmlns:d5p1="Didox" name="buyer" type="d5p1:СторонаТип"/>
+				<property name="productList">
+					<typeDef xsi:type="ObjectType">
+						<property xmlns:d7p1="Didox" name="product" type="d7p1:ТоварыТип" upperBound="-1"/>
+						<property name="forPay" lowerBound="1">
+							<typeDef xsi:type="ObjectType">
+								<property name="totalPrice">
+									<typeDef xsi:type="ValueType" base="xs:decimal" variety="Atomic" totalDigits="15" fractionDigits="2"/>
+								</property>
+								<property name="exciseTaxSum">
+									<typeDef xsi:type="ValueType" base="xs:decimal" variety="Atomic" totalDigits="15" fractionDigits="2"/>
+								</property>
+								<property name="VATTotal">
+									<typeDef xsi:type="ValueType" base="xs:decimal" variety="Atomic" totalDigits="15" fractionDigits="2"/>
+								</property>
+								<property name="priceWithVAT">
+									<typeDef xsi:type="ValueType" base="xs:decimal" variety="Atomic" totalDigits="15" fractionDigits="2"/>
+								</property>
+								<property name="totalPriceWithoutDiscount" lowerBound="0">
+									<typeDef xsi:type="ValueType" base="xs:decimal" variety="Atomic" totalDigits="15" fractionDigits="2"/>
+								</property>
+							</typeDef>
+						</property>
+					</typeDef>
+				</property>
+				<property name="payments" lowerBound="1">
+					<typeDef xsi:type="ObjectType">
+						<property name="terminalId">
+							<typeDef xsi:type="ValueType" base="xs:integer" variety="Atomic" totalDigits="20"/>
+						</property>
+						<property name="payDate">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" length="10"/>
+						</property>
+						<property name="transactionId">
+							<typeDef xsi:type="ValueType" base="xs:integer" variety="Atomic" totalDigits="20"/>
+						</property>
+						<property name="transactionStatus">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="256"/>
+						</property>
+						<property name="paymentSystemId">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="256"/>
+						</property>
+						<property name="paymentType">
+							<typeDef xsi:type="ValueType" base="xs:integer" variety="Atomic" totalDigits="3"/>
+						</property>
+						<property name="paymentSum">
+							<typeDef xsi:type="ValueType" base="xs:decimal" variety="Atomic" totalDigits="15" fractionDigits="2"/>
+						</property>
+						<property name="paymentCurrency">
+							<typeDef xsi:type="ValueType" base="xs:integer" variety="Atomic" totalDigits="3"/>
+						</property>
+						<property name="exchangeRate">
+							<typeDef xsi:type="ValueType" base="xs:decimal" variety="Atomic" totalDigits="15" fractionDigits="2"/>
+						</property>
+						<property name="paymentDetails">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="256"/>
+						</property>
+					</typeDef>
+				</property>
+			</typeDef>
+		</property>
+		<property name="Expansion">
+			<typeDef xsi:type="ObjectType">
+				<property name="Comments">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="256"/>
+				</property>
+				<property name="СуммаВключаетНДС">
+					<typeDef xsi:type="ValueType" base="xs:boolean" variety="Atomic"/>
+				</property>
+				<property name="CurrencyCode">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="3"/>
+				</property>
+				<property name="contract">
+					<typeDef xsi:type="ObjectType">
+						<property name="Title">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="150"/>
+						</property>
+					</typeDef>
+				</property>
+				<property name="amendment">
+					<typeDef xsi:type="ObjectType">
+						<property name="Наименование">
+							<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="150"/>
+						</property>
+					</typeDef>
+				</property>
+				<property name="supplier">
+					<typeDef xsi:type="ObjectType">
+						<property name="organization" lowerBound="1">
+							<typeDef xsi:type="ObjectType">
+								<property name="BankAddress">
+									<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="250"/>
+								</property>
+								<property name="TreasuryBank">
+									<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="255"/>
+								</property>
+								<property name="TreasuryCode">
+									<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="20"/>
+								</property>
+								<property name="TreasuryTIN">
+									<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="9"/>
+								</property>
+								<property name="TreasuryTitle">
+									<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="250"/>
+								</property>
+								<property name="TreasyruPersonalAccount">
+									<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="50"/>
+								</property>
+							</typeDef>
+						</property>
+						<property name="privatePerson" lowerBound="1">
+							<typeDef xsi:type="ObjectType">
+								<property name="FullTitle">
+									<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="250"/>
+								</property>
+							</typeDef>
+						</property>
+						<property name="address" lowerBound="1">
+							<typeDef xsi:type="ObjectType">
+								<property name="PhoneNumber">
+									<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="256"/>
+								</property>
+							</typeDef>
+						</property>
+					</typeDef>
+				</property>
+				<property name="comissioner">
+					<typeDef xsi:type="ObjectType">
+						<property name="organization" lowerBound="1">
+							<typeDef xsi:type="ObjectType">
+								<property name="BankAddress">
+									<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="250"/>
+								</property>
+								<property name="TreasuryBank">
+									<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="255"/>
+								</property>
+								<property name="TreasuryCode">
+									<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="20"/>
+								</property>
+								<property name="TreasuryTIN">
+									<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="9"/>
+								</property>
+								<property name="TreasuryTitle">
+									<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="250"/>
+								</property>
+								<property name="TreasyruPersonalAccount">
+									<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="50"/>
+								</property>
+							</typeDef>
+						</property>
+						<property name="privatePerson" lowerBound="1">
+							<typeDef xsi:type="ObjectType">
+								<property name="FullTitle">
+									<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="250"/>
+								</property>
+							</typeDef>
+						</property>
+						<property name="address" lowerBound="1">
+							<typeDef xsi:type="ObjectType">
+								<property name="PhoneNumber">
+									<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="256"/>
+								</property>
+							</typeDef>
+						</property>
+					</typeDef>
+				</property>
+				<property name="buyer">
+					<typeDef xsi:type="ObjectType">
+						<property name="organization" lowerBound="1">
+							<typeDef xsi:type="ObjectType">
+								<property name="BankAddress">
+									<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="250"/>
+								</property>
+								<property name="TreasuryBank">
+									<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="255"/>
+								</property>
+								<property name="TreasuryCode">
+									<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="20"/>
+								</property>
+								<property name="TreasuryTIN">
+									<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="9"/>
+								</property>
+								<property name="TreasuryTitle">
+									<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="250"/>
+								</property>
+								<property name="TreasyruPersonalAccount">
+									<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="50"/>
+								</property>
+							</typeDef>
+						</property>
+						<property name="privatePerson" lowerBound="1">
+							<typeDef xsi:type="ObjectType">
+								<property name="FullTitle">
+									<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="250"/>
+								</property>
+							</typeDef>
+						</property>
+						<property name="address" lowerBound="1">
+							<typeDef xsi:type="ObjectType">
+								<property name="PhoneNumber">
+									<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="256"/>
+								</property>
+							</typeDef>
+						</property>
+					</typeDef>
+				</property>
+				<property name="productList">
+					<typeDef xsi:type="ObjectType">
+						<property xmlns:d7p1="Didox" name="product" type="d7p1:ТоварыExpansionТип" upperBound="-1"/>
+					</typeDef>
+				</property>
+				<property name="Version">
+					<typeDef xsi:type="ValueType" base="xs:integer" variety="Atomic"/>
+				</property>
+				<property name="HashFile">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+				</property>
+				<property name="AuthorityNum">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="10"/>
+				</property>
+				<property name="AuthorityDate" lowerBound="1">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="10"/>
+				</property>
+				<property name="AuthorityName" lowerBound="1">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="100"/>
+				</property>
+				<property name="Discount" lowerBound="0">
+					<typeDef xsi:type="ValueType" base="xs:integer" variety="Atomic" totalDigits="3"/>
+				</property>
+			</typeDef>
+		</property>
+		<property name="Acknowledgement">
+			<typeDef xsi:type="ObjectType">
+				<property name="msgId">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="256"/>
+				</property>
+				<property name="ackResult">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="256"/>
+				</property>
+				<property name="statuscode">
+					<typeDef xsi:type="ValueType" base="xs:integer" variety="Atomic" totalDigits="3"/>
+				</property>
+				<property name="comment">
+					<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="256"/>
+				</property>
+			</typeDef>
+		</property>
+	</objectType>
+</package>

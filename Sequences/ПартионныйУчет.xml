@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Sequence uuid="80475ccb-7a28-4e5e-b845-a920ee12f260">
+		<InternalInfo>
+			<xr:GeneratedType name="SequenceRecord.ПартионныйУчет" category="Record">
+				<xr:TypeId>e843d706-df98-49a0-81cb-5a9ad86e7377</xr:TypeId>
+				<xr:ValueId>ee53ab94-767a-4aae-9da1-aaa0906a9e31</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="SequenceManager.ПартионныйУчет" category="Manager">
+				<xr:TypeId>546deac6-4909-44c4-b745-407462a419d9</xr:TypeId>
+				<xr:ValueId>339efce3-ac1f-4ee6-a0fd-d0f0ff11ff8d</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="SequenceRecordSet.ПартионныйУчет" category="RecordSet">
+				<xr:TypeId>0456864a-2bd2-43e7-a726-52562719e281</xr:TypeId>
+				<xr:ValueId>0972d908-fe86-4ba3-ab1a-1db81e0a3a05</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ПартионныйУчет</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Партионный учет</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<MoveBoundaryOnPosting>DontMove</MoveBoundaryOnPosting>
+			<Documents>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеНоменклатурыВалютныйСписками</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеНоменклатурыСПереработки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПеремещениеНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СписаниеНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РеализацияНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ТребованиеНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КомплектацияНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РаскройНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПередачаНоменклатурыНаПереработку</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПередачаНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПередачаНоменклатурыВЭксплуатацию</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеДополнительныхРасходов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АвансовыйОтчет</xr:Item>
+			</Documents>
+			<RegisterRecords>
+				<xr:Item xsi:type="xr:MDObjectRef">AccountingRegister.Хозрасчетный</xr:Item>
+			</RegisterRecords>
+			<DataLockControlMode>Automatic</DataLockControlMode>
+		</Properties>
+		<ChildObjects>
+			<Dimension uuid="8c2d7a37-a86a-49fc-9ae6-5a3d1584b53b">
+				<Properties>
+					<Name>Организация</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+					<DocumentMap>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.КомплектацияНоменклатуры.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПередачаНоменклатуры.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПередачаНоменклатурыВЭксплуатацию.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПередачаНоменклатурыНаПереработку.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПеремещениеНоменклатуры.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеНоменклатуры.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеНоменклатурыВалютныйСписками.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеНоменклатурыСПереработки.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РаскройНоменклатуры.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.РеализацияНоменклатуры.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.СписаниеНоменклатуры.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ТребованиеНоменклатуры.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеДополнительныхРасходов.Attribute.Организация</xr:Item>
+					</DocumentMap>
+					<RegisterRecordsMap>
+						<xr:Item xsi:type="xr:MDObjectRef">AccountingRegister.Хозрасчетный.Dimension.Организация</xr:Item>
+					</RegisterRecordsMap>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</Sequence>
+</MetaDataObject>

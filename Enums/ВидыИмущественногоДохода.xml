@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Enum uuid="cf6e3971-5d56-4c90-a730-ed797697ae88">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ВидыИмущественногоДохода" category="Ref">
+				<xr:TypeId>d20f1425-f2c0-49a5-b46d-8de9b8b9fdc1</xr:TypeId>
+				<xr:ValueId>a74909ce-c1b9-459f-8ffb-b45fb5bf70d2</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ВидыИмущественногоДохода" category="Manager">
+				<xr:TypeId>41431835-3b0f-444c-8779-02306ba47cef</xr:TypeId>
+				<xr:ValueId>16b88de9-d84c-4085-a8da-35aae2ba5d56</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ВидыИмущественногоДохода" category="List">
+				<xr:TypeId>0fd158be-bf8d-4fa3-b662-9ca14162389a</xr:TypeId>
+				<xr:ValueId>d1205781-48a7-4aba-9cc0-7480ed4abcdc</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ВидыИмущественногоДохода</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды имущественного дохода</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Виды имущественного дохода</Comment>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="48d9c70e-7881-422e-b1c0-5a75ca87f9ed">
+				<Properties>
+					<Name>Проценты</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проценты</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Проценты</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="534bece6-d8ed-4295-b80b-b4c412c782c2">
+				<Properties>
+					<Name>Дивиденды</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дивиденды</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Дивиденды</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="158db835-90cf-445c-9e56-eedaaab34cde">
+				<Properties>
+					<Name>АрендаИмущества</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доходы от сдачи имущества в аренду</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Доходы от сдачи имущества в аренду</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="edcb72c7-5af4-43d1-9d7b-182a3f56ab69">
+				<Properties>
+					<Name>РеализацияИмущества</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доходы от реализации имущества</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Доходы от реализации имущества</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="01b7cea9-3579-45ba-a2e9-435cac41b274">
+				<Properties>
+					<Name>ПродажаПатента</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доходы при продаже патента (лицензии)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Доходы при продаже патента (лицензии)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="33843f35-3b59-46f3-9732-9a4b6c2e3a3a">
+				<Properties>
+					<Name>Роялти</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Роялти</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Роялти</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="5a5c7a2e-aed5-4d0d-aa2e-1e33ff842760">
+				<Properties>
+					<Name>РеализацияЦБ</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доходы от реализации ценных бумаг</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Доходы от реализации ценных бумаг</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="e7bd7b6f-c344-45b7-ba91-7c758d44b716">
+				<Properties>
+					<Name>Прочее</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочее</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Прочее</Comment>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

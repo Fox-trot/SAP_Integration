@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Период" id="1">
+			<DataPath>Запись.Period</DataPath>
+			<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="СтатьяЗатрат" id="4">
+			<DataPath>Запись.СтатьяЗатрат</DataPath>
+			<ChoiceButton>false</ChoiceButton>
+			<ContextMenu name="СтатьяЗатратКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="СтатьяЗатратРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<CheckBoxField name="НеВычетаемыеРасходыВключаемыеНОБ" id="7">
+			<DataPath>Запись.НеВычетаемыеРасходыВключаемыеНОБ</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не вычетаемые расходы вкл. в НОБ</v8:content>
+				</v8:item>
+			</Title>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НеВычетаемыеРасходыВключаемыеНОБКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="НеВычетаемыеРасходыВключаемыеНОБРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="OnChange">НеВычетаемыеРасходыВключаемыеНОБПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<InputField name="СтрокаПриложения3" id="10">
+			<DataPath>Запись.СтрокаПриложения3</DataPath>
+			<ChoiceParameterLinks>
+				<xr:Link>
+					<xr:Name>НеВычетаемыеРасходыВключаемыеНОБ</xr:Name>
+					<xr:DataPath xsi:type="xs:string">Запись.НеВычетаемыеРасходыВключаемыеНОБ</xr:DataPath>
+					<xr:ValueChange>Clear</xr:ValueChange>
+				</xr:Link>
+			</ChoiceParameterLinks>
+			<ContextMenu name="СтрокаПриложения3КонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="СтрокаПриложения3РасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<CheckBoxField name="НеВычетаемыеРасходыВключаемыеНОБОтчетногоПериода" id="13">
+			<DataPath>Запись.НеВычетаемыеРасходыВключаемыеНОБОтчетногоПериода</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не вычетаемые расходы НОБ отчетного периода</v8:content>
+				</v8:item>
+			</Title>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НеВычетаемыеРасходыВключаемыеНОБОтчетногоПериодаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="НеВычетаемыеРасходыВключаемыеНОБОтчетногоПериодаРасширеннаяПодсказка" id="15"/>
+			<Events>
+				<Event name="OnChange">НеВычетаемыеРасходыВключаемыеНОБОтчетногоПериодаПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<InputField name="СтрокаПриложения4" id="16">
+			<DataPath>Запись.СтрокаПриложения4</DataPath>
+			<ChoiceParameterLinks>
+				<xr:Link>
+					<xr:Name>НеВычетаемыеРасходыВключаемыеНОБОтчетногоПериода</xr:Name>
+					<xr:DataPath xsi:type="xs:string">Запись.НеВычетаемыеРасходыВключаемыеНОБОтчетногоПериода</xr:DataPath>
+					<xr:ValueChange>Clear</xr:ValueChange>
+				</xr:Link>
+			</ChoiceParameterLinks>
+			<ContextMenu name="СтрокаПриложения4КонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="СтрокаПриложения4РасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<CheckBoxField name="УменьшениеНОБ" id="19">
+			<DataPath>Запись.УменьшениеНОБ</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уменьшение НОБ</v8:content>
+				</v8:item>
+			</Title>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="УменьшениеНОБКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="УменьшениеНОБРасширеннаяПодсказка" id="21"/>
+			<Events>
+				<Event name="OnChange">УменьшениеНОБПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<InputField name="СтрокаПриложения7" id="22">
+			<DataPath>Запись.СтрокаПриложения7</DataPath>
+			<ChoiceParameterLinks>
+				<xr:Link>
+					<xr:Name>УменьшениеНОБ</xr:Name>
+					<xr:DataPath xsi:type="xs:string">Запись.УменьшениеНОБ</xr:DataPath>
+					<xr:ValueChange>Clear</xr:ValueChange>
+				</xr:Link>
+			</ChoiceParameterLinks>
+			<ContextMenu name="СтрокаПриложения7КонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="СтрокаПриложения7РасширеннаяПодсказка" id="24"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ПриложенияКРасчетуНалогаНаПрибыль</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

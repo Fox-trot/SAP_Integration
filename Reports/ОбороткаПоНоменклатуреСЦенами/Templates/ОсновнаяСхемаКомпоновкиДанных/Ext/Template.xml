@@ -1,0 +1,594 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Счет</dataPath>
+			<field>Счет</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Субконто1</dataPath>
+			<field>Субконто1</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Субконто2</dataPath>
+			<field>Субконто2</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Субконто3</dataPath>
+			<field>Субконто3</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Субконто4</dataPath>
+			<field>Субконто4</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоКонечныйОстатокДт</dataPath>
+			<field>КоличествоКонечныйОстатокДт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>Количество</dcscom:balanceGroupName>
+				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоНачальныйОстатокДт</dataPath>
+			<field>КоличествоНачальныйОстатокДт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>Количество</dcscom:balanceGroupName>
+				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоОборотКт</dataPath>
+			<field>КоличествоОборотКт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоОборотДт</dataPath>
+			<field>КоличествоОборотДт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">30</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаКонечныйОстатокДт</dataPath>
+			<field>СуммаКонечныйОстатокДт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>Сумма</dcscom:balanceGroupName>
+				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаНачальныйОстатокДт</dataPath>
+			<field>СуммаНачальныйОстатокДт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>Сумма</dcscom:balanceGroupName>
+				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаОборотКт</dataPath>
+			<field>СуммаОборотКт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаОборотДт</dataPath>
+			<field>СуммаОборотДт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаОстатка</dataPath>
+			<field>ЦенаОстатка</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаПрихода</dataPath>
+			<field>ЦенаПрихода</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаРасхода</dataPath>
+			<field>ЦенаРасхода</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕстьРазница</dataPath>
+			<field>ЕстьРазница</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Разница</dataPath>
+			<field>Разница</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ХозрасчетныйОстаткиИОбороты.Субконто2 КАК Склад,
+	ХозрасчетныйОстаткиИОбороты.Субконто1 КАК Номенклатура,
+	ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокДт,
+	ХозрасчетныйОстаткиИОбороты.КоличествоНачальныйОстатокДт,
+	ХозрасчетныйОстаткиИОбороты.СуммаОборотДт,
+	ХозрасчетныйОстаткиИОбороты.КоличествоОборотДт,
+	ХозрасчетныйОстаткиИОбороты.СуммаОборотКт,
+	ХозрасчетныйОстаткиИОбороты.КоличествоОборотКт,
+	ХозрасчетныйОстаткиИОбороты.СуммаКонечныйОстатокДт,
+	ХозрасчетныйОстаткиИОбороты.КоличествоКонечныйОстатокДт,
+	ВЫРАЗИТЬ(ВЫБОР
+			КОГДА ХозрасчетныйОстаткиИОбороты.КоличествоНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.КоличествоОборотДт &lt;&gt; 0
+					И ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.СуммаОборотДт &lt;&gt; 0
+				ТОГДА (ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.СуммаОборотДт) / (ХозрасчетныйОстаткиИОбороты.КоличествоНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.КоличествоОборотДт)
+			КОГДА ХозрасчетныйОстаткиИОбороты.КоличествоНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.КоличествоОборотДт = 0
+					И ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.СуммаОборотДт &lt;&gt; 0
+				ТОГДА "99999999"
+			КОГДА ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.СуммаОборотДт = 0
+					И ХозрасчетныйОстаткиИОбороты.КоличествоНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.КоличествоОборотДт &lt;&gt; 0
+				ТОГДА "99999999"
+			ИНАЧЕ 0
+		КОНЕЦ КАК ЧИСЛО(15, 2)) КАК ЦенаПрихода,
+	ВЫРАЗИТЬ(ВЫБОР
+			КОГДА ХозрасчетныйОстаткиИОбороты.СуммаОборотКт &lt;&gt; 0
+					И ХозрасчетныйОстаткиИОбороты.КоличествоОборотКт &lt;&gt; 0
+				ТОГДА ХозрасчетныйОстаткиИОбороты.СуммаОборотКт / ХозрасчетныйОстаткиИОбороты.КоличествоОборотКт
+			КОГДА ХозрасчетныйОстаткиИОбороты.СуммаОборотКт = 0
+					И ХозрасчетныйОстаткиИОбороты.КоличествоОборотКт &lt;&gt; 0
+				ТОГДА "99999999"
+			КОГДА ХозрасчетныйОстаткиИОбороты.КоличествоОборотКт = 0
+					И ХозрасчетныйОстаткиИОбороты.СуммаОборотКт &lt;&gt; 0
+				ТОГДА "99999999"
+			ИНАЧЕ 0
+		КОНЕЦ КАК ЧИСЛО(15, 2)) КАК ЦенаРасхода,
+	ВЫРАЗИТЬ(ВЫБОР
+			КОГДА ХозрасчетныйОстаткиИОбороты.СуммаКонечныйОстатокДт &lt;&gt; 0
+					И ХозрасчетныйОстаткиИОбороты.КоличествоКонечныйОстатокДт &lt;&gt; 0
+				ТОГДА ХозрасчетныйОстаткиИОбороты.СуммаКонечныйОстатокДт / ХозрасчетныйОстаткиИОбороты.КоличествоКонечныйОстатокДт
+			КОГДА ХозрасчетныйОстаткиИОбороты.СуммаКонечныйОстатокДт = 0
+					И ХозрасчетныйОстаткиИОбороты.КоличествоКонечныйОстатокДт &lt;&gt; 0
+				ТОГДА "99999999"
+			КОГДА ХозрасчетныйОстаткиИОбороты.КоличествоКонечныйОстатокДт = 0
+					И ХозрасчетныйОстаткиИОбороты.СуммаКонечныйОстатокДт &lt;&gt; 0
+				ТОГДА "99999999"
+			ИНАЧЕ 0
+		КОНЕЦ КАК ЧИСЛО(15, 2)) КАК ЦенаОстатка,
+	ВЫБОР
+		КОГДА (ВЫРАЗИТЬ(ВЫБОР
+						КОГДА ХозрасчетныйОстаткиИОбороты.КоличествоНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.КоличествоОборотДт &lt;&gt; 0
+								И ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.СуммаОборотДт &lt;&gt; 0
+							ТОГДА (ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.СуммаОборотДт) / (ХозрасчетныйОстаткиИОбороты.КоличествоНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.КоличествоОборотДт)
+						КОГДА ХозрасчетныйОстаткиИОбороты.КоличествоНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.КоличествоОборотДт = 0
+								И ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.СуммаОборотДт &lt;&gt; 0
+							ТОГДА "99999999"
+						КОГДА ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.СуммаОборотДт = 0
+								И ХозрасчетныйОстаткиИОбороты.КоличествоНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.КоличествоОборотДт &lt;&gt; 0
+							ТОГДА "99999999"
+						ИНАЧЕ 0
+					КОНЕЦ КАК ЧИСЛО(15, 2))) &lt;&gt; 0
+				И (ВЫРАЗИТЬ(ВЫБОР
+						КОГДА ХозрасчетныйОстаткиИОбороты.СуммаОборотКт &lt;&gt; 0
+								И ХозрасчетныйОстаткиИОбороты.КоличествоОборотКт &lt;&gt; 0
+							ТОГДА ХозрасчетныйОстаткиИОбороты.СуммаОборотКт / ХозрасчетныйОстаткиИОбороты.КоличествоОборотКт
+						КОГДА ХозрасчетныйОстаткиИОбороты.СуммаОборотКт = 0
+								И ХозрасчетныйОстаткиИОбороты.КоличествоОборотКт &lt;&gt; 0
+							ТОГДА "99999999"
+						КОГДА ХозрасчетныйОстаткиИОбороты.КоличествоОборотКт = 0
+								И ХозрасчетныйОстаткиИОбороты.СуммаОборотКт &lt;&gt; 0
+							ТОГДА "99999999"
+						ИНАЧЕ 0
+					КОНЕЦ КАК ЧИСЛО(15, 2))) &lt;&gt; 0
+				И (ВЫРАЗИТЬ(ВЫБОР
+						КОГДА ХозрасчетныйОстаткиИОбороты.КоличествоНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.КоличествоОборотДт &lt;&gt; 0
+								И ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.СуммаОборотДт &lt;&gt; 0
+							ТОГДА (ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.СуммаОборотДт) / (ХозрасчетныйОстаткиИОбороты.КоличествоНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.КоличествоОборотДт)
+						КОГДА ХозрасчетныйОстаткиИОбороты.КоличествоНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.КоличествоОборотДт = 0
+								И ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.СуммаОборотДт &lt;&gt; 0
+							ТОГДА "99999999"
+						КОГДА ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.СуммаОборотДт = 0
+								И ХозрасчетныйОстаткиИОбороты.КоличествоНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.КоличествоОборотДт &lt;&gt; 0
+							ТОГДА "99999999"
+						ИНАЧЕ 0
+					КОНЕЦ КАК ЧИСЛО(15, 2))) &lt;&gt; (ВЫРАЗИТЬ(ВЫБОР
+						КОГДА ХозрасчетныйОстаткиИОбороты.СуммаОборотКт &lt;&gt; 0
+								И ХозрасчетныйОстаткиИОбороты.КоличествоОборотКт &lt;&gt; 0
+							ТОГДА ХозрасчетныйОстаткиИОбороты.СуммаОборотКт / ХозрасчетныйОстаткиИОбороты.КоличествоОборотКт
+						КОГДА ХозрасчетныйОстаткиИОбороты.СуммаОборотКт = 0
+								И ХозрасчетныйОстаткиИОбороты.КоличествоОборотКт &lt;&gt; 0
+							ТОГДА "99999999"
+						КОГДА ХозрасчетныйОстаткиИОбороты.КоличествоОборотКт = 0
+								И ХозрасчетныйОстаткиИОбороты.СуммаОборотКт &lt;&gt; 0
+							ТОГДА "99999999"
+						ИНАЧЕ 0
+					КОНЕЦ КАК ЧИСЛО(15, 2)))
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ЕстьРазница,
+	(ВЫРАЗИТЬ(ВЫБОР
+			КОГДА ХозрасчетныйОстаткиИОбороты.КоличествоНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.КоличествоОборотДт &lt;&gt; 0
+					И ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.СуммаОборотДт &lt;&gt; 0
+				ТОГДА (ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.СуммаОборотДт) / (ХозрасчетныйОстаткиИОбороты.КоличествоНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.КоличествоОборотДт)
+			КОГДА ХозрасчетныйОстаткиИОбороты.КоличествоНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.КоличествоОборотДт = 0
+					И ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.СуммаОборотДт &lt;&gt; 0
+				ТОГДА "99999999"
+			КОГДА ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.СуммаОборотДт = 0
+					И ХозрасчетныйОстаткиИОбороты.КоличествоНачальныйОстатокДт + ХозрасчетныйОстаткиИОбороты.КоличествоОборотДт &lt;&gt; 0
+				ТОГДА "99999999"
+			ИНАЧЕ 0
+		КОНЕЦ КАК ЧИСЛО(15, 2))) - (ВЫРАЗИТЬ(ВЫБОР
+			КОГДА ХозрасчетныйОстаткиИОбороты.СуммаОборотКт &lt;&gt; 0
+					И ХозрасчетныйОстаткиИОбороты.КоличествоОборотКт &lt;&gt; 0
+				ТОГДА ХозрасчетныйОстаткиИОбороты.СуммаОборотКт / ХозрасчетныйОстаткиИОбороты.КоличествоОборотКт
+			КОГДА ХозрасчетныйОстаткиИОбороты.СуммаОборотКт = 0
+					И ХозрасчетныйОстаткиИОбороты.КоличествоОборотКт &lt;&gt; 0
+				ТОГДА "99999999"
+			КОГДА ХозрасчетныйОстаткиИОбороты.КоличествоОборотКт = 0
+					И ХозрасчетныйОстаткиИОбороты.СуммаОборотКт &lt;&gt; 0
+				ТОГДА "99999999"
+			ИНАЧЕ 0
+		КОНЕЦ КАК ЧИСЛО(15, 2))) КАК Разница
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.ОстаткиИОбороты(, , , , Счет В ИЕРАРХИИ (&amp;Счет), , Организация = &amp;Организация) КАК ХозрасчетныйОстаткиИОбороты</query>
+	</dataSet>
+	<totalField>
+		<dataPath>СуммаКонечныйОстатокДт</dataPath>
+		<expression>Сумма(СуммаКонечныйОстатокДт)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаНачальныйОстатокДт</dataPath>
+		<expression>Сумма(СуммаНачальныйОстатокДт)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаОборотДт</dataPath>
+		<expression>Сумма(СуммаОборотДт)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаОборотКт</dataPath>
+		<expression>Сумма(СуммаОборотКт)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоКонечныйОстатокДт</dataPath>
+		<expression>Сумма(КоличествоКонечныйОстатокДт)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоНачальныйОстатокДт</dataPath>
+		<expression>Сумма(КоличествоНачальныйОстатокДт)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоОборотДт</dataPath>
+		<expression>Сумма(КоличествоОборотДт)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоОборотКт</dataPath>
+		<expression>Сумма(КоличествоОборотКт)</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Организация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ПустаяСсылка</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Счет</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счет</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Хозрасчетный</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланСчетов.Хозрасчетный.ПустаяСсылка</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остаток на начало</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаНачальныйОстатокДт</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоНачальныйОстатокДт</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Vertically</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приход</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаОборотДт</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоОборотДт</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Vertically</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расход</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаОборотКт</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоОборотКт</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Vertically</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остаток на конец</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаКонечныйОстатокДт</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоКонечныйОстатокДт</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Vertically</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЦенаПрихода</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЦенаРасхода</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЦенаОстатка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Разница</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ЕстьРазница</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ЕстьРазница</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Разница</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ЕстьРазница</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="xs:string"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Склад</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

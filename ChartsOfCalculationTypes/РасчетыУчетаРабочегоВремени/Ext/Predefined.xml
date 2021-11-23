@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CalculationTypePredefinedItems" version="2.11">
+	<Item id="eeb6c5c9-1007-4f59-b5fd-e9b653b37bac">
+		<Name>Неявка</Name>
+		<Code>002      </Code>
+		<Description>Неявка</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+		<Displaced>
+			<CalculationType>ChartOfCalculationTypes.РасчетыУчетаРабочегоВремени.Отзыв</CalculationType>
+		</Displaced>
+	</Item>
+	<Item id="05329830-80e2-45ce-a4e9-bd819a17b8ad">
+		<Name>Отзыв</Name>
+		<Code>003      </Code>
+		<Description>Отзыв</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+	</Item>
+	<Item id="09d4a9f9-c1dc-4b17-94ca-57c066f0d16c">
+		<Name>РабочееВремя</Name>
+		<Code>001      </Code>
+		<Description>Рабочее время</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+		<Displaced>
+			<CalculationType>ChartOfCalculationTypes.РасчетыУчетаРабочегоВремени.Неявка</CalculationType>
+			<CalculationType>ChartOfCalculationTypes.РасчетыУчетаРабочегоВремени.Отзыв</CalculationType>
+		</Displaced>
+	</Item>
+</PredefinedData>

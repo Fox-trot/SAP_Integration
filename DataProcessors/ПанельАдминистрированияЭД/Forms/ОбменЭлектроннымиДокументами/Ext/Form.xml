@@ -1,0 +1,751 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Width>88</Width>
+	<Customizable>false</Customizable>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаЗаголовок" id="1710">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content> </v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content> </v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗаголовокРасширеннаяПодсказка" id="1809"/>
+			<ChildItems>
+				<LabelDecoration name="ОписаниеРаздела" id="1569">
+					<Width>78</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка параметров обмена электронными документами.</v8:content>
+						</v8:item>
+					</Title>
+					<VerticalAlign>Top</VerticalAlign>
+					<ContextMenu name="ОписаниеРазделаКонтекстноеМеню" id="1570"/>
+					<ExtendedTooltip name="ОписаниеРазделаРасширеннаяПодсказка" id="1810"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияЗаголовка" id="1711">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content> </v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content> </v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="ДекорацияЗаголовкаКонтекстноеМеню" id="1712"/>
+					<ExtendedTooltip name="ДекорацияЗаголовкаРасширеннаяПодсказка" id="1811"/>
+				</LabelDecoration>
+				<CommandBar name="ГруппаСправка" id="1713">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content> </v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content> </v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<ExtendedTooltip name="ГруппаСправкаРасширеннаяПодсказка" id="1812"/>
+					<ChildItems>
+						<Button name="Справка" id="1714">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Help</CommandName>
+							<ExtendedTooltip name="СправкаРасширеннаяПодсказка" id="1813"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаУправлениеОбменомЭД" id="1245">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа управление обменом ЭД</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа управление обменом ЭД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>86</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаУправлениеОбменомЭДРасширеннаяПодсказка" id="1814"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаГруппаУправлениеОбменомЭД1" id="1246">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа группа управление обменом э д1</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа группа управление обменом э д1</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаГруппаУправлениеОбменомЭД1РасширеннаяПодсказка" id="1815"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаИспользоватьОбменЭД" id="1248">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать обмен ЭД</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать обмен ЭД</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИспользоватьОбменЭДРасширеннаяПодсказка" id="1816"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьОбменЭД" id="507">
+									<DataPath>НаборКонстант.ИспользоватьОбменЭД</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обмен электронными документами</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьОбменЭДКонтекстноеМеню" id="508"/>
+									<ExtendedTooltip name="ИспользоватьОбменЭДРасширеннаяПодсказка" id="1817"/>
+									<Events>
+										<Event name="OnChange">ИспользоватьОбменЭДПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<LabelDecoration name="ПояснениеИспользоватьОбменЭД" id="1249">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обмен электронными документами с контрагентами, банками и между организациями.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПояснениеИспользоватьОбменЭДКонтекстноеМеню" id="1250"/>
+									<ExtendedTooltip name="ПояснениеИспользоватьОбменЭДРасширеннаяПодсказка" id="1818"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаИспользоватьЭлектронныеЦифровыеПодписи" id="1705">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать электронные цифровые подписи</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать электронные цифровые подписи</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИспользоватьЭлектронныеЦифровыеПодписиРасширеннаяПодсказка" id="1819"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьЭлектронныеЦифровыеПодписи" id="1706">
+									<DataPath>НаборКонстант.ИспользоватьЭлектронныеЦифровыеПодписи</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Электронные подписи</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьЭлектронныеЦифровыеПодписиКонтекстноеМеню" id="1707"/>
+									<ExtendedTooltip name="ИспользоватьЭлектронныеЦифровыеПодписиРасширеннаяПодсказка" id="1820"/>
+									<Events>
+										<Event name="OnChange">ИспользоватьЭлектронныеЦифровыеПодписиПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<LabelDecoration name="ПояснениеИспользоватьЭлектронныеЦифровыеПодписи" id="1708">
+									<Height>3</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Проверка отсутствия изменений файла с момента формирования электронной подписи.</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="ПояснениеИспользоватьЭлектронныеЦифровыеПодписиКонтекстноеМеню" id="1709"/>
+									<ExtendedTooltip name="ПояснениеИспользоватьЭлектронныеЦифровыеПодписиРасширеннаяПодсказка" id="1821"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаГруппаУправлениеОбменомЭД2" id="1247">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа группа управление обменом э д1</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа группа управление обменом э д1</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаГруппаУправлениеОбменомЭД2РасширеннаяПодсказка" id="1822"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаВыгружатьСФВНовомФормате2019" id="1858">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа выгружать сф в новом формате 2019</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать электронные цифровые подписи</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВыгружатьСФВНовомФормате2019РасширеннаяПодсказка" id="1859"/>
+							<ChildItems>
+								<CheckBoxField name="ВыгружатьСФВНовомФормате2019" id="1860">
+									<DataPath>НаборКонстант.ДидоксВыгружатьСФВНовомФормате2019</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выгружать счет-фактуру в новом формате 2019 г.</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВыгружатьСФВНовомФормате2019КонтекстноеМеню" id="1861"/>
+									<ExtendedTooltip name="ВыгружатьСФВНовомФормате2019РасширеннаяПодсказка" id="1862"/>
+									<Events>
+										<Event name="OnChange">ИспользоватьЭлектронныеЦифровыеПодписиПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<LabelDecoration name="ПояснениеИспользоватьЭлектронныеЦифровыеПодписи1" id="1863">
+									<Height>3</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для перехода подсистемы ЭДО на новые формы счетов-фактур действующих с 22.01.2019</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="ПояснениеИспользоватьЭлектронныеЦифровыеПодписи1КонтекстноеМеню" id="1864"/>
+									<ExtendedTooltip name="ПояснениеИспользоватьЭлектронныеЦифровыеПодписи1РасширеннаяПодсказка" id="1865"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСпособЗагрузкиОбновленийПоИсходящимДокументам" id="1251">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа способ загрузки обновлений по исходящим документам</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа способ загрузки обновлений по исходящим документам</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСпособЗагрузкиОбновленийПоИсходящимДокументамРасширеннаяПодсказка" id="1826"/>
+							<ChildItems>
+								<RadioButtonField name="СпособЗагрузкиОбновленийПоИсходящимДокументам" id="801">
+									<DataPath>НаборКонстант.ДидоксСпособЗагрузкиОбновленийПоИсходящимДокументам</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обмен электронными документами между организациями</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>Tumbler</RadioButtonType>
+									<ColumnsCount>2</ColumnsCount>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Полная загрузка</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xr:DesignTimeRef">Enum.СпособыЗагрузкиОбновленийПоИсходящимДокументам.EnumValue.ПолнаяЗагрузка</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Только статусы</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xr:DesignTimeRef">Enum.СпособыЗагрузкиОбновленийПоИсходящимДокументам.EnumValue.ТолькоСтатусы</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="СпособЗагрузкиОбновленийПоИсходящимДокументамКонтекстноеМеню" id="802"/>
+									<ExtendedTooltip name="СпособЗагрузкиОбновленийПоИсходящимДокументамРасширеннаяПодсказка" id="1827"/>
+									<Events>
+										<Event name="OnChange">СпособЗагрузкиОбновленийПоИсходящимДокументамПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+								<LabelDecoration name="ПояснениеСпособЗагрузкиОбновленийПоИсходящимДокументам" id="1252">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Полная загрузка документов - Единовременное загрузка и статусов, и подписанных с двух сторон документов. Только статусы - загрузка только статусов (при большом объеме исходящих документов).</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПояснениеСпособЗагрузкиОбновленийПоИсходящимДокументамКонтекстноеМеню" id="1253"/>
+									<ExtendedTooltip name="ПояснениеСпособЗагрузкиОбновленийПоИсходящимДокументамРасширеннаяПодсказка" id="1828"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНастройкиОбменаЭД" id="1254">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки обмена ЭД</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки обмена ЭД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>86</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНастройкиОбменаЭДРасширеннаяПодсказка" id="1829"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПомощниковПодключения" id="1255">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа помощников подключения</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа помощников подключения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>43</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПомощниковПодключенияРасширеннаяПодсказка" id="1830"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОткрытьПомощникПодключенияКСервису1СЭДО" id="1733">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа открыть помощник подключения к сервису1 СЭДО</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа открыть типовые соглашения об использовании ЭД</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОткрытьПомощникПодключенияКСервису1СЭДОРасширеннаяПодсказка" id="1831"/>
+							<ChildItems>
+								<Button name="ОткрытьПомощникПодключенияКСервисуVenkonЭДО" id="1737">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьПомощникПодключенияКСервисуVenkonЭДО</CommandName>
+									<ExtendedTooltip name="ОткрытьПомощникПодключенияКСервисуVenkonЭДОРасширеннаяПодсказка" id="1832"/>
+								</Button>
+								<LabelDecoration name="ПояснениеОткрытьПомощникПодключенияКСервисуVenkonЭДО" id="1735">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройка обмена электронными документами через сервис Venkon-ЭДО.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПояснениеОткрытьПомощникПодключенияКСервисуVenkonЭДОКонтекстноеМеню" id="1736"/>
+									<ExtendedTooltip name="ПояснениеОткрытьПомощникПодключенияКСервисуVenkonЭДОРасширеннаяПодсказка" id="1833"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаНастройкиЭД" id="1720">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки ЭД</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки ЭД</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНастройкиЭДРасширеннаяПодсказка" id="1840"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОткрытьТиповыеСоглашенияОбИспользованииЭД" id="1260">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа открыть типовые соглашения об использовании ЭД</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа открыть типовые соглашения об использовании ЭД</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОткрытьТиповыеСоглашенияОбИспользованииЭДРасширеннаяПодсказка" id="1841"/>
+							<ChildItems>
+								<Button name="ОткрытьТиповыеСоглашенияОбИспользованииЭД" id="1267">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьНастройкиПрофилейЭДО</CommandName>
+									<ExtendedTooltip name="ОткрытьТиповыеСоглашенияОбИспользованииЭДРасширеннаяПодсказка" id="1842"/>
+								</Button>
+								<LabelDecoration name="ПояснениеОткрытьТиповыеСоглашенияОбИспользованииЭД" id="1261">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройка профилей организации для обмена электронными документами.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПояснениеОткрытьТиповыеСоглашенияОбИспользованииЭДКонтекстноеМеню" id="1262"/>
+									<ExtendedTooltip name="ПояснениеОткрытьТиповыеСоглашенияОбИспользованииЭДРасширеннаяПодсказка" id="1843"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКомментарийОткрытьНастройкиОбменаЭлектроннымиДокументами" id="1681">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа комментарий открыть настройки обмена электронными документами</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа комментарий открыть настройки обмена электронными документами</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>86</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>StrongSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКомментарийОткрытьНастройкиОбменаЭлектроннымиДокументамиРасширеннаяПодсказка" id="1850"/>
+			<ChildItems>
+				<PictureDecoration name="Декорация29" id="1682">
+					<Width>2</Width>
+					<Height>1</Height>
+					<Picture>
+						<xr:Ref>CommonPicture.Информация02</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="Декорация29КонтекстноеМеню" id="1683"/>
+					<ExtendedTooltip name="Декорация29РасширеннаяПодсказка" id="1851"/>
+				</PictureDecoration>
+				<LabelDecoration name="КомментарийОткрытьНастройкиОбменаЭлектроннымиДокументами" id="1684">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Для настройки обмена электронными документами с электронными подписями необходимо включить функциональную опцию "Электронные подписи".</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КомментарийОткрытьНастройкиОбменаЭлектроннымиДокументамиКонтекстноеМеню" id="1685"/>
+					<ExtendedTooltip name="КомментарийОткрытьНастройкиОбменаЭлектроннымиДокументамиРасширеннаяПодсказка" id="1852"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПрочиеНастройкиОбменаЭД" id="1686">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа прочие настройки обмена ЭД</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа прочие настройки обмена ЭД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>86</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПрочиеНастройкиОбменаЭДРасширеннаяПодсказка" id="1853"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПрочиеНастройкиОбменаЭД1" id="1687">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа прочие настройки обмена э д1</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа прочие настройки обмена э д1</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>43</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПрочиеНастройкиОбменаЭД1РасширеннаяПодсказка" id="1854"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОтключитьНемедленнуюОтправкуЭД" id="1693">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа отключить немедленную отправку ЭД</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа отключить немедленную отправку ЭД</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОтключитьНемедленнуюОтправкуЭДРасширеннаяПодсказка" id="1855"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьОтложеннуюОтправкуЭлектронныхДокументов" id="1689">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отложенная отправка электронных документов</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьОтложеннуюОтправкуЭлектронныхДокументовКонтекстноеМеню" id="1690"/>
+									<ExtendedTooltip name="ИспользоватьОтложеннуюОтправкуЭлектронныхДокументовРасширеннаяПодсказка" id="1856"/>
+									<Events>
+										<Event name="OnChange">ОтключитьНемедленнуюОтправкуЭДПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<LabelDecoration name="ПояснениеОтключитьНемедленнуюОтправкуЭД" id="1691">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отключение немедленной отправки электронных документов при выполнении команды "Сформировать, подписать и отправить".</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПояснениеОтключитьНемедленнуюОтправкуЭДКонтекстноеМеню" id="1692"/>
+									<ExtendedTooltip name="ПояснениеОтключитьНемедленнуюОтправкуЭДРасширеннаяПодсказка" id="1857"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="РежимРаботы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим работы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ИспользоватьАвтоматическоеПолучениеЭД" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать автоматическое получение ЭД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьАвтоматическуюОтправкуЭД" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать автоматическую отправку ЭД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РасписаниеОтправкиЭД" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание отправки ЭД</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="РасписаниеПолученияЭД" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание получения ЭД</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ОповещатьОСобытияхЭДО" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оповещать о событиях ЭДО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РасписаниеНовыхЭД" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание новых ЭД</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОткрытьНастройкиПрофилейЭДО" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Профили настроек ЭДО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть профили настроек ЭДО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьНастройкиПрофилейЭДО</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьПомощникПодключенияКСервисуVenkonЭДО" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключиться к сервису Venkon-ЭДО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть помощник подключения к сервису 1С-ЭДО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьПомощникПодключенияКСервисуVenkonЭДО</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

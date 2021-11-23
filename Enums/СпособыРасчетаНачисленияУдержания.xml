@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Enum uuid="029fb199-a15e-45cf-a21c-36d5f21728ae">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.СпособыРасчетаНачисленияУдержания" category="Ref">
+				<xr:TypeId>20d3522b-7e68-4401-b575-95f1efe2ab95</xr:TypeId>
+				<xr:ValueId>d4be2729-f327-41b6-b0c8-05456db3d152</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.СпособыРасчетаНачисленияУдержания" category="Manager">
+				<xr:TypeId>d30f4c11-f8cc-4e0b-8acc-e70d8d0d7280</xr:TypeId>
+				<xr:ValueId>f68cbf6d-1f55-479b-b5e7-1774575e5a91</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.СпособыРасчетаНачисленияУдержания" category="List">
+				<xr:TypeId>088f8aae-a4d5-401d-bb7c-d2838d070d8a</xr:TypeId>
+				<xr:ValueId>6e4d16b7-8cf3-4d99-a800-4a692b12d2f4</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>СпособыРасчетаНачисленияУдержания</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способы расчета начисления удержания</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="149206d7-2a91-4e0d-801f-57b9cd02a63a">
+				<Properties>
+					<Name>Суммой</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Суммой</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="3dfc4031-88f9-4681-9cfa-c414c1f404da">
+				<Properties>
+					<Name>ПроцентОтМинимальнойЗарплаты</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Процент от минимальной зарплаты</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="2396ac54-ef99-41d5-a8d0-871eb2017202">
+				<Properties>
+					<Name>ПроцентОтОсновныхНачислений</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Процент от основных начислений</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="e81d1e66-0d3f-4793-9e4f-c79a65df5ad5">
+				<Properties>
+					<Name>ПроцентОтНачислений</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Процент от начислений</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="21fa8b5b-471b-4ccd-ab90-5eda2aff5b1f">
+				<Properties>
+					<Name>СуммойПропорциональноОтработаннымДням</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Суммой, пропорционально отработанным дням</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c7704cb3-6bc0-4d3c-b022-6eadeb9fb41a">
+				<Properties>
+					<Name>ПроцентОтНачисленийЗаМинусомПНиПФ</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Процент от начислений за минусом под. нал. и пенс. ф.</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="8e314633-7f3a-4dad-9faf-7e6d16771f25">
+				<Properties>
+					<Name>РасчетРайонногоКоэффициента</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расчет районного коэффициента</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="53c2559f-bc36-4f81-8d20-640c97ab9609">
+				<Properties>
+					<Name>ПроцентОтОсновныхНачисленийИНочных</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Процент от основных начислений и ночных</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="bb47bafa-7e4b-4b0f-a066-4d81e23290bd">
+				<Properties>
+					<Name>ПоОтработаннымДнямОтОклада</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По отработанным дням от оклада</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="eda2b058-1132-4182-a174-2286c89bd019">
+				<Properties>
+					<Name>ПроцентомОтМинимальнойЗаДеньПропорциональноОтработаннымДням</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>% от минимальной зарплаты пропорционально отработанным дням</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

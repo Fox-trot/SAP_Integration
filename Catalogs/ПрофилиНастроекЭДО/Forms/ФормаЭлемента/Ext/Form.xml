@@ -1,0 +1,629 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Copy</ExcludedCommand>
+	</CommandSet>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<ButtonGroup name="ЛокальныеКоманды" id="156">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Локальные команды</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Локальные команды</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ЛокальныеКомандыРасширеннаяПодсказка" id="185"/>
+				<ChildItems>
+					<Button name="НачальнаяДатаЗапросаДанныхУОператора" id="157">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.НачальнаяДатаЗапросаДанныхУОператора</CommandName>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="НачальнаяДатаЗапросаДанныхУОператораРасширеннаяПодсказка" id="186"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="187"/>
+			<ChildItems>
+				<InputField name="Организация" id="5">
+					<DataPath>Объект.Организация</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="189"/>
+				</InputField>
+				<UsualGroup name="ГруппаПароль" id="256">
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа пароль</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа пароль</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПарольРасширеннаяПодсказка" id="257"/>
+					<ChildItems>
+						<InputField name="Пароль" id="258">
+							<DataPath>Объект.Пароль</DataPath>
+							<ContextMenu name="ПарольКонтекстноеМеню" id="259"/>
+							<ExtendedTooltip name="ПарольРасширеннаяПодсказка" id="260"/>
+						</InputField>
+						<Button name="СменитьПароль" id="261">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ИзменитьПароль</CommandName>
+							<ExtendedTooltip name="СменитьПарольРасширеннаяПодсказка" id="262"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="КодМестонахождения" id="263">
+					<DataPath>КодМестонахождения</DataPath>
+					<ChoiceButton>true</ChoiceButton>
+					<ContextMenu name="КодМестонахожденияКонтекстноеМеню" id="264"/>
+					<ExtendedTooltip name="КодМестонахожденияРасширеннаяПодсказка" id="265"/>
+					<Events>
+						<Event name="StartChoice">КодМестонахожденияНачалоВыбора</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНастройкиУчастника" id="116">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные об участнике</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки участника</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНастройкиУчастникаРасширеннаяПодсказка" id="196"/>
+		</UsualGroup>
+		<Pages name="СтраницыПрофиляНастроекЭДО" id="128">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы профиля настроек ЭДО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы профиля настроек ЭДО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="СтраницыПрофиляНастроекЭДОРасширеннаяПодсказка" id="217"/>
+			<ChildItems>
+				<Page name="ГруппаСертификатыПодписейОрганизации" id="130">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сертификаты организации</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сертификаты подписей организации</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСертификатыПодписейОрганизацииРасширеннаяПодсказка" id="239"/>
+					<ChildItems>
+						<Table name="СертификатыПодписейОрганизации" id="7">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.СертификатыПодписейОрганизации</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+							</CommandSet>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СертификатыПодписейОрганизацииКонтекстноеМеню" id="8"/>
+							<AutoCommandBar name="СертификатыПодписейОрганизацииКоманднаяПанель" id="9">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<ButtonGroup name="СписокСертификатовГруппаЛокальныхКоманд" id="125">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Список сертификатов группа локальных команд</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Список сертификатов группа локальных команд</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="СписокСертификатовГруппаЛокальныхКомандРасширеннаяПодсказка" id="240"/>
+										<ChildItems>
+											<Button name="СписокСертификатовДобавитьСертификат" id="126">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ДобавитьСертификат</CommandName>
+												<ExtendedTooltip name="СписокСертификатовДобавитьСертификатРасширеннаяПодсказка" id="241"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="СписокСертификатовГруппаСтандартныхКоманд" id="127">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Список сертификатов группа стандартных команд</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Список сертификатов группа стандартных команд</v8:content>
+											</v8:item>
+										</ToolTip>
+										<CommandSource>Item.СертификатыПодписейОрганизации</CommandSource>
+										<ExtendedTooltip name="СписокСертификатовГруппаСтандартныхКомандРасширеннаяПодсказка" id="242"/>
+									</ButtonGroup>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СертификатыПодписейОрганизацииРасширеннаяПодсказка" id="243"/>
+							<SearchStringAddition name="СертификатыПодписейОрганизацииСтрокаПоиска" id="244">
+								<AdditionSource>
+									<Item>СертификатыПодписейОрганизации</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СертификатыПодписейОрганизацииСтрокаПоискаКонтекстноеМеню" id="245"/>
+								<ExtendedTooltip name="СертификатыПодписейОрганизацииСтрокаПоискаРасширеннаяПодсказка" id="246"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СертификатыПодписейОрганизацииСостояниеПросмотра" id="247">
+								<AdditionSource>
+									<Item>СертификатыПодписейОрганизации</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СертификатыПодписейОрганизацииСостояниеПросмотраКонтекстноеМеню" id="248"/>
+								<ExtendedTooltip name="СертификатыПодписейОрганизацииСостояниеПросмотраРасширеннаяПодсказка" id="249"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СертификатыПодписейОрганизацииУправлениеПоиском" id="250">
+								<AdditionSource>
+									<Item>СертификатыПодписейОрганизации</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СертификатыПодписейОрганизацииУправлениеПоискомКонтекстноеМеню" id="251"/>
+								<ExtendedTooltip name="СертификатыПодписейОрганизацииУправлениеПоискомРасширеннаяПодсказка" id="252"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">СертификатыПодписейОрганизацииВыбор</Event>
+								<Event name="BeforeAddRow">СертификатыПодписейОрганизацииПередНачаломДобавления</Event>
+								<Event name="BeforeRowChange">СертификатыПодписейОрганизацииПередНачаломИзменения</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="СертификатыПодписейОрганизацииНомерСтроки" id="10">
+									<DataPath>Объект.СертификатыПодписейОрганизации.LineNumber</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СертификатыПодписейОрганизацииНомерСтрокиКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="СертификатыПодписейОрганизацииНомерСтрокиРасширеннаяПодсказка" id="253"/>
+								</LabelField>
+								<InputField name="СертификатыПодписейОрганизацииСертификат" id="12">
+									<DataPath>Объект.СертификатыПодписейОрганизации.Сертификат</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сертификат, используемый в ЭДО</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СертификатыПодписейОрганизацииСертификатКонтекстноеМеню" id="13"/>
+									<ExtendedTooltip name="СертификатыПодписейОрганизацииСертификатРасширеннаяПодсказка" id="254"/>
+								</InputField>
+								<LabelField name="СертификатыПодписейОрганизацииСертификатДатаОкончания" id="159">
+									<DataPath>Объект.СертификатыПодписейОрганизации.Сертификат.ДатаОкончания</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Действителен до</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СертификатыПодписейОрганизацииСертификатДатаОкончанияКонтекстноеМеню" id="160"/>
+									<ExtendedTooltip name="СертификатыПодписейОрганизацииСертификатДатаОкончанияРасширеннаяПодсказка" id="255"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ПрофилиНастроекЭДО</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<Columns>
+				<AdditionalColumns table="Объект.СертификатыПодписейОрганизации">
+					<Column name="Действует" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Действует</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="Объект.ИсходящиеДокументы">
+					<Column name="РегламентЭДО" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Регламент ЭДО</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>150</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="FTPКаталогВходящихДокументов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>FTPКаталог входящих документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ЭлектроннаяПочтаОрганизации" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Электронная почта организации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КаталогВходящихДокументов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог входящих документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КонтролироватьСодержимоеНастроекЭД" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контролировать содержимое настроек ЭД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДобавляемыйСертификат" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавляемый сертификат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СертификатыЭЦП</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="УникальныйИдентификаторЗаявки1СЭДО" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уникальный идентификатор заявки1С ЭДО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>36</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="УведомлятьОСобытиях" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уведомлять о событиях</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОчиститьРегистрНовыеДокументы" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить регистр новые документы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СинхронизироватьСертификаты1СЭДО" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синхронизировать сертификаты 1С-ЭДО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПодключениеВыполнено" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключение выполнено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КодМестонахождения" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код местонахождения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>4</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СертификатыПодписейОрганизации</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.СертификатыПодписейОрганизации.Действует</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ИсходящиеДокументыВерсияФормата</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>NotGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>AndGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Объект.ИсходящиеДокументы.ИсходящийДокумент</dcsset:left>
+								<dcsset:comparisonType>InList</dcsset:comparisonType>
+								<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыЭД.ЗаказТовара</dcsset:right>
+								<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыЭД.КаталогТоваров</dcsset:right>
+								<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыЭД.ОтветНаЗаказ</dcsset:right>
+								<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыЭД.ОтчетОПродажахКомиссионногоТовара</dcsset:right>
+								<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыЭД.ОтчетОСписанииКомиссионногоТовара</dcsset:right>
+								<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыЭД.ПрайсЛист</dcsset:right>
+								<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыЭД.СчетНаОплату</dcsset:right>
+								<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыЭД.ТОРГ12Продавец</dcsset:right>
+								<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыЭД.АктИсполнитель</dcsset:right>
+								<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыЭД.АктНаПередачуПрав</dcsset:right>
+								<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыЭД.СчетФактура</dcsset:right>
+								<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыЭД.КорректировочныйСчетФактура</dcsset:right>
+								<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыЭД.СоглашениеОбИзмененииСтоимостиОтправитель</dcsset:right>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Объект.ИсходящиеДокументы.Формировать</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#C0C0C0</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ИсходящиеДокументыВерсияФормата</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ИсходящиеДокументы.ИсходящийДокумент</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыЭД.ПроизвольныйЭД</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">Произвольный электронный документ</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьСертификат" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить сертификат</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьСертификат</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НачальнаяДатаЗапросаДанныхУОператора" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начальная дата запроса данных у оператора ЭДО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начальная дата запроса данных у оператора</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Change</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>НачальнаяДатаЗапросаДанныхУОператора</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИзменитьПароль" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить пароль</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить пароль</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьПароль</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>
