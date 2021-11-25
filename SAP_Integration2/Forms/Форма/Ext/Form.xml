@@ -1238,13 +1238,26 @@
 					<ChildItems>
 						<InputField name="Организация" id="631">
 							<DataPath>Объект.Организация</DataPath>
+							<ReadOnly>true</ReadOnly>
 							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="632"/>
 							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="633"/>
+						</InputField>
+						<InputField name="НацВалюта" id="637">
+							<DataPath>Объект.НацВалюта</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="НацВалютаКонтекстноеМеню" id="638"/>
+							<ExtendedTooltip name="НацВалютаРасширеннаяПодсказка" id="639"/>
 						</InputField>
 						<InputField name="Ответственный" id="634">
 							<DataPath>Объект.Ответственный</DataPath>
 							<ContextMenu name="ОтветственныйКонтекстноеМеню" id="635"/>
 							<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="636"/>
+						</InputField>
+						<InputField name="ИмяСервера" id="640">
+							<DataPath>Объект.ИмяСервера</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ИмяСервераКонтекстноеМеню" id="641"/>
+							<ExtendedTooltip name="ИмяСервераРасширеннаяПодсказка" id="642"/>
 						</InputField>
 					</ChildItems>
 				</Page>
