@@ -1259,6 +1259,12 @@
 							<ContextMenu name="ИмяСервераКонтекстноеМеню" id="641"/>
 							<ExtendedTooltip name="ИмяСервераРасширеннаяПодсказка" id="642"/>
 						</InputField>
+						<CheckBoxField name="ЭтотТест" id="643">
+							<DataPath>Объект.ЭтотТест</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЭтотТестКонтекстноеМеню" id="644"/>
+							<ExtendedTooltip name="ЭтотТестРасширеннаяПодсказка" id="645"/>
+						</CheckBoxField>
 					</ChildItems>
 				</Page>
 			</ChildItems>
@@ -1270,6 +1276,9 @@
 				<v8:Type>cfg:ExternalDataProcessorObject.SAP_Integration2</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>Объект.ЭтотТест</Field>
+			</Save>
 		</Attribute>
 		<Attribute name="Ответ" id="3">
 			<Title>
