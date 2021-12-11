@@ -8,7 +8,6 @@
 		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 		xmlns:xsd1="urn:sap-com:document:sap:rfc:functions"
 		targetNamespace="urn:sap-com:document:sap:rfc:functions">
-	<documentation> </documentation>
 	<types>
 		<xsd:schema xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
 				xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
@@ -200,7 +199,7 @@
 				element="tns:ZFI_011_RFC_OZBEKISTAN_RTRN"/>
 	</message>
 	<message name="ZFI_011_RFC_OZBEKISTAN_RTRNResponse">
-		<part name="parameters"
+		<part name="parameter"
 				element="tns:ZFI_011_RFC_OZBEKISTAN_RTRNResponse"/>
 	</message>
 	<message name="ZFI_011_RFC_OZBEKISTAN">
@@ -208,7 +207,7 @@
 				element="tns:ZFI_011_RFC_OZBEKISTAN"/>
 	</message>
 	<message name="ZFI_011_RFC_OZBEKISTANResponse">
-		<part name="parameters"
+		<part name="parameter"
 				element="tns:ZFI_011_RFC_OZBEKISTANResponse"/>
 	</message>
 	<portType name="ZFI_011_FG_1C">
@@ -279,11 +278,11 @@
 	<service name="ZFI_011_FG_1C">
 		<port name="ZFI_011_FG_1C"
 				binding="tns:ZFI_011_FG_1C">
-			<soapbind:address location="http://176.88.5.98:8000/sap/bc/srt/rfc/sap/zfi_011_fg_1c/200/zfi_011_fg_1c/zfi_011_fg_1c"/>
+			<soapbind:address location="http://AFERPAEQA1.asfarma.local:8000/sap/bc/srt/rfc/sap/zfi_011_fg_1c/100/zfi_011_fg_1c/zfi_011_fg_1c"/>
 		</port>
 		<port name="ZFI_011_FG_1C_soap12"
 				binding="tns:ZFI_011_FG_1C_soap12">
-			<soap12bind:address location="http://176.88.5.98:8000/sap/bc/srt/rfc/sap/zfi_011_fg_1c/200/zfi_011_fg_1c/zfi_011_fg_1c"/>
+			<soap12bind:address location="http://AFERPAEQA1.asfarma.local:8000/sap/bc/srt/rfc/sap/zfi_011_fg_1c/100/zfi_011_fg_1c/zfi_011_fg_1c"/>
 		</port>
 	</service>
 </definitions>
