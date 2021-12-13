@@ -8,7 +8,6 @@
 		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 		xmlns:xsd1="urn:sap-com:document:sap:rfc:functions"
 		targetNamespace="urn:sap-com:document:sap:rfc:functions">
-	<documentation> </documentation>
 	<types>
 		<xsd:schema xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
 				xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
@@ -68,6 +67,12 @@
 				<xsd:restriction base="xsd:string">
 					<xsd:maxLength value="10"/>
 					<xsd:pattern value="\d\d\d\d-\d\d-\d\d"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="decimal24.9">
+				<xsd:restriction base="xsd:decimal">
+					<xsd:totalDigits value="24"/>
+					<xsd:fractionDigits value="9"/>
 				</xsd:restriction>
 			</xsd:simpleType>
 			<xsd:simpleType name="numeric6">
@@ -136,13 +141,19 @@
 					<xsd:element name="COST"
 							type="xsd1:curr13.2"/>
 					<xsd:element name="PROFITMARJIN"
-							type="xsd1:curr13.2"/>
+							type="xsd1:decimal24.9"/>
 					<xsd:element name="SELPRICE"
 							type="xsd1:curr15.2"/>
 					<xsd:element name="TOTALPRICE"
 							type="xsd1:curr15.2"/>
 					<xsd:element name="CURRUNIT"
 							type="xsd1:cuky5"/>
+					<xsd:element name="TOTALDISC"
+							type="xsd1:curr13.2"/>
+					<xsd:element name="FINDISC"
+							type="xsd1:decimal24.9"/>
+					<xsd:element name="KDV"
+							type="xsd1:decimal24.9"/>
 				</xsd:sequence>
 			</xsd:complexType>
 			<xsd:complexType name="ZSD_010_S_OZB_IADE_TES_LOG">

@@ -8,7 +8,6 @@
 		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 		xmlns:xsd1="urn:sap-com:document:sap:rfc:functions"
 		targetNamespace="urn:sap-com:document:sap:rfc:functions">
-	<documentation> </documentation>
 	<types>
 		<xsd:schema xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
 				xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
@@ -25,6 +24,11 @@
 			<xsd:simpleType name="char10">
 				<xsd:restriction base="xsd:string">
 					<xsd:maxLength value="10"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char11">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="11"/>
 				</xsd:restriction>
 			</xsd:simpleType>
 			<xsd:simpleType name="char4">
@@ -132,6 +136,8 @@
 							type="xsd1:curr15.2"/>
 					<xsd:element name="CURRUNIT"
 							type="xsd1:cuky5"/>
+					<xsd:element name="VKN"
+							type="xsd1:char11"/>
 				</xsd:sequence>
 			</xsd:complexType>
 			<xsd:complexType name="ZSD_011_S_OZB_FAT_IA_DEKON_LOG">
