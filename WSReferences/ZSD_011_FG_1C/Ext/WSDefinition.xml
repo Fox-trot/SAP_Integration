@@ -69,6 +69,12 @@
 					<xsd:pattern value="\d\d\d\d-\d\d-\d\d"/>
 				</xsd:restriction>
 			</xsd:simpleType>
+			<xsd:simpleType name="decimal24.9">
+				<xsd:restriction base="xsd:decimal">
+					<xsd:totalDigits value="24"/>
+					<xsd:fractionDigits value="9"/>
+				</xsd:restriction>
+			</xsd:simpleType>
 			<xsd:simpleType name="numeric6">
 				<xsd:restriction base="xsd:string">
 					<xsd:maxLength value="6"/>
@@ -129,7 +135,7 @@
 					<xsd:element name="COST"
 							type="xsd1:curr13.2"/>
 					<xsd:element name="PROFITMARJIN"
-							type="xsd1:curr13.2"/>
+							type="xsd1:decimal24.9"/>
 					<xsd:element name="SELPRICE"
 							type="xsd1:curr15.2"/>
 					<xsd:element name="TOTALPRICE"
@@ -138,6 +144,12 @@
 							type="xsd1:cuky5"/>
 					<xsd:element name="VKN"
 							type="xsd1:char11"/>
+					<xsd:element name="TOTALDISC"
+							type="xsd1:curr13.2"/>
+					<xsd:element name="FINDISC"
+							type="xsd1:decimal24.9"/>
+					<xsd:element name="KDV"
+							type="xsd1:decimal24.9"/>
 				</xsd:sequence>
 			</xsd:complexType>
 			<xsd:complexType name="ZSD_011_S_OZB_FAT_IA_DEKON_LOG">
