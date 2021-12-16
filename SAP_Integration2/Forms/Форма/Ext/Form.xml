@@ -39,6 +39,11 @@
 										<CommandName>Form.Command.КомандаПоступлениеНоменклатурыСоздать</CommandName>
 										<ExtendedTooltip name="ZMM_000_S_1C_ENTEGRASYON_LISTКомандаПоступлениеНоменклатурыСоздатьРасширеннаяПодсказка" id="628"/>
 									</Button>
+									<Button name="ZMM_000_S_1C_ENTEGRASYON_LISTZMM_000_FM_1C_FATURA_LIST_RTRN" id="702">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ZMM_000_FM_1C_FATURA_LIST_RTRN</CommandName>
+										<ExtendedTooltip name="ZMM_000_S_1C_ENTEGRASYON_LISTZMM_000_FM_1C_FATURA_LIST_RTRNРасширеннаяПодсказка" id="703"/>
+									</Button>
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="ZMM_000_S_1C_ENTEGRASYON_LISTРасширеннаяПодсказка" id="514"/>
@@ -1647,6 +1652,7 @@
 					<v8:content>ZSD 010 RFC OZB FAT i a DEKONT</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Shortcut>F5</Shortcut>
 			<Picture>
 				<xr:Ref>StdPicture.Refresh</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
@@ -1687,6 +1693,7 @@
 					<v8:content>ZMM 000 f m 1 c FATURA LISTESI</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Shortcut>F5</Shortcut>
 			<Picture>
 				<xr:Ref>StdPicture.Refresh</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
@@ -1813,6 +1820,27 @@
 			<Action>УслугиСтороннихСоздать</Action>
 			<Representation>TextPicture</Representation>
 			<AssociatedTableElementId xsi:type="xs:string">ZFI_011_FG_1C</AssociatedTableElementId>
+		</Command>
+		<Command name="ZMM_000_FM_1C_FATURA_LIST_RTRN" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подтвердить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ZMM 000 f m 1 c FATURA LIST RTRN</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.AppearanceCheckBox</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ZMM_000_FM_1C_FATURA_LIST_RTRN</Action>
+			<Representation>TextPicture</Representation>
+			<AssociatedTableElementId xsi:type="xs:string">ZMM_000_S_1C_ENTEGRASYON_LIST</AssociatedTableElementId>
 		</Command>
 	</Commands>
 </Form>
