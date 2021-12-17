@@ -556,6 +556,13 @@
 									<ContextMenu name="ZFI_011_FG_1CFDOCNOКонтекстноеМеню" id="299"/>
 									<ExtendedTooltip name="ZFI_011_FG_1CFDOCNOРасширеннаяПодсказка" id="300"/>
 								</InputField>
+								<InputField name="ZFI_011_FG_1CDOCTYP" id="704">
+									<DataPath>Объект.ZFI_011_FG_1C.DOCTYP</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZFI_011_FG_1CDOCTYPКонтекстноеМеню" id="705"/>
+									<ExtendedTooltip name="ZFI_011_FG_1CDOCTYPРасширеннаяПодсказка" id="706"/>
+								</InputField>
 								<InputField name="ZFI_011_FG_1CFDOCTYP_DESC" id="301">
 									<DataPath>Объект.ZFI_011_FG_1C.DOCTYP_DESC</DataPath>
 									<ReadOnly>true</ReadOnly>
@@ -681,6 +688,13 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ZFI_011_FG_1CFAMOUNT_COMPANYCODECURRКонтекстноеМеню" id="353"/>
 									<ExtendedTooltip name="ZFI_011_FG_1CFAMOUNT_COMPANYCODECURRРасширеннаяПодсказка" id="354"/>
+								</InputField>
+								<InputField name="ZFI_011_FG_1CTAXNO" id="707">
+									<DataPath>Объект.ZFI_011_FG_1C.TAXNO</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZFI_011_FG_1CTAXNOКонтекстноеМеню" id="708"/>
+									<ExtendedTooltip name="ZFI_011_FG_1CTAXNOРасширеннаяПодсказка" id="709"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -1630,6 +1644,7 @@
 					<v8:content>ZSD_010_RFC_OZB_IADE_TES</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Shortcut>F5</Shortcut>
 			<Picture>
 				<xr:Ref>StdPicture.Refresh</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
@@ -1673,6 +1688,7 @@
 					<v8:content>ZFI 011 RFC OZBEKISTAN2</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Shortcut>F5</Shortcut>
 			<Picture>
 				<xr:Ref>StdPicture.Refresh</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
