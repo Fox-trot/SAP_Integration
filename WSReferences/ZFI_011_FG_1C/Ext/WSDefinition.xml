@@ -26,6 +26,16 @@
 					<xsd:maxLength value="10"/>
 				</xsd:restriction>
 			</xsd:simpleType>
+			<xsd:simpleType name="char16">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="16"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char2">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="2"/>
+				</xsd:restriction>
+			</xsd:simpleType>
 			<xsd:simpleType name="char20">
 				<xsd:restriction base="xsd:string">
 					<xsd:maxLength value="20"/>
@@ -109,6 +119,8 @@
 				<xsd:sequence>
 					<xsd:element name="DOCNO"
 							type="xsd1:char10"/>
+					<xsd:element name="DOCTYP"
+							type="xsd1:char2"/>
 					<xsd:element name="DOCTYP_DESC"
 							type="xsd1:char20"/>
 					<xsd:element name="PERIOD_YEAR"
@@ -145,6 +157,8 @@
 							type="xsd1:curr23.2"/>
 					<xsd:element name="AMOUNT_COMPANYCODECURR"
 							type="xsd1:curr23.2"/>
+					<xsd:element name="TAXNO"
+							type="xsd1:char16"/>
 				</xsd:sequence>
 			</xsd:complexType>
 			<xsd:complexType name="ZFI_011_TT_1C_LOG">
