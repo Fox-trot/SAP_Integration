@@ -9,6 +9,232 @@
 		<Pages name="Группа1" id="11">
 			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="12"/>
 			<ChildItems>
+				<Page name="Группа6" id="280">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ZFI_011_RFC_OZBEKISTAN</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ZFI_011_RFC_OZBEKISTAN</v8:content>
+						</v8:item>
+					</ToolTip>
+					<TitleDataPath>1/0:0935e089-d679-4187-b8a7-e39db3521a71/100000000</TitleDataPath>
+					<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="281"/>
+					<ChildItems>
+						<Table name="ZFI_011_FG_1C" id="282">
+							<ChangeRowSet>false</ChangeRowSet>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ZFI_011_FG_1C</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ZFI_011_FG_1CКонтекстноеМеню" id="283"/>
+							<AutoCommandBar name="ZFI_011_FG_1CКоманднаяПанель" id="284">
+								<ChildItems>
+									<Button name="ZFI_011_FG_1CFZFI_011_RFC_OZBEKISTAN2" id="355">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ZFI_011_RFC_OZBEKISTAN2</CommandName>
+										<ExtendedTooltip name="ZFI_011_FG_1CFZFI_011_RFC_OZBEKISTAN2РасширеннаяПодсказка" id="356"/>
+									</Button>
+									<Button name="ZFI_011_FG_1CУслугиСтороннихСоздать" id="679">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УслугиСтороннихСоздать</CommandName>
+										<ExtendedTooltip name="ZFI_011_FG_1CУслугиСтороннихСоздатьРасширеннаяПодсказка" id="680"/>
+									</Button>
+									<Button name="ZFI_011_FG_1CZFI_011_RFC_OZBEKISTAN_RTRN" id="710">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ZFI_011_RFC_OZBEKISTAN_RTRN</CommandName>
+										<ExtendedTooltip name="ZFI_011_FG_1CZFI_011_RFC_OZBEKISTAN_RTRNРасширеннаяПодсказка" id="711"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ZFI_011_FG_1CРасширеннаяПодсказка" id="285"/>
+							<SearchStringAddition name="ZFI_011_FG_1CСтрокаПоиска" id="286">
+								<AdditionSource>
+									<Item>ZFI_011_FG_1C</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ZFI_011_FG_1CСтрокаПоискаКонтекстноеМеню" id="287"/>
+								<ExtendedTooltip name="ZFI_011_FG_1CСтрокаПоискаРасширеннаяПодсказка" id="288"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ZFI_011_FG_1CСостояниеПросмотра" id="289">
+								<AdditionSource>
+									<Item>ZFI_011_FG_1C</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ZFI_011_FG_1CСостояниеПросмотраКонтекстноеМеню" id="290"/>
+								<ExtendedTooltip name="ZFI_011_FG_1CСостояниеПросмотраРасширеннаяПодсказка" id="291"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ZFI_011_FG_1CУправлениеПоиском" id="292">
+								<AdditionSource>
+									<Item>ZFI_011_FG_1C</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ZFI_011_FG_1CУправлениеПоискомКонтекстноеМеню" id="293"/>
+								<ExtendedTooltip name="ZFI_011_FG_1CУправлениеПоискомРасширеннаяПодсказка" id="294"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ZFI_011_FG_1CFНомерСтроки" id="295">
+									<DataPath>Объект.ZFI_011_FG_1C.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZFI_011_FG_1CFНомерСтрокиКонтекстноеМеню" id="296"/>
+									<ExtendedTooltip name="ZFI_011_FG_1CFНомерСтрокиРасширеннаяПодсказка" id="297"/>
+								</LabelField>
+								<InputField name="ZFI_011_FG_1CFDOCNO" id="298">
+									<DataPath>Объект.ZFI_011_FG_1C.DOCNO</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZFI_011_FG_1CFDOCNOКонтекстноеМеню" id="299"/>
+									<ExtendedTooltip name="ZFI_011_FG_1CFDOCNOРасширеннаяПодсказка" id="300"/>
+								</InputField>
+								<InputField name="ZFI_011_FG_1CDOCTYP" id="704">
+									<DataPath>Объект.ZFI_011_FG_1C.DOCTYP</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZFI_011_FG_1CDOCTYPКонтекстноеМеню" id="705"/>
+									<ExtendedTooltip name="ZFI_011_FG_1CDOCTYPРасширеннаяПодсказка" id="706"/>
+								</InputField>
+								<InputField name="ZFI_011_FG_1CFDOCTYP_DESC" id="301">
+									<DataPath>Объект.ZFI_011_FG_1C.DOCTYP_DESC</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZFI_011_FG_1CFDOCTYP_DESCКонтекстноеМеню" id="302"/>
+									<ExtendedTooltip name="ZFI_011_FG_1CFDOCTYP_DESCРасширеннаяПодсказка" id="303"/>
+								</InputField>
+								<InputField name="ZFI_011_FG_1CFPERIOD_YEAR" id="304">
+									<DataPath>Объект.ZFI_011_FG_1C.PERIOD_YEAR</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZFI_011_FG_1CFPERIOD_YEARКонтекстноеМеню" id="305"/>
+									<ExtendedTooltip name="ZFI_011_FG_1CFPERIOD_YEARРасширеннаяПодсказка" id="306"/>
+								</InputField>
+								<InputField name="ZFI_011_FG_1CFPOSTDATE" id="307">
+									<DataPath>Объект.ZFI_011_FG_1C.POSTDATE</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZFI_011_FG_1CFPOSTDATEКонтекстноеМеню" id="308"/>
+									<ExtendedTooltip name="ZFI_011_FG_1CFPOSTDATEРасширеннаяПодсказка" id="309"/>
+								</InputField>
+								<InputField name="ZFI_011_FG_1CFDOCDATE" id="310">
+									<DataPath>Объект.ZFI_011_FG_1C.DOCDATE</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZFI_011_FG_1CFDOCDATEКонтекстноеМеню" id="311"/>
+									<ExtendedTooltip name="ZFI_011_FG_1CFDOCDATEРасширеннаяПодсказка" id="312"/>
+								</InputField>
+								<InputField name="ZFI_011_FG_1CFCURRENCY" id="313">
+									<DataPath>Объект.ZFI_011_FG_1C.CURRENCY</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZFI_011_FG_1CFCURRENCYКонтекстноеМеню" id="314"/>
+									<ExtendedTooltip name="ZFI_011_FG_1CFCURRENCYРасширеннаяПодсказка" id="315"/>
+								</InputField>
+								<InputField name="ZFI_011_FG_1CFREFBELNO" id="316">
+									<DataPath>Объект.ZFI_011_FG_1C.REFBELNO</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZFI_011_FG_1CFREFBELNOКонтекстноеМеню" id="317"/>
+									<ExtendedTooltip name="ZFI_011_FG_1CFREFBELNOРасширеннаяПодсказка" id="318"/>
+								</InputField>
+								<InputField name="ZFI_011_FG_1CFEXCRATE" id="319">
+									<DataPath>Объект.ZFI_011_FG_1C.EXCRATE</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZFI_011_FG_1CFEXCRATEКонтекстноеМеню" id="320"/>
+									<ExtendedTooltip name="ZFI_011_FG_1CFEXCRATEРасширеннаяПодсказка" id="321"/>
+								</InputField>
+								<InputField name="ZFI_011_FG_1CFXREVERSED" id="322">
+									<DataPath>Объект.ZFI_011_FG_1C.XREVERSED</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZFI_011_FG_1CFXREVERSEDКонтекстноеМеню" id="323"/>
+									<ExtendedTooltip name="ZFI_011_FG_1CFXREVERSEDРасширеннаяПодсказка" id="324"/>
+								</InputField>
+								<InputField name="ZFI_011_FG_1CFXREVERSING" id="325">
+									<DataPath>Объект.ZFI_011_FG_1C.XREVERSING</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZFI_011_FG_1CFXREVERSINGКонтекстноеМеню" id="326"/>
+									<ExtendedTooltip name="ZFI_011_FG_1CFXREVERSINGРасширеннаяПодсказка" id="327"/>
+								</InputField>
+								<InputField name="ZFI_011_FG_1CFREFDOCNO_TOREVERSE" id="328">
+									<DataPath>Объект.ZFI_011_FG_1C.REFDOCNO_TOREVERSE</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZFI_011_FG_1CFREFDOCNO_TOREVERSEКонтекстноеМеню" id="329"/>
+									<ExtendedTooltip name="ZFI_011_FG_1CFREFDOCNO_TOREVERSEРасширеннаяПодсказка" id="330"/>
+								</InputField>
+								<InputField name="ZFI_011_FG_1CFPOSTITEMFORLEDGER" id="331">
+									<DataPath>Объект.ZFI_011_FG_1C.POSTITEMFORLEDGER</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZFI_011_FG_1CFPOSTITEMFORLEDGERКонтекстноеМеню" id="332"/>
+									<ExtendedTooltip name="ZFI_011_FG_1CFPOSTITEMFORLEDGERРасширеннаяПодсказка" id="333"/>
+								</InputField>
+								<InputField name="ZFI_011_FG_1CFALT_ACCNO" id="334">
+									<DataPath>Объект.ZFI_011_FG_1C.ALT_ACCNO</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZFI_011_FG_1CFALT_ACCNOКонтекстноеМеню" id="335"/>
+									<ExtendedTooltip name="ZFI_011_FG_1CFALT_ACCNOРасширеннаяПодсказка" id="336"/>
+								</InputField>
+								<InputField name="ZFI_011_FG_1CFGLACC_TEXT" id="337">
+									<DataPath>Объект.ZFI_011_FG_1C.GLACC_TEXT</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZFI_011_FG_1CFGLACC_TEXTКонтекстноеМеню" id="338"/>
+									<ExtendedTooltip name="ZFI_011_FG_1CFGLACC_TEXTРасширеннаяПодсказка" id="339"/>
+								</InputField>
+								<InputField name="ZFI_011_FG_1CFVENDOR" id="340">
+									<DataPath>Объект.ZFI_011_FG_1C.VENDOR</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZFI_011_FG_1CFVENDORКонтекстноеМеню" id="341"/>
+									<ExtendedTooltip name="ZFI_011_FG_1CFVENDORРасширеннаяПодсказка" id="342"/>
+								</InputField>
+								<InputField name="ZFI_011_FG_1CFCUSTOMER" id="343">
+									<DataPath>Объект.ZFI_011_FG_1C.CUSTOMER</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZFI_011_FG_1CFCUSTOMERКонтекстноеМеню" id="344"/>
+									<ExtendedTooltip name="ZFI_011_FG_1CFCUSTOMERРасширеннаяПодсказка" id="345"/>
+								</InputField>
+								<InputField name="ZFI_011_FG_1CFASSET_DESC" id="346">
+									<DataPath>Объект.ZFI_011_FG_1C.ASSET_DESC</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZFI_011_FG_1CFASSET_DESCКонтекстноеМеню" id="347"/>
+									<ExtendedTooltip name="ZFI_011_FG_1CFASSET_DESCРасширеннаяПодсказка" id="348"/>
+								</InputField>
+								<InputField name="ZFI_011_FG_1CFAMOUNT_TRANSACTIONCURR" id="349">
+									<DataPath>Объект.ZFI_011_FG_1C.AMOUNT_TRANSACTIONCURR</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZFI_011_FG_1CFAMOUNT_TRANSACTIONCURRКонтекстноеМеню" id="350"/>
+									<ExtendedTooltip name="ZFI_011_FG_1CFAMOUNT_TRANSACTIONCURRРасширеннаяПодсказка" id="351"/>
+								</InputField>
+								<InputField name="ZFI_011_FG_1CFAMOUNT_COMPANYCODECURR" id="352">
+									<DataPath>Объект.ZFI_011_FG_1C.AMOUNT_COMPANYCODECURR</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZFI_011_FG_1CFAMOUNT_COMPANYCODECURRКонтекстноеМеню" id="353"/>
+									<ExtendedTooltip name="ZFI_011_FG_1CFAMOUNT_COMPANYCODECURRРасширеннаяПодсказка" id="354"/>
+								</InputField>
+								<InputField name="ZFI_011_FG_1CTAXNO" id="707">
+									<DataPath>Объект.ZFI_011_FG_1C.TAXNO</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZFI_011_FG_1CTAXNOКонтекстноеМеню" id="708"/>
+									<ExtendedTooltip name="ZFI_011_FG_1CTAXNOРасширеннаяПодсказка" id="709"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
 				<Page name="Группа7" id="357">
 					<Title>
 						<v8:item>
@@ -21,6 +247,7 @@
 					<ChildItems>
 						<Table name="ZMM_000_S_1C_ENTEGRASYON_LIST" id="511">
 							<ChangeRowSet>false</ChangeRowSet>
+							<Footer>true</Footer>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -145,6 +372,7 @@
 									<DataPath>Объект.ZMM_000_S_1C_ENTEGRASYON_LIST.MIKTAR</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.ZMM_000_S_1C_ENTEGRASYON_LIST.MIKTAR</FooterDataPath>
 									<ContextMenu name="ZMM_000_S_1C_ENTEGRASYON_LISTMIKTARКонтекстноеМеню" id="555"/>
 									<ExtendedTooltip name="ZMM_000_S_1C_ENTEGRASYON_LISTMIKTARРасширеннаяПодсказка" id="556"/>
 								</InputField>
@@ -159,15 +387,9 @@
 									<DataPath>Объект.ZMM_000_S_1C_ENTEGRASYON_LIST.TUTAR</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.ZMM_000_S_1C_ENTEGRASYON_LIST.TUTAR</FooterDataPath>
 									<ContextMenu name="ZMM_000_S_1C_ENTEGRASYON_LISTTUTARКонтекстноеМеню" id="561"/>
 									<ExtendedTooltip name="ZMM_000_S_1C_ENTEGRASYON_LISTTUTARРасширеннаяПодсказка" id="562"/>
-								</InputField>
-								<InputField name="ZMM_000_S_1C_ENTEGRASYON_LISTPARA_BIRIMI" id="563">
-									<DataPath>Объект.ZMM_000_S_1C_ENTEGRASYON_LIST.PARA_BIRIMI</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ZMM_000_S_1C_ENTEGRASYON_LISTPARA_BIRIMIКонтекстноеМеню" id="564"/>
-									<ExtendedTooltip name="ZMM_000_S_1C_ENTEGRASYON_LISTPARA_BIRIMIРасширеннаяПодсказка" id="565"/>
 								</InputField>
 								<InputField name="ZMM_000_S_1C_ENTEGRASYON_LISTFATURA_BELGE_NO" id="566">
 									<DataPath>Объект.ZMM_000_S_1C_ENTEGRASYON_LIST.FATURA_BELGE_NO</DataPath>
@@ -187,6 +409,7 @@
 									<DataPath>Объект.ZMM_000_S_1C_ENTEGRASYON_LIST.VERGI_TUTAR</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.ZMM_000_S_1C_ENTEGRASYON_LIST.TOPLAM_TUTAR</FooterDataPath>
 									<ContextMenu name="ZMM_000_S_1C_ENTEGRASYON_LISTVERGI_TUTARКонтекстноеМеню" id="573"/>
 									<ExtendedTooltip name="ZMM_000_S_1C_ENTEGRASYON_LISTVERGI_TUTARРасширеннаяПодсказка" id="574"/>
 								</InputField>
@@ -194,6 +417,7 @@
 									<DataPath>Объект.ZMM_000_S_1C_ENTEGRASYON_LIST.TOPLAM_TUTAR</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.ZMM_000_S_1C_ENTEGRASYON_LIST.TOPLAM_TUTAR</FooterDataPath>
 									<ContextMenu name="ZMM_000_S_1C_ENTEGRASYON_LISTTOPLAM_TUTARКонтекстноеМеню" id="576"/>
 									<ExtendedTooltip name="ZMM_000_S_1C_ENTEGRASYON_LISTTOPLAM_TUTARРасширеннаяПодсказка" id="577"/>
 								</InputField>
@@ -287,6 +511,28 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ZMM_000_S_1C_ENTEGRASYON_LISTTERS_KAYIT_BELGE_YILКонтекстноеМеню" id="615"/>
 									<ExtendedTooltip name="ZMM_000_S_1C_ENTEGRASYON_LISTTERS_KAYIT_BELGE_YILРасширеннаяПодсказка" id="616"/>
+								</InputField>
+								<InputField name="ZMM_000_S_1C_ENTEGRASYON_LISTPARA_BIRIMI" id="563">
+									<DataPath>Объект.ZMM_000_S_1C_ENTEGRASYON_LIST.PARA_BIRIMI</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZMM_000_S_1C_ENTEGRASYON_LISTPARA_BIRIMIКонтекстноеМеню" id="564"/>
+									<ExtendedTooltip name="ZMM_000_S_1C_ENTEGRASYON_LISTPARA_BIRIMIРасширеннаяПодсказка" id="565"/>
+								</InputField>
+								<InputField name="ZMM_000_S_1C_ENTEGRASYON_LISTCEVIRI_TARIHI" id="712">
+									<DataPath>Объект.ZMM_000_S_1C_ENTEGRASYON_LIST.CEVIRI_TARIHI</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZMM_000_S_1C_ENTEGRASYON_LISTCEVIRI_TARIHIКонтекстноеМеню" id="713"/>
+									<ExtendedTooltip name="ZMM_000_S_1C_ENTEGRASYON_LISTCEVIRI_TARIHIРасширеннаяПодсказка" id="714"/>
+								</InputField>
+								<InputField name="ZMM_000_S_1C_ENTEGRASYON_LISTCEVIRI_KURU" id="715">
+									<DataPath>Объект.ZMM_000_S_1C_ENTEGRASYON_LIST.CEVIRI_KURU</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZMM_000_S_1C_ENTEGRASYON_LISTCEVIRI_KURUКонтекстноеМеню" id="716"/>
+									<ExtendedTooltip name="ZMM_000_S_1C_ENTEGRASYON_LISTCEVIRI_KURUРасширеннаяПодсказка" id="717"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -474,227 +720,6 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ZFI_011_S_DATAREFDOCNO_TOREVERSEКонтекстноеМеню" id="278"/>
 									<ExtendedTooltip name="ZFI_011_S_DATAREFDOCNO_TOREVERSEРасширеннаяПодсказка" id="279"/>
-								</InputField>
-							</ChildItems>
-						</Table>
-					</ChildItems>
-				</Page>
-				<Page name="Группа6" id="280">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ZFI_011_RFC_OZBEKISTAN</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ZFI_011_RFC_OZBEKISTAN</v8:content>
-						</v8:item>
-					</ToolTip>
-					<TitleDataPath>1/0:0935e089-d679-4187-b8a7-e39db3521a71/100000000</TitleDataPath>
-					<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="281"/>
-					<ChildItems>
-						<Table name="ZFI_011_FG_1C" id="282">
-							<ChangeRowSet>false</ChangeRowSet>
-							<AutoInsertNewRow>true</AutoInsertNewRow>
-							<EnableStartDrag>true</EnableStartDrag>
-							<EnableDrag>true</EnableDrag>
-							<DataPath>Объект.ZFI_011_FG_1C</DataPath>
-							<RowFilter xsi:nil="true"/>
-							<ContextMenu name="ZFI_011_FG_1CКонтекстноеМеню" id="283"/>
-							<AutoCommandBar name="ZFI_011_FG_1CКоманднаяПанель" id="284">
-								<ChildItems>
-									<Button name="ZFI_011_FG_1CFZFI_011_RFC_OZBEKISTAN2" id="355">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.ZFI_011_RFC_OZBEKISTAN2</CommandName>
-										<ExtendedTooltip name="ZFI_011_FG_1CFZFI_011_RFC_OZBEKISTAN2РасширеннаяПодсказка" id="356"/>
-									</Button>
-									<Button name="ZFI_011_FG_1CУслугиСтороннихСоздать" id="679">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.УслугиСтороннихСоздать</CommandName>
-										<ExtendedTooltip name="ZFI_011_FG_1CУслугиСтороннихСоздатьРасширеннаяПодсказка" id="680"/>
-									</Button>
-								</ChildItems>
-							</AutoCommandBar>
-							<ExtendedTooltip name="ZFI_011_FG_1CРасширеннаяПодсказка" id="285"/>
-							<SearchStringAddition name="ZFI_011_FG_1CСтрокаПоиска" id="286">
-								<AdditionSource>
-									<Item>ZFI_011_FG_1C</Item>
-									<Type>SearchStringRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="ZFI_011_FG_1CСтрокаПоискаКонтекстноеМеню" id="287"/>
-								<ExtendedTooltip name="ZFI_011_FG_1CСтрокаПоискаРасширеннаяПодсказка" id="288"/>
-							</SearchStringAddition>
-							<ViewStatusAddition name="ZFI_011_FG_1CСостояниеПросмотра" id="289">
-								<AdditionSource>
-									<Item>ZFI_011_FG_1C</Item>
-									<Type>ViewStatusRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="ZFI_011_FG_1CСостояниеПросмотраКонтекстноеМеню" id="290"/>
-								<ExtendedTooltip name="ZFI_011_FG_1CСостояниеПросмотраРасширеннаяПодсказка" id="291"/>
-							</ViewStatusAddition>
-							<SearchControlAddition name="ZFI_011_FG_1CУправлениеПоиском" id="292">
-								<AdditionSource>
-									<Item>ZFI_011_FG_1C</Item>
-									<Type>SearchControl</Type>
-								</AdditionSource>
-								<ContextMenu name="ZFI_011_FG_1CУправлениеПоискомКонтекстноеМеню" id="293"/>
-								<ExtendedTooltip name="ZFI_011_FG_1CУправлениеПоискомРасширеннаяПодсказка" id="294"/>
-							</SearchControlAddition>
-							<ChildItems>
-								<LabelField name="ZFI_011_FG_1CFНомерСтроки" id="295">
-									<DataPath>Объект.ZFI_011_FG_1C.LineNumber</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ZFI_011_FG_1CFНомерСтрокиКонтекстноеМеню" id="296"/>
-									<ExtendedTooltip name="ZFI_011_FG_1CFНомерСтрокиРасширеннаяПодсказка" id="297"/>
-								</LabelField>
-								<InputField name="ZFI_011_FG_1CFDOCNO" id="298">
-									<DataPath>Объект.ZFI_011_FG_1C.DOCNO</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ZFI_011_FG_1CFDOCNOКонтекстноеМеню" id="299"/>
-									<ExtendedTooltip name="ZFI_011_FG_1CFDOCNOРасширеннаяПодсказка" id="300"/>
-								</InputField>
-								<InputField name="ZFI_011_FG_1CDOCTYP" id="704">
-									<DataPath>Объект.ZFI_011_FG_1C.DOCTYP</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ZFI_011_FG_1CDOCTYPКонтекстноеМеню" id="705"/>
-									<ExtendedTooltip name="ZFI_011_FG_1CDOCTYPРасширеннаяПодсказка" id="706"/>
-								</InputField>
-								<InputField name="ZFI_011_FG_1CFDOCTYP_DESC" id="301">
-									<DataPath>Объект.ZFI_011_FG_1C.DOCTYP_DESC</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ZFI_011_FG_1CFDOCTYP_DESCКонтекстноеМеню" id="302"/>
-									<ExtendedTooltip name="ZFI_011_FG_1CFDOCTYP_DESCРасширеннаяПодсказка" id="303"/>
-								</InputField>
-								<InputField name="ZFI_011_FG_1CFPERIOD_YEAR" id="304">
-									<DataPath>Объект.ZFI_011_FG_1C.PERIOD_YEAR</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ZFI_011_FG_1CFPERIOD_YEARКонтекстноеМеню" id="305"/>
-									<ExtendedTooltip name="ZFI_011_FG_1CFPERIOD_YEARРасширеннаяПодсказка" id="306"/>
-								</InputField>
-								<InputField name="ZFI_011_FG_1CFPOSTDATE" id="307">
-									<DataPath>Объект.ZFI_011_FG_1C.POSTDATE</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ZFI_011_FG_1CFPOSTDATEКонтекстноеМеню" id="308"/>
-									<ExtendedTooltip name="ZFI_011_FG_1CFPOSTDATEРасширеннаяПодсказка" id="309"/>
-								</InputField>
-								<InputField name="ZFI_011_FG_1CFDOCDATE" id="310">
-									<DataPath>Объект.ZFI_011_FG_1C.DOCDATE</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ZFI_011_FG_1CFDOCDATEКонтекстноеМеню" id="311"/>
-									<ExtendedTooltip name="ZFI_011_FG_1CFDOCDATEРасширеннаяПодсказка" id="312"/>
-								</InputField>
-								<InputField name="ZFI_011_FG_1CFCURRENCY" id="313">
-									<DataPath>Объект.ZFI_011_FG_1C.CURRENCY</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ZFI_011_FG_1CFCURRENCYКонтекстноеМеню" id="314"/>
-									<ExtendedTooltip name="ZFI_011_FG_1CFCURRENCYРасширеннаяПодсказка" id="315"/>
-								</InputField>
-								<InputField name="ZFI_011_FG_1CFREFBELNO" id="316">
-									<DataPath>Объект.ZFI_011_FG_1C.REFBELNO</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ZFI_011_FG_1CFREFBELNOКонтекстноеМеню" id="317"/>
-									<ExtendedTooltip name="ZFI_011_FG_1CFREFBELNOРасширеннаяПодсказка" id="318"/>
-								</InputField>
-								<InputField name="ZFI_011_FG_1CFEXCRATE" id="319">
-									<DataPath>Объект.ZFI_011_FG_1C.EXCRATE</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ZFI_011_FG_1CFEXCRATEКонтекстноеМеню" id="320"/>
-									<ExtendedTooltip name="ZFI_011_FG_1CFEXCRATEРасширеннаяПодсказка" id="321"/>
-								</InputField>
-								<InputField name="ZFI_011_FG_1CFXREVERSED" id="322">
-									<DataPath>Объект.ZFI_011_FG_1C.XREVERSED</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ZFI_011_FG_1CFXREVERSEDКонтекстноеМеню" id="323"/>
-									<ExtendedTooltip name="ZFI_011_FG_1CFXREVERSEDРасширеннаяПодсказка" id="324"/>
-								</InputField>
-								<InputField name="ZFI_011_FG_1CFXREVERSING" id="325">
-									<DataPath>Объект.ZFI_011_FG_1C.XREVERSING</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ZFI_011_FG_1CFXREVERSINGКонтекстноеМеню" id="326"/>
-									<ExtendedTooltip name="ZFI_011_FG_1CFXREVERSINGРасширеннаяПодсказка" id="327"/>
-								</InputField>
-								<InputField name="ZFI_011_FG_1CFREFDOCNO_TOREVERSE" id="328">
-									<DataPath>Объект.ZFI_011_FG_1C.REFDOCNO_TOREVERSE</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ZFI_011_FG_1CFREFDOCNO_TOREVERSEКонтекстноеМеню" id="329"/>
-									<ExtendedTooltip name="ZFI_011_FG_1CFREFDOCNO_TOREVERSEРасширеннаяПодсказка" id="330"/>
-								</InputField>
-								<InputField name="ZFI_011_FG_1CFPOSTITEMFORLEDGER" id="331">
-									<DataPath>Объект.ZFI_011_FG_1C.POSTITEMFORLEDGER</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ZFI_011_FG_1CFPOSTITEMFORLEDGERКонтекстноеМеню" id="332"/>
-									<ExtendedTooltip name="ZFI_011_FG_1CFPOSTITEMFORLEDGERРасширеннаяПодсказка" id="333"/>
-								</InputField>
-								<InputField name="ZFI_011_FG_1CFALT_ACCNO" id="334">
-									<DataPath>Объект.ZFI_011_FG_1C.ALT_ACCNO</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ZFI_011_FG_1CFALT_ACCNOКонтекстноеМеню" id="335"/>
-									<ExtendedTooltip name="ZFI_011_FG_1CFALT_ACCNOРасширеннаяПодсказка" id="336"/>
-								</InputField>
-								<InputField name="ZFI_011_FG_1CFGLACC_TEXT" id="337">
-									<DataPath>Объект.ZFI_011_FG_1C.GLACC_TEXT</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ZFI_011_FG_1CFGLACC_TEXTКонтекстноеМеню" id="338"/>
-									<ExtendedTooltip name="ZFI_011_FG_1CFGLACC_TEXTРасширеннаяПодсказка" id="339"/>
-								</InputField>
-								<InputField name="ZFI_011_FG_1CFVENDOR" id="340">
-									<DataPath>Объект.ZFI_011_FG_1C.VENDOR</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ZFI_011_FG_1CFVENDORКонтекстноеМеню" id="341"/>
-									<ExtendedTooltip name="ZFI_011_FG_1CFVENDORРасширеннаяПодсказка" id="342"/>
-								</InputField>
-								<InputField name="ZFI_011_FG_1CFCUSTOMER" id="343">
-									<DataPath>Объект.ZFI_011_FG_1C.CUSTOMER</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ZFI_011_FG_1CFCUSTOMERКонтекстноеМеню" id="344"/>
-									<ExtendedTooltip name="ZFI_011_FG_1CFCUSTOMERРасширеннаяПодсказка" id="345"/>
-								</InputField>
-								<InputField name="ZFI_011_FG_1CFASSET_DESC" id="346">
-									<DataPath>Объект.ZFI_011_FG_1C.ASSET_DESC</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ZFI_011_FG_1CFASSET_DESCКонтекстноеМеню" id="347"/>
-									<ExtendedTooltip name="ZFI_011_FG_1CFASSET_DESCРасширеннаяПодсказка" id="348"/>
-								</InputField>
-								<InputField name="ZFI_011_FG_1CFAMOUNT_TRANSACTIONCURR" id="349">
-									<DataPath>Объект.ZFI_011_FG_1C.AMOUNT_TRANSACTIONCURR</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ZFI_011_FG_1CFAMOUNT_TRANSACTIONCURRКонтекстноеМеню" id="350"/>
-									<ExtendedTooltip name="ZFI_011_FG_1CFAMOUNT_TRANSACTIONCURRРасширеннаяПодсказка" id="351"/>
-								</InputField>
-								<InputField name="ZFI_011_FG_1CFAMOUNT_COMPANYCODECURR" id="352">
-									<DataPath>Объект.ZFI_011_FG_1C.AMOUNT_COMPANYCODECURR</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ZFI_011_FG_1CFAMOUNT_COMPANYCODECURRКонтекстноеМеню" id="353"/>
-									<ExtendedTooltip name="ZFI_011_FG_1CFAMOUNT_COMPANYCODECURRРасширеннаяПодсказка" id="354"/>
-								</InputField>
-								<InputField name="ZFI_011_FG_1CTAXNO" id="707">
-									<DataPath>Объект.ZFI_011_FG_1C.TAXNO</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ZFI_011_FG_1CTAXNOКонтекстноеМеню" id="708"/>
-									<ExtendedTooltip name="ZFI_011_FG_1CTAXNOРасширеннаяПодсказка" id="709"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -1100,6 +1125,7 @@
 					<ChildItems>
 						<Table name="ZSD_011_S_DATA" id="160">
 							<ChangeRowSet>false</ChangeRowSet>
+							<Footer>true</Footer>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -1198,6 +1224,7 @@
 									<DataPath>Объект.ZSD_011_S_DATA.QUANTITY</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.ZSD_011_S_DATA.QUANTITY</FooterDataPath>
 									<ContextMenu name="ZSD_011_S_DATAQUANTITYКонтекстноеМеню" id="195"/>
 									<ExtendedTooltip name="ZSD_011_S_DATAQUANTITYРасширеннаяПодсказка" id="196"/>
 								</InputField>
@@ -1240,6 +1267,7 @@
 									<DataPath>Объект.ZSD_011_S_DATA.TOTALPRICE</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.ZSD_011_S_DATA.TOTALPRICE</FooterDataPath>
 									<ContextMenu name="ZSD_011_S_DATATOTALPRICEКонтекстноеМеню" id="213"/>
 									<ExtendedTooltip name="ZSD_011_S_DATATOTALPRICEРасширеннаяПодсказка" id="214"/>
 								</InputField>
@@ -1278,37 +1306,52 @@
 									<ContextMenu name="ZSD_011_S_DATAKDVКонтекстноеМеню" id="700"/>
 									<ExtendedTooltip name="ZSD_011_S_DATAKDVРасширеннаяПодсказка" id="701"/>
 								</InputField>
+								<InputField name="ZSD_011_S_DATAIADE_KDV" id="718">
+									<DataPath>Объект.ZSD_011_S_DATA.IADE_KDV</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZSD_011_S_DATAIADE_KDVКонтекстноеМеню" id="719"/>
+									<ExtendedTooltip name="ZSD_011_S_DATAIADE_KDVРасширеннаяПодсказка" id="720"/>
+								</InputField>
+								<InputField name="ZSD_011_S_DATAIADE_KDV_TUTARI" id="721">
+									<DataPath>Объект.ZSD_011_S_DATA.IADE_KDV_TUTARI</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.ZSD_011_S_DATA.IADE_KDV_TUTARI</FooterDataPath>
+									<ContextMenu name="ZSD_011_S_DATAIADE_KDV_TUTARIКонтекстноеМеню" id="722"/>
+									<ExtendedTooltip name="ZSD_011_S_DATAIADE_KDV_TUTARIРасширеннаяПодсказка" id="723"/>
+								</InputField>
+								<InputField name="ZSD_011_S_DATAIADE_REF_TARIH" id="724">
+									<DataPath>Объект.ZSD_011_S_DATA.IADE_REF_TARIH</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZSD_011_S_DATAIADE_REF_TARIHКонтекстноеМеню" id="725"/>
+									<ExtendedTooltip name="ZSD_011_S_DATAIADE_REF_TARIHРасширеннаяПодсказка" id="726"/>
+								</InputField>
+								<InputField name="ZSD_011_S_DATAREVREC" id="727">
+									<DataPath>Объект.ZSD_011_S_DATA.REVREC</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZSD_011_S_DATAREVRECКонтекстноеМеню" id="728"/>
+									<ExtendedTooltip name="ZSD_011_S_DATAREVRECРасширеннаяПодсказка" id="729"/>
+								</InputField>
+								<InputField name="ZSD_011_S_DATAACCDOC" id="730">
+									<DataPath>Объект.ZSD_011_S_DATA.ACCDOC</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZSD_011_S_DATAACCDOCКонтекстноеМеню" id="731"/>
+									<ExtendedTooltip name="ZSD_011_S_DATAACCDOCРасширеннаяПодсказка" id="732"/>
+								</InputField>
+								<InputField name="ZSD_011_S_DATAKDV_TUTARI" id="733">
+									<DataPath>Объект.ZSD_011_S_DATA.KDV_TUTARI</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.ZSD_011_S_DATA.KDV_TUTARI</FooterDataPath>
+									<ContextMenu name="ZSD_011_S_DATAKDV_TUTARIКонтекстноеМеню" id="734"/>
+									<ExtendedTooltip name="ZSD_011_S_DATAKDV_TUTARIРасширеннаяПодсказка" id="735"/>
+								</InputField>
 							</ChildItems>
 						</Table>
-					</ChildItems>
-				</Page>
-				<Page name="Группа2" id="13">
-					<Visible>false</Visible>
-					<Enabled>false</Enabled>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>TEST</v8:content>
-						</v8:item>
-					</Title>
-					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="14"/>
-					<ChildItems>
-						<Button name="ZFI_011_RFC_OZBEKISTAN_RTRN" id="17">
-							<Type>UsualButton</Type>
-							<Enabled>false</Enabled>
-							<CommandName>Form.Command.ZFI_011_RFC_OZBEKISTAN_RTRN</CommandName>
-							<ExtendedTooltip name="ZFI_011_RFC_OZBEKISTAN_RTRNРасширеннаяПодсказка" id="18"/>
-						</Button>
-						<InputField name="Ответ" id="4">
-							<DataPath>Ответ</DataPath>
-							<ReadOnly>true</ReadOnly>
-							<TitleLocation>None</TitleLocation>
-							<AutoMaxWidth>false</AutoMaxWidth>
-							<MultiLine>true</MultiLine>
-							<ChooseType>false</ChooseType>
-							<ContextMenu name="ОтветКонтекстноеМеню" id="5"/>
-							<ExtendedTooltip name="ОтветРасширеннаяПодсказка" id="6"/>
-						</InputField>
 					</ChildItems>
 				</Page>
 				<Page name="ГруппаСоответствия" id="646">
@@ -1581,7 +1624,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>ZFI 011 RFC OZBEKISTAN RTRN</v8:content>
+					<v8:content>Подтвердить</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -1591,6 +1634,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ZFI_011_RFC_OZBEKISTAN_RTRN</Action>
+			<AssociatedTableElementId xsi:type="xs:string">ZFI_011_FG_1C</AssociatedTableElementId>
 		</Command>
 		<Command name="ZFI_011_RFC_OZBEKISTAN" id="3">
 			<Title>
