@@ -8,7 +8,6 @@
 		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 		xmlns:xsd1="urn:sap-com:document:sap:rfc:functions"
 		targetNamespace="urn:sap-com:document:sap:rfc:functions">
-	<documentation> </documentation>
 	<types>
 		<xsd:schema xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
 				xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
@@ -83,6 +82,12 @@
 				<xsd:restriction base="xsd:string">
 					<xsd:maxLength value="10"/>
 					<xsd:pattern value="\d\d\d\d-\d\d-\d\d"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="decimal9.5">
+				<xsd:restriction base="xsd:decimal">
+					<xsd:totalDigits value="9"/>
+					<xsd:fractionDigits value="5"/>
 				</xsd:restriction>
 			</xsd:simpleType>
 			<xsd:simpleType name="numeric4">
@@ -270,6 +275,10 @@
 							type="xsd1:char10"/>
 					<xsd:element name="TERS_KAYIT_BELGE_YIL"
 							type="xsd1:numeric4"/>
+					<xsd:element name="CEVIRI_TARIHI"
+							type="xsd1:date10"/>
+					<xsd:element name="CEVIRI_KURU"
+							type="xsd1:decimal9.5"/>
 				</xsd:sequence>
 			</xsd:complexType>
 			<xsd:complexType name="IBKK_R_BUDAT">

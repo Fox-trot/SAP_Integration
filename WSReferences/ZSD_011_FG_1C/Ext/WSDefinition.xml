@@ -31,6 +31,11 @@
 					<xsd:maxLength value="11"/>
 				</xsd:restriction>
 			</xsd:simpleType>
+			<xsd:simpleType name="char20">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="20"/>
+				</xsd:restriction>
+			</xsd:simpleType>
 			<xsd:simpleType name="char4">
 				<xsd:restriction base="xsd:string">
 					<xsd:maxLength value="4"/>
@@ -150,6 +155,24 @@
 							type="xsd1:decimal24.9"/>
 					<xsd:element name="KDV"
 							type="xsd1:decimal24.9"/>
+					<xsd:element name="KDV_TUTARI"
+							type="xsd1:decimal24.9"/>
+					<xsd:element name="IADE_KDV"
+							type="xsd1:decimal24.9"/>
+					<xsd:element name="IADE_KDV_TUTARI"
+							type="xsd1:decimal24.9"/>
+					<xsd:element name="IADE_REF_TARIH"
+							type="xsd1:date10"/>
+					<xsd:element name="IADE_REF_NO"
+							type="xsd1:char10"/>
+					<xsd:element name="SOZLESME_NO"
+							type="xsd1:char20"/>
+					<xsd:element name="SOZLESME_TARIH"
+							type="xsd1:date10"/>
+					<xsd:element name="REVREC"
+							type="xsd1:char10"/>
+					<xsd:element name="ACCDOC"
+							type="xsd1:char10"/>
 				</xsd:sequence>
 			</xsd:complexType>
 			<xsd:complexType name="ZSD_011_S_OZB_FAT_IA_DEKON_LOG">
