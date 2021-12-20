@@ -957,6 +957,11 @@
 										<CommandName>Form.Command.РеализацияМедикаментовСоздать</CommandName>
 										<ExtendedTooltip name="ZSD_011_S_DATAРеализацияМедикаментовСоздатьРасширеннаяПодсказка" id="678"/>
 									</Button>
+									<Button name="ZSD_011_S_DATAZSD_010_RFC_OZB_IADE_TES_RTRN" id="736">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ZSD_010_RFC_OZB_IADE_TES_RTRN</CommandName>
+										<ExtendedTooltip name="ZSD_011_S_DATAZSD_010_RFC_OZB_IADE_TES_RTRNРасширеннаяПодсказка" id="737"/>
+									</Button>
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="ZSD_011_S_DATAРасширеннаяПодсказка" id="163"/>
@@ -1446,7 +1451,12 @@
 					<v8:content>ZFI_011_RFC_OZBEKISTAN_RTRN</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.AppearanceCheckBox</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ZFI_011_RFC_OZBEKISTAN_RTRN</Action>
+			<Representation>TextPicture</Representation>
 			<AssociatedTableElementId xsi:type="xs:string">ZFI_011_S_DATA</AssociatedTableElementId>
 		</Command>
 		<Command name="ZSD_010_RFC_OZB_IADE_TES" id="4">
@@ -1675,6 +1685,28 @@
 			<Action>ZMM_000_FM_1C_FATURA_LIST_RTRN</Action>
 			<Representation>TextPicture</Representation>
 			<AssociatedTableElementId xsi:type="xs:string">ZMM_000_S_1C_ENTEGRASYON_LIST</AssociatedTableElementId>
+		</Command>
+		<Command name="ZSD_010_RFC_OZB_IADE_TES_RTRN" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подтвердить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ZSD 010 RFC OZB IADE TES RTRN</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.AppearanceCheckBox</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ZSD_011_RFC_OZBFAT_IA_DKNT_RTR</Action>
+			<Representation>TextPicture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<AssociatedTableElementId xsi:type="xs:string">ZSD_011_S_DATA</AssociatedTableElementId>
 		</Command>
 	</Commands>
 </Form>

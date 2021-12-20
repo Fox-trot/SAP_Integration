@@ -356,13 +356,27 @@
 КонецПроцедуры
 
 &НаСервере
-Процедура ZMM_000_FM_1C_FATURA_LIST_RTRNНаСервере()
+Функция ZMM_000_FM_1C_FATURA_LIST_RTRNНаСервере()
 	Если Объект.ZMM_000_S_1C_ENTEGRASYON_LIST.Количество() > 0 Тогда
-		НаСервере().ZMM_000_FM_1C_FATURA_LIST_RTRN(Объект.ZMM_000_S_1C_ENTEGRASYON_LIST);
+		Возврат (НаСервере().ZMM_000_FM_1C_FATURA_LIST_RTRN(Объект.ZMM_000_S_1C_ENTEGRASYON_LIST));
+	КонецЕсли;
+КонецФункции
+
+&НаКлиенте
+Процедура ZMM_000_FM_1C_FATURA_LIST_RTRN(Команда)
+	Если Объект.ZMM_000_S_1C_ENTEGRASYON_LIST.Количество() > 0 Тогда
+		Сообщить(ZMM_000_FM_1C_FATURA_LIST_RTRNНаСервере());
 	КонецЕсли;
 КонецПроцедуры
 
 &НаКлиенте
-Процедура ZMM_000_FM_1C_FATURA_LIST_RTRN(Команда)
-	ZMM_000_FM_1C_FATURA_LIST_RTRNНаСервере();
+Процедура ZSD_011_RFC_OZBFAT_IA_DKNT_RTR(Команда)
+	Если Объект.ZSD_011_S_DATA.Количество() > 0 Тогда
+		Сообщить(ZSD_011_RFC_OZBFAT_IA_DKNT_RTRНаСервере());
+	КонецЕсли;
 КонецПроцедуры
+
+&НаСервере
+Функция ZSD_011_RFC_OZBFAT_IA_DKNT_RTRНаСервере()
+	Возврат (НаСервере().ZSD_011_RFC_OZBFAT_IA_DKNT_RTR(Объект.ZSD_011_S_DATA));
+КонецФункции
