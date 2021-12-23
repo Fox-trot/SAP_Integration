@@ -77,6 +77,9 @@
 								<ContextMenu name="ZFI_011_S_DATAУправлениеПоискомКонтекстноеМеню" id="293"/>
 								<ExtendedTooltip name="ZFI_011_S_DATAУправлениеПоискомРасширеннаяПодсказка" id="294"/>
 							</SearchControlAddition>
+							<Events>
+								<Event name="1282f000-23b6-4887-87f4-9e8e79db3d32">ZFI_011_S_DATAВыбор</Event>
+							</Events>
 							<ChildItems>
 								<LabelField name="ZFI_011_FG_1CFНомерСтроки" id="295">
 									<DataPath>Объект.ZFI_011_S_DATA.LineNumber</DataPath>
@@ -97,6 +100,13 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ZFI_011_FG_1CDOCTYPКонтекстноеМеню" id="705"/>
 									<ExtendedTooltip name="ZFI_011_FG_1CDOCTYPРасширеннаяПодсказка" id="706"/>
+								</InputField>
+								<InputField name="ZFI_011_FG_1CFPOSTITEMFORLEDGER" id="331">
+									<DataPath>Объект.ZFI_011_S_DATA.POSTITEMFORLEDGER</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZFI_011_FG_1CFPOSTITEMFORLEDGERКонтекстноеМеню" id="332"/>
+									<ExtendedTooltip name="ZFI_011_FG_1CFPOSTITEMFORLEDGERРасширеннаяПодсказка" id="333"/>
 								</InputField>
 								<InputField name="ZFI_011_FG_1CFDOCTYP_DESC" id="301">
 									<DataPath>Объект.ZFI_011_S_DATA.DOCTYP_DESC</DataPath>
@@ -167,13 +177,6 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ZFI_011_FG_1CFREFDOCNO_TOREVERSEКонтекстноеМеню" id="329"/>
 									<ExtendedTooltip name="ZFI_011_FG_1CFREFDOCNO_TOREVERSEРасширеннаяПодсказка" id="330"/>
-								</InputField>
-								<InputField name="ZFI_011_FG_1CFPOSTITEMFORLEDGER" id="331">
-									<DataPath>Объект.ZFI_011_S_DATA.POSTITEMFORLEDGER</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ZFI_011_FG_1CFPOSTITEMFORLEDGERКонтекстноеМеню" id="332"/>
-									<ExtendedTooltip name="ZFI_011_FG_1CFPOSTITEMFORLEDGERРасширеннаяПодсказка" id="333"/>
 								</InputField>
 								<InputField name="ZFI_011_FG_1CFALT_ACCNO" id="334">
 									<DataPath>Объект.ZFI_011_S_DATA.ALT_ACCNO</DataPath>
@@ -298,6 +301,9 @@
 								<ContextMenu name="ZMM_000_S_1C_ENTEGRASYON_LISTУправлениеПоискомКонтекстноеМеню" id="522"/>
 								<ExtendedTooltip name="ZMM_000_S_1C_ENTEGRASYON_LISTУправлениеПоискомРасширеннаяПодсказка" id="523"/>
 							</SearchControlAddition>
+							<Events>
+								<Event name="1282f000-23b6-4887-87f4-9e8e79db3d32">ZMM_000_S_1C_ENTEGRASYON_LISTВыбор</Event>
+							</Events>
 							<ChildItems>
 								<LabelField name="ZMM_000_S_1C_ENTEGRASYON_LISTНомерСтроки" id="524">
 									<DataPath>Объект.ZMM_000_S_1C_ENTEGRASYON_LIST.LineNumber</DataPath>
@@ -989,6 +995,9 @@
 								<ContextMenu name="ZSD_011_S_DATAУправлениеПоискомКонтекстноеМеню" id="171"/>
 								<ExtendedTooltip name="ZSD_011_S_DATAУправлениеПоискомРасширеннаяПодсказка" id="172"/>
 							</SearchControlAddition>
+							<Events>
+								<Event name="1282f000-23b6-4887-87f4-9e8e79db3d32">ZSD_011_S_DATAВыбор</Event>
+							</Events>
 							<ChildItems>
 								<LabelField name="ZSD_011_S_DATAНомерСтроки" id="173">
 									<DataPath>Объект.ZSD_011_S_DATA.LineNumber</DataPath>
@@ -1146,6 +1155,13 @@
 									<ContextMenu name="ZSD_011_S_DATAIADE_REF_TARIHКонтекстноеМеню" id="725"/>
 									<ExtendedTooltip name="ZSD_011_S_DATAIADE_REF_TARIHРасширеннаяПодсказка" id="726"/>
 								</InputField>
+								<InputField name="ZSD_011_S_DATAIADE_REF_NO" id="738">
+									<DataPath>Объект.ZSD_011_S_DATA.IADE_REF_NO</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZSD_011_S_DATAIADE_REF_NOКонтекстноеМеню" id="739"/>
+									<ExtendedTooltip name="ZSD_011_S_DATAIADE_REF_NOРасширеннаяПодсказка" id="740"/>
+								</InputField>
 								<InputField name="ZSD_011_S_DATAREVREC" id="727">
 									<DataPath>Объект.ZSD_011_S_DATA.REVREC</DataPath>
 									<ReadOnly>true</ReadOnly>
@@ -1167,6 +1183,20 @@
 									<FooterDataPath>Объект.ZSD_011_S_DATA.KDV_TUTARI</FooterDataPath>
 									<ContextMenu name="ZSD_011_S_DATAKDV_TUTARIКонтекстноеМеню" id="734"/>
 									<ExtendedTooltip name="ZSD_011_S_DATAKDV_TUTARIРасширеннаяПодсказка" id="735"/>
+								</InputField>
+								<InputField name="ZSD_011_S_DATASOZLESME_NO" id="741">
+									<DataPath>Объект.ZSD_011_S_DATA.SOZLESME_NO</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZSD_011_S_DATASOZLESME_NOКонтекстноеМеню" id="742"/>
+									<ExtendedTooltip name="ZSD_011_S_DATASOZLESME_NOРасширеннаяПодсказка" id="743"/>
+								</InputField>
+								<InputField name="ZSD_011_S_DATASOZLESME_TARIH" id="744">
+									<DataPath>Объект.ZSD_011_S_DATA.SOZLESME_TARIH</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZSD_011_S_DATASOZLESME_TARIHКонтекстноеМеню" id="745"/>
+									<ExtendedTooltip name="ZSD_011_S_DATASOZLESME_TARIHРасширеннаяПодсказка" id="746"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -1300,17 +1330,16 @@
 						<xr:Ref>StdPicture.Setting</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
+					<TitleDataPath>Объект.ЭтоТест</TitleDataPath>
 					<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="630"/>
 					<ChildItems>
 						<InputField name="Организация" id="631">
 							<DataPath>Объект.Организация</DataPath>
-							<ReadOnly>true</ReadOnly>
 							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="632"/>
 							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="633"/>
 						</InputField>
 						<InputField name="НацВалюта" id="637">
 							<DataPath>Объект.НацВалюта</DataPath>
-							<ReadOnly>true</ReadOnly>
 							<ContextMenu name="НацВалютаКонтекстноеМеню" id="638"/>
 							<ExtendedTooltip name="НацВалютаРасширеннаяПодсказка" id="639"/>
 						</InputField>
@@ -1321,7 +1350,6 @@
 						</InputField>
 						<InputField name="ИмяСервера" id="640">
 							<DataPath>Объект.ИмяСервера</DataPath>
-							<ReadOnly>true</ReadOnly>
 							<ContextMenu name="ИмяСервераКонтекстноеМеню" id="641"/>
 							<ExtendedTooltip name="ИмяСервераРасширеннаяПодсказка" id="642"/>
 						</InputField>
@@ -1343,6 +1371,10 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<Save>
+				<Field>Объект.ИмяСервера</Field>
+				<Field>Объект.НацВалюта</Field>
+				<Field>Объект.Организация</Field>
+				<Field>Объект.Ответственный</Field>
 				<Field>Объект.ЭтоТест</Field>
 			</Save>
 		</Attribute>
@@ -1457,6 +1489,7 @@
 			</Picture>
 			<Action>ZFI_011_RFC_OZBEKISTAN_RTRN</Action>
 			<Representation>TextPicture</Representation>
+			<CurrentRowUse>Use</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">ZFI_011_S_DATA</AssociatedTableElementId>
 		</Command>
 		<Command name="ZSD_010_RFC_OZB_IADE_TES" id="4">
@@ -1521,7 +1554,7 @@
 				<xr:Ref>StdPicture.Refresh</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
-			<Action>ZFI_011_RFC_OZBEKISTAN2</Action>
+			<Action>ZFI_011_RFC_OZBEKISTAN</Action>
 			<Representation>TextPicture</Representation>
 		</Command>
 		<Command name="ZMM_000_FM_1C_FATURA_LISTESI" id="7">
