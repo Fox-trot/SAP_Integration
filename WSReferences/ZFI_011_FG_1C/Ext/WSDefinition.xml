@@ -26,6 +26,11 @@
 					<xsd:maxLength value="10"/>
 				</xsd:restriction>
 			</xsd:simpleType>
+			<xsd:simpleType name="char12">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="12"/>
+				</xsd:restriction>
+			</xsd:simpleType>
 			<xsd:simpleType name="char16">
 				<xsd:restriction base="xsd:string">
 					<xsd:maxLength value="16"/>
@@ -39,6 +44,11 @@
 			<xsd:simpleType name="char20">
 				<xsd:restriction base="xsd:string">
 					<xsd:maxLength value="20"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType name="char4">
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="4"/>
 				</xsd:restriction>
 			</xsd:simpleType>
 			<xsd:simpleType name="char50">
@@ -159,6 +169,16 @@
 							type="xsd1:curr23.2"/>
 					<xsd:element name="TAXNO"
 							type="xsd1:char16"/>
+					<xsd:element name="ASSET_NO"
+							type="xsd1:char12"/>
+					<xsd:element name="ASSET_SUB_NO"
+							type="xsd1:char4"/>
+					<xsd:element name="COMMENTARY"
+							type="xsd1:char50"/>
+					<xsd:element name="CONTRACT_NO"
+							type="xsd1:char12"/>
+					<xsd:element name="CONTRACT_DATE"
+							type="xsd1:char12"/>
 				</xsd:sequence>
 			</xsd:complexType>
 			<xsd:complexType name="ZFI_011_TT_1C_LOG">
