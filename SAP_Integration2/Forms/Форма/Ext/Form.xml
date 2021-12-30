@@ -546,6 +546,13 @@
 									<ContextMenu name="ZMM_000_S_1C_ENTEGRASYON_LISTTERS_KAYIT_BELGE_NOКонтекстноеМеню" id="612"/>
 									<ExtendedTooltip name="ZMM_000_S_1C_ENTEGRASYON_LISTTERS_KAYIT_BELGE_NOРасширеннаяПодсказка" id="613"/>
 								</InputField>
+								<InputField name="ZMM_000_S_1C_ENTEGRASYON_LISTTERS_KAYIT_BELGE_KALEM" id="768">
+									<DataPath>Объект.ZMM_000_S_1C_ENTEGRASYON_LIST.TERS_KAYIT_BELGE_KALEM</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZMM_000_S_1C_ENTEGRASYON_LISTTERS_KAYIT_BELGE_KALEMКонтекстноеМеню" id="769"/>
+									<ExtendedTooltip name="ZMM_000_S_1C_ENTEGRASYON_LISTTERS_KAYIT_BELGE_KALEMРасширеннаяПодсказка" id="770"/>
+								</InputField>
 								<InputField name="ZMM_000_S_1C_ENTEGRASYON_LISTTERS_KAYIT_BELGE_YIL" id="614">
 									<DataPath>Объект.ZMM_000_S_1C_ENTEGRASYON_LIST.TERS_KAYIT_BELGE_YIL</DataPath>
 									<ReadOnly>true</ReadOnly>
@@ -574,6 +581,20 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ZMM_000_S_1C_ENTEGRASYON_LISTCEVIRI_KURUКонтекстноеМеню" id="716"/>
 									<ExtendedTooltip name="ZMM_000_S_1C_ENTEGRASYON_LISTCEVIRI_KURUРасширеннаяПодсказка" id="717"/>
+								</InputField>
+								<InputField name="ZMM_000_S_1C_ENTEGRASYON_LISTFATURA_KALEM" id="762">
+									<DataPath>Объект.ZMM_000_S_1C_ENTEGRASYON_LIST.FATURA_KALEM</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZMM_000_S_1C_ENTEGRASYON_LISTFATURA_KALEMКонтекстноеМеню" id="763"/>
+									<ExtendedTooltip name="ZMM_000_S_1C_ENTEGRASYON_LISTFATURA_KALEMРасширеннаяПодсказка" id="764"/>
+								</InputField>
+								<InputField name="ZMM_000_S_1C_ENTEGRASYON_LISTFATURA_YIL" id="765">
+									<DataPath>Объект.ZMM_000_S_1C_ENTEGRASYON_LIST.FATURA_YIL</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ZMM_000_S_1C_ENTEGRASYON_LISTFATURA_YILКонтекстноеМеню" id="766"/>
+									<ExtendedTooltip name="ZMM_000_S_1C_ENTEGRASYON_LISTFATURA_YILРасширеннаяПодсказка" id="767"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -1417,6 +1438,11 @@
 							</ChoiceList>
 							<ContextMenu name="ИмяСервераКонтекстноеМеню" id="641"/>
 							<ExtendedTooltip name="ИмяСервераРасширеннаяПодсказка" id="642"/>
+						</InputField>
+						<InputField name="ExchangeHost" id="771">
+							<DataPath>Объект.ExchangeHost</DataPath>
+							<ContextMenu name="ExchangeHostКонтекстноеМеню" id="772"/>
+							<ExtendedTooltip name="ExchangeHostРасширеннаяПодсказка" id="773"/>
 						</InputField>
 						<CheckBoxField name="ЭтотТест" id="643">
 							<DataPath>Объект.ЭтоТест</DataPath>

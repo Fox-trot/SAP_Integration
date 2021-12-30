@@ -110,7 +110,7 @@
 		ТекСтрока.TERS_KAYIT_BELGE_YIL	= Макет.Область(Итератор, 30).Текст;
 		ЗаполнитьЗначенияСвойств(Объект.ZMM_000_S_1C_ENTEGRASYON_LIST.Добавить(), ТекСтрока);
 	КонецЦикла;
-	Объект.ZMM_000_S_1C_ENTEGRASYON_LIST.Сортировать("MUHASEBE_BELGE_NO,MUHASEBE_BELGE_KALEM");
+	Объект.ZMM_000_S_1C_ENTEGRASYON_LIST.Сортировать("SATINALMA_SIPARIS,MUHASEBE_BELGE_KALEM");
 КонецПроцедуры
 
 &НаСервере
@@ -361,15 +361,15 @@
 КонецПроцедуры
 
 &НаСервере
-Функция ZMM_000_FM_1C_FATURA_LIST_RTRNНаСервере(MUHASEBE_BELGE_NO)
-	Возврат (НаСервере().ZMM_000_FM_1C_FATURA_LIST_RTRN(Объект.ZMM_000_S_1C_ENTEGRASYON_LIST, MUHASEBE_BELGE_NO));
+Функция ZMM_000_FM_1C_FATURA_LIST_RTRNНаСервере(SATINALMA_SIPARIS)
+	Возврат (НаСервере().ZMM_000_FM_1C_FATURA_LIST_RTRN(Объект.ZMM_000_S_1C_ENTEGRASYON_LIST, SATINALMA_SIPARIS));
 КонецФункции
 
 &НаКлиенте
 Процедура ZMM_000_FM_1C_FATURA_LIST_RTRN(Команда)
 	//Если Объект.ZMM_000_S_1C_ENTEGRASYON_LIST.Количество() > 0 Тогда
 	Если Элементы.ZMM_000_S_1C_ENTEGRASYON_LIST.ТекущиеДанные <> Неопределено Тогда
-		Ответ	= ZMM_000_FM_1C_FATURA_LIST_RTRNНаСервере(Элементы.ZMM_000_S_1C_ENTEGRASYON_LIST.ТекущиеДанные.MUHASEBE_BELGE_NO);
+		Ответ	= ZMM_000_FM_1C_FATURA_LIST_RTRNНаСервере(Элементы.ZMM_000_S_1C_ENTEGRASYON_LIST.ТекущиеДанные.SATINALMA_SIPARIS);
 		Если НЕ ПустаяСтрока(Ответ) Тогда
 			Сообщить(Ответ);
 			ZMM_000_FM_1C_FATURA_LISTESIНаСервере();
@@ -391,7 +391,7 @@
 
 &НаСервере
 Функция УслугиСтороннихОрганизацийНайти(Параметры)
-	Возврат НаСервере().УслугиСтороннихОрганизацийНайти(Параметры);
+	Возврат НаСервере().ZFI_011_ДокументНайти(Параметры);
 КонецФункции
 
 &НаКлиенте
@@ -417,7 +417,7 @@
 
 &НаКлиенте
 Процедура ZMM_000_S_1C_ENTEGRASYON_LISTВыбор(Элемент, ВыбраннаяСтрока, Поле, СтандартнаяОбработка)
-	Ссылка	= ПоступлениеНоменклатурыПродажВалютныйСпискамиНайти(Новый Структура("KAYIT_TARIH,MUHASEBE_BELGE_NO", Элемент.ТекущиеДанные.KAYIT_TARIH, Элемент.ТекущиеДанные.MUHASEBE_BELGE_NO));
+	Ссылка	= ПоступлениеНоменклатурыПродажВалютныйСпискамиНайти(Новый Структура("KAYIT_TARIH,SATINALMA_SIPARIS", Элемент.ТекущиеДанные.KAYIT_TARIH, Элемент.ТекущиеДанные.SATINALMA_SIPARIS));
 	Если ЗначениеЗаполнено(Ссылка) Тогда
 		ПоказатьЗначение(, Ссылка);
 	КонецЕсли;
