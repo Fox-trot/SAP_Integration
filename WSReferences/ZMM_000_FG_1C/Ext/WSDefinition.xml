@@ -84,9 +84,9 @@
 					<xsd:pattern value="\d\d\d\d-\d\d-\d\d"/>
 				</xsd:restriction>
 			</xsd:simpleType>
-			<xsd:simpleType name="decimal9.5">
+			<xsd:simpleType name="decimal30.5">
 				<xsd:restriction base="xsd:decimal">
-					<xsd:totalDigits value="9"/>
+					<xsd:totalDigits value="30"/>
 					<xsd:fractionDigits value="5"/>
 				</xsd:restriction>
 			</xsd:simpleType>
@@ -179,14 +179,12 @@
 				<xsd:sequence>
 					<xsd:element name="SIRKET_KODU"
 							type="xsd1:char4"/>
-					<xsd:element name="YIL"
-							type="xsd1:numeric4"/>
-					<xsd:element name="MUHASEBE_BELGE_NO"
+					<xsd:element name="FATURA_BELGE_NO"
 							type="xsd1:char10"/>
-					<xsd:element name="MUHASEBE_BELGE_KALEM"
+					<xsd:element name="FATURA_BELGE_KALEM"
 							type="xsd1:numeric6"/>
-					<xsd:element name="FATURA_NO"
-							type="xsd1:char16"/>
+					<xsd:element name="FATURA_BELGE_YIL"
+							type="xsd1:numeric4"/>
 				</xsd:sequence>
 			</xsd:complexType>
 			<xsd:complexType name="TRGS_POSTING_DATE">
@@ -273,12 +271,18 @@
 							type="xsd1:date10"/>
 					<xsd:element name="TERS_KAYIT_BELGE_NO"
 							type="xsd1:char10"/>
+					<xsd:element name="TERS_KAYIT_BELGE_KALEM"
+							type="xsd1:numeric6"/>
 					<xsd:element name="TERS_KAYIT_BELGE_YIL"
 							type="xsd1:numeric4"/>
 					<xsd:element name="CEVIRI_TARIHI"
 							type="xsd1:date10"/>
 					<xsd:element name="CEVIRI_KURU"
-							type="xsd1:decimal9.5"/>
+							type="xsd1:decimal30.5"/>
+					<xsd:element name="FATURA_KALEM"
+							type="xsd1:numeric6"/>
+					<xsd:element name="FATURA_YIL"
+							type="xsd1:numeric4"/>
 				</xsd:sequence>
 			</xsd:complexType>
 			<xsd:complexType name="IBKK_R_BUDAT">

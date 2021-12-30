@@ -32,7 +32,7 @@ Procedure PerformDataSyncronization(p01 = Undefined) Export
 	           |WHERE
 	           |	IntegrationSettings.Off = FALSE" + ?(p01 = Undefined, "", " AND IntegrationSettings.ExchangeHost = &ExchangeHost");
 	;
-	p03 = p02.Execute().Choose();
+	p03 = p02.Выполнить().Выбрать();
 	While p03.Next() Do 
 		p04 = New Structure("ExchangeHost, ExchangeDirectory, RulesStorage, ToArchiveTheFile, ArchivePassword, ConnectionString, GuarantedDelivery, FTPAdress, FTPPassword, FTPUser, FTPPassiveConnection, FTPPort, ExchangeProtocol", p03.ExchangeHost, p03.ExchangeDirectory, p03.RulesStorage, p03.ToArchiveTheFile, p03.ArchivePassword, p03.ConnectionString, p03.GuarantedDelivery, p03.FTPAdress, p03.FTPPassword, p03.FTPUser, p03.FTPPassiveConnection, p03.FTPPort, p03.ExchangeProtocol);
 		p05 = "";
@@ -106,7 +106,7 @@ Procedure PerformDataDownload(p07, p08) Export
 	Else 
 		p12 = p07.ExchangeDirectory + "\" + ExchangeFileName;
 		p13 = New File(p12);
-		If Not p13.Exist() Then
+		If Not p13.Существует() Then
 			WriteEventToLogString(p08, EventLogLevel.Error, "Exchange: [" + p10.Code + "] --> [" + p09.Code + "]" + Chars.LF + " Download" + Chars.LF + "" + CurrentDate() + " File: <"+ExchangeFileName + "> is missing" + Chars.LF + " --");
 			Return;
 		EndIf;
@@ -174,14 +174,14 @@ Procedure PerformDataUpload(p16, p17) Export
 	
 	p23 = TempFilesDir() + "ExRul_" + p18.Code + "_" + p19.Code + ".xml";
 	p22 = New Файл(p23);
-	If p22.Exist() Then
+	If p22.Существует() Then
 		DeleteFiles(p23);
 	EndIf;
 	Try 
 		p24= p16.RulesStorage.Get();
 		p24.Write(p23);
 		p22 = New File(p23);
-		If Not p22.Exist() Then
+		If Not p22.Существует() Then
 			WriteEventToLogString(p17, EventLogLevel.Error, "Exchange: [" + p18.Code + "] --> [" + p19.Code + "]" + Chars.LF + " Upload" + Chars.LF + "" + CurrentDate() + " Error writing file exchange rules: " + ErrorDescription() + Chars.LF + " --");
 		EndIf;
 	Except 
@@ -287,7 +287,7 @@ Procedure PerformDataUpload(p16, p17) Export
 	ExchangeFileName = "Message_" + p18.Code + "_" + p19.Code + ?(p16.ToArchiveTheFile, ".zip", ".xml");
 	
 	d = New File(dosyaKonumu);
-	If d.Exist() Then
+	If d.Существует() Then
 		
 		If p16.ExchangeProtocol = 1 Then
 			
@@ -316,7 +316,7 @@ Procedure PerformDataUpload(p16, p17) Export
 		Else 
 			p21 = p16.ExchangeDirectory + "\"+ExchangeFileName;
 			p22 = New File(p21);
-			If p22.Exist() Then
+			If p22.Существует() Then
 				WriteEventToLogString(p17, EventLogLevel.Error, "Exchange: [" + p18.Code + "] --> [" + p19.Code + "]" + Chars.LF + " Upload" + Chars.LF + "" + CurrentDate() + " Data on the opposite host is not yet taken" + Chars.LF + " --");
 				Return;
 			EndIf;
