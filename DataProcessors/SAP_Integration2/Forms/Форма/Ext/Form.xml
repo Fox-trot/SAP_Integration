@@ -1417,6 +1417,11 @@
 					<TitleDataPath>Объект.ЭтоТест</TitleDataPath>
 					<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="630"/>
 					<ChildItems>
+						<Button name="КомандаОбмен" id="774">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.КомандаОбмен</CommandName>
+							<ExtendedTooltip name="КомандаОбменРасширеннаяПодсказка" id="775"/>
+						</Button>
 						<InputField name="Организация" id="631">
 							<DataPath>Объект.Организация</DataPath>
 							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="632"/>
@@ -1490,6 +1495,7 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<Save>
+				<Field>Объект.ExchangeHost</Field>
 				<Field>Объект.ИмяСервера</Field>
 				<Field>Объект.НацВалюта</Field>
 				<Field>Объект.Организация</Field>
@@ -1859,6 +1865,21 @@
 			<Representation>TextPicture</Representation>
 			<ModifiesSavedData>true</ModifiesSavedData>
 			<AssociatedTableElementId xsi:type="xs:string">ZSD_011_S_DATA</AssociatedTableElementId>
+		</Command>
+		<Command name="КомандаОбмен" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обмен</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда обмен</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОбмен</Action>
 		</Command>
 	</Commands>
 </Form>
