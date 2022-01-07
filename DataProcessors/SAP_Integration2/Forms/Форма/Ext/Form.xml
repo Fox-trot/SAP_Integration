@@ -1417,11 +1417,23 @@
 					<TitleDataPath>Объект.ЭтоТест</TitleDataPath>
 					<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="630"/>
 					<ChildItems>
-						<Button name="КомандаОбмен" id="774">
-							<Type>UsualButton</Type>
-							<CommandName>Form.Command.КомандаОбмен</CommandName>
-							<ExtendedTooltip name="КомандаОбменРасширеннаяПодсказка" id="775"/>
-						</Button>
+						<UsualGroup name="Группа2" id="776">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="777"/>
+							<ChildItems>
+								<Button name="КомандаОбмен" id="774">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.КомандаОбмен</CommandName>
+									<ExtendedTooltip name="КомандаОбменРасширеннаяПодсказка" id="775"/>
+								</Button>
+								<Button name="КомандаЗаменаКирилицы" id="778">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.КомандаЗаменаКирилицы</CommandName>
+									<ExtendedTooltip name="КомандаЗаменаКирилицыРасширеннаяПодсказка" id="779"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
 						<InputField name="Организация" id="631">
 							<DataPath>Объект.Организация</DataPath>
 							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="632"/>
@@ -1880,6 +1892,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>КомандаОбмен</Action>
+		</Command>
+		<Command name="КомандаЗаменаКирилицы" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Замена кирилицы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда замена кирилицы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗаменаКирилицы</Action>
 		</Command>
 	</Commands>
 </Form>
